@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Market - Tienda Online</title>
         <link rel="stylesheet" href="./styles/style.css" />
         <!-- Link a Google Fonts  -->
         <link
@@ -17,11 +17,11 @@
         <header>
             <div class="content-logo container">
                 <div class="box-icon-logo">
-                    <img class="image-logo" src="./images/icon-logo.webp" alt="" />
+                    <img class="image-logo" src="./images/icon-logo.webp" alt="Logo de Market" />
                     <span class="span-logo">Market</span>
                 </div>
                 <div class="box-icon-cart">
-                    <img class="icon-cart" src="./images/cart-blanco.png" alt="" />
+                    <img class="icon-cart" src="./images/cart-blanco.png" alt="Icono Carrito de compras" />
                     <span class="span-cart">0</span>
                 </div>
             </div>
@@ -32,8 +32,7 @@
                 <div class="content-inputs">
                     <div class="box-input-search">
                         <input id="search" type="search" placeholder="Buscar productos..." />
-
-                        <img class="icon-search" src="./images/search-b.png" alt="search" />
+                        <img class="icon-search" src="./images/search-b.png" alt="Icono de buscador" />
                     </div>
                     <select>
                         <option value="" disabled selected>Todas las categoría</option>
@@ -46,54 +45,55 @@
                 <h2>Nuestros Productos</h2>
 
                 <div class="content-cards container">
+                    <!-- Card 1  -->
                     <div class="card">
                         <img
                             class="card-img"
                             src="https://cdn.dummyjson.com/products/images/groceries/Cat%20Food/1.png"
-                            alt=""
+                            alt="Imagen de alimento para gatos"
                         />
                         <h3>Cat Food</h3>
                         <div class="card-info">
                             <p class="text-card">Quality fish steak, suitable for grilling, baking, or pan-searing.</p>
                             <div>
-                                <span class="text-rosa">Categoria</span>
-                                <button class="button-category">groceries</button>
+                                <span class="text-rosa">Categoría</span>
+                                <a class="button-category" href="#">groceries</a>
                             </div>
                             <p class="text-price">Precio: <span class="span-price">S/ 8.99</span></p>
                             <button class="button-add">Agregar al carrito</button>
                         </div>
                     </div>
-
+                    <!-- Card 2  -->
                     <div class="card">
                         <img
                             class="card-img"
                             src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
-                            alt=""
+                            alt="Imagen mascara maquilladora"
                         />
                         <h3>Essence Mascara Lash Princess</h3>
                         <div class="card-info">
                             <p class="text-card">Quality fish steak, suitable for grilling, baking, or pan-searing.</p>
                             <div>
-                                <span class="text-rosa">Categoria</span>
-                                <button class="button-category">beauty</button>
+                                <span class="text-rosa">Categoría</span>
+                                <a class="button-category" href="#">beauty</a>
                             </div>
                             <p class="text-price">Precio: <span class="span-price">S/ 19.99</span></p>
                             <button class="button-add">Agregar al carrito</button>
                         </div>
                     </div>
-
+                    <!-- Card 3  -->
                     <div class="card">
                         <img
                             class="card-img"
                             src="https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/1.png"
-                            alt=""
+                            alt="Imagen cama blanca"
                         />
                         <h3>Annibale Colombo Sofa</h3>
                         <div class="card-info">
                             <p class="text-card">Quality fish steak, suitable for grilling, baking, or pan-searing.</p>
                             <div>
                                 <span class="text-rosa">Categoria</span>
-                                <button class="button-category">fourniture</button>
+                                <a class="button-category" href="#">fourniture</a>
                             </div>
                             <p class="text-price">Precio: <span class="span-price">S/ 2499.99</span></p>
                             <button class="button-add">Agregar al carrito</button>
@@ -104,7 +104,16 @@
         </main>
         <!-- footer  -->
         <footer>
-            <p>Todos los dereschos reservados</p>
+            <div class="content-footer container">
+                <h4 class="text-footer">Síguenos en redes:</h4>
+                <div>
+                    <img class="icon-social" src="./images/icon-whatsapp.png" alt="Icono de WhatsApp" />
+                    <img class="icon-social" src="./images/icono-tiktok.png" alt="Icono de Tiktok" />
+                    <img class="icon-social" src="./images/icon-instagram.png" alt="Icono de Instagram" />
+                    <img class="icon-social" src="./images/icon-facebook.png" alt="Icono de Instagram" />
+                </div>
+                <p class="text-copyrigth">© 2024 Market. Todos los dereschos reservados</p>
+            </div>
         </footer>
     </body>
 </html>
