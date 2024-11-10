@@ -1,116 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./styles/style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <!-- Link a boxicons  -->
-  <link rel="stylesheet" href="./styles/style.css" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Link a Google Fonts  -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playwrite+NG+Modern:wght@100..400&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+NG+Modern:wght@100..400&display=swap"
-    rel="stylesheet" />
-</head>
+    <body>
+        <header>
+            <div class="content-logo container">
+                <div class="box-icon-logo">
+                    <img class="image-logo" src="./images/icon-logo.webp" alt="" />
+                    <span class="span-logo">Market</span>
+                </div>
 
-<body>
-  <header class="header">
-    <div class="content-logo container">
-      <div class="logo">
-        <img class="image-logo" src="./images//store1.png" alt="" />
-        <span class="span-logo">Mi Market</span>
-      </div>
-      <i class="bx bxs-cart"></i>
-    </div>
-  </header>
+                <div class="box-icon-cart">
+                    <img class="icon-cart" src="./images/cart-blanco.png" alt="" />
+                    <span class="span-cart">0</span>
+                </div>
+            </div>
+        </header>
 
-  <main>
-    <section class="section">
+        <main>
+            <section>
+                <div class="content-inputs">
+                    <div class="box-input-search">
+                        <input id="search" type="search" placeholder="Buscar productos..." />
 
-      <div class="content-inputs">
+                        <img class="icon-search" src="./images/search-b.png"  alt="search" />
+                    </div>
+                    <select>
+                        <option value="" disabled selected>Todas las categoría</option>
+                        <option value="">Carnes</option>
+                        <option value="">Carnes</option>
+                        <option value="">Carnes</option>
+                    </select>
+                </div>
 
-        <div class="input-search">
-          <input  id="search" type="search" placeholder="Search Characters" />
-          <img src="./images/icons_search.png" class="icon-search" alt="search" />
-        </div>
+                <h2>Nuestros Productos</h2>
 
-        <select>
-          <option value="" disabled selected>Todas las categoría</option>
-          <option value="">Carnes</option>
-          <option value="">Carnes</option>
-          <option value="">Carnes</option>
-        </select>
+                <div class="content-cards container">
+                    <div class="card">
+                        <img
+                            class="card-img"
+                            src="https://cdn.dummyjson.com/products/images/groceries/Cat%20Food/1.png"
+                            alt=""
+                        />
+                        <h3>Cat Food</h3>
 
-      </div>
+                        <div class="card-info">
+                            <p class="text-card">
+                                <span class="text1"
+                                    >Quality fish steak, suitable for grilling, baking, or pan-searing.
+                                </span>
+                            </p>
 
-      <h2>Productos</h2>
+                            <div>
+                                <span class="text-rosa">Categoria</span>
+                                <button class="button-category">groceries</button>
+                            </div>
+                            <p class="text-price">Precio: <span class="span-price">S/ 8.99</span></p>
 
-      <div class="content-cards container">
-        <div class="card">
-          <img class="card-img" src="https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/1.png"
-            alt="" />
-          <div class="card-info">
-            <h3>Eggs</h3>
-            <p>Fresh eggs a versatile ingredient baking, cooking or breakfast</p>
-            <p>Categorias</p>
-            <link>dairy</link>
-            <p>Precio: S/ 2.99</p>
-          </div>
-          <button class="card-button">Agregar al carrito</button>
-        </div>
+                            <button class="button-add">Agregar al carrito</button>
+                        </div>
+                    </div>
 
-        <div class="card">
-          <img class="card-img" src="https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/1.png"
-            alt="" />
-          <div class="card-info">
-            <h3>fish Steak</h3>
-            <p>Quality fish steak, suitable for grilling, baking, or pan-searing.</p>
-            <p>Categorias</p>
-            <link>seafood</link>
-            <p>Precio: S/ 14.99</p>
-          </div>
-          <button class="card-button">Agregar al carrito</button>
-        </div>
+                    <div class="card">
+                        <img
+                            class="card-img"
+                            src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
+                            alt=""
+                        />
+                        <h3>Essence Mascara Lash Princess</h3>
+                        <div class="card-info">
+                            <p class="text-card">
+                                <span class="text1"
+                                    >Quality fish steak, suitable for grilling, baking, or pan-searing.
+                                </span>
+                            </p>
+                            <div>
+                                <span class="text-rosa">Categoria</span>
+                                <button class="button-category">beauty</button>
+                            </div>
+                            <p class="text-price">Precio: <span class="span-price">S/ 19.99</span></p>
+                            <button class="button-add">Agregar al carrito</button>
+                        </div>
+                    </div>
 
-        <div class="card">
-          <img class="card-img" src="https://cdn.dummyjson.com/products/images/groceries/Apple/1.png" alt="" />
-          <div class="card-info">
-            <h3>Green Bell Pepper</h3>
-            <p>
-              Fresh and vibrant green bell pepper, perfect for adding color and flavor to your
-              dishes.
-            </p>
-            <p>Categorias</p>
-            <link>Vegetables</link>
-            <p>Precio: S/ 1.29</p>
-          </div>
-          <button class="card-button">Agregar al carrito</button>
-        </div>
-        <div class="card">
-          <img class="card-img" src="https://cdn.dummyjson.com/products/images/groceries/Apple/1.png" alt="" />
-          <div class="card-info">
-            <h3>Green Bell Pepper</h3>
-            <p>
-              Fresh and vibrant green bell pepper, perfect for adding color and flavor to your
-              dishes.
-            </p>
-            <p>Categorias</p>
-            <link>Vegetables</link>
-            <p>Precio: S/ 1.29</p>
-          </div>
-          <button class="card-button">Agregar al carrito</button>
-        </div>
+                    <div class="card">
+                        <img
+                            class="card-img"
+                            src="https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/1.png"
+                            alt=""
+                        />
+                        <h3>Annibale Colombo Sofa</h3>
+                        <div class="card-info">
+                            <p class="text-card">
+                                <span class="text1"
+                                    >Quality fish steak, suitable for grilling, baking, or pan-searing.
+                                </span>
+                            </p>
+                            <div>
+                                <span class="text-rosa">Categoria</span>
+                                <button class="button-category">fourniture</button>
+                            </div>
+                            <p class="text-price">Precio: <span class="span-price">S/ 2499.99</span></p>
+                            <button class="button-add">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-      </div>
-
-    </section>
-  </main>
-
-  <footer>
-    <p>Todos los dereschos reservados</p>
-  </footer>
-
-</body>
-
+        <footer>
+            <p>Todos los dereschos reservados</p>
+        </footer>
+    </body>
 </html>
