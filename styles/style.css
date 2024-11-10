@@ -8,6 +8,7 @@ html {
     font-size: 62.5%;
     font-family: "Roboto", sans-serif;
     background-color: #f5f5f5;
+    color: #2b2727;
 }
 
 .container {
@@ -20,8 +21,8 @@ html {
 
 header {
     padding-top: 8px;
-    background-color: #252020ea;
-    box-shadow: 0 0 15px #0000008c;
+    background-color: #2b2727;
+    box-shadow: 0 0 12px #0000008c;
 }
 
 .content-logo {
@@ -29,30 +30,28 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
-    background-color: #25202015;
 }
+
 .box-icon-logo {
     display: flex;
     align-items: center;
     gap: 2px;
 }
+
 .image-logo {
-    width: 65px;
+    width: 52px;
 }
 
 .span-logo {
     font-weight: bold;
     color: #f5f5f5;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-family: "Playwrite NG Modern", cursive;
 }
 
 .box-icon-cart {
     position: relative;
-}
-
-.icon-cart {
-    font-size: 10px;
+    margin-right: 10px;
 }
 
 .span-cart {
@@ -68,6 +67,8 @@ header {
     border-radius: 100%;
     color: #fff;
 }
+
+
 
 /* ---------------------Main----------------------- */
 
@@ -90,10 +91,10 @@ header {
 .icon-search {
     position: absolute;
     right: 0;
-    top: 0%;
+    top: 0;
     padding: 7px;
     background: rgb(48, 46, 46);
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 8px 8px 0;
 }
 
 input, select {
@@ -109,9 +110,8 @@ select {
 
 h2 {
     text-align: center;
-    padding: 35px 85px 0;
-    font-size: 4rem;
-    color: #000;
+    padding: 20px 0px 0;
+    font-size: 2.5rem;
 }
 
 .content-cards {
@@ -130,6 +130,7 @@ h2 {
     padding: 0 0 20px;
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
         0px 1px 3px 0px rgba(0, 0, 0, 0.12) ;
+    gap: 80px;
 }
 
 .card-img {
@@ -144,8 +145,7 @@ h2 {
 
 h3 {
     font-size: 2rem;
-    color: #242424;
-    padding: 15px 0 10px 20px;
+    padding: 25px 0 15px 20px;
 }
 
 .card-info {
@@ -155,22 +155,10 @@ h3 {
     padding: 0px 20px 0px;
     font-size: 1.5rem;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.text-card {
-    font-size: 1.6rem;
-    color: #000;
-    font-weight: 700;
-}
-
-.text1 {
-    font-weight: 300;
 }
 
 .text-rosa, .text-price {
     font-weight: 700;
-    color: #000;
 }
 
 .button-category {
@@ -195,17 +183,28 @@ h3 {
     border: none;
     border-radius: 20px;
     font-size: 1.8rem;
-    gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* ---------------------Footer----------------------- */
 
 footer {
-    background-color: #242424;
+    background-color: #2b2727;
     padding: 30px 0;
 }
 
 
+@media(min-width:750px){
+    h2{
+        padding: 35px 85px 0;
+        font-size: 4rem;
+    }
+    .image-logo {
+        width: 65px;
+    }
+    .span-logo{
+        font-size: 2.8rem;
+    }
+    .box-icon-cart{
+        margin-right: 0px;
+    }
+}
