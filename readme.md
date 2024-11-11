@@ -44,4 +44,4 @@ Este proyecto presenta una estructura inicial para crear una interfaz intuitiva 
 
 ## Vista Previa del Proyecto
 
-![Vista previa del proyecto](./images/interfaz-readme1.png.jpg)
+![Vista previa del proyecto](./images//interfaz-readme1.png)
