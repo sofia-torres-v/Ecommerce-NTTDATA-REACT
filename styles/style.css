@@ -21,6 +21,7 @@ html {
 
 header {
     padding-top: 8px;
+    /* los colores deben estar en variables para reutilizarlos */
     background-color: #2b2727;
     background-color: #1f0d32;
     box-shadow: 0 0 10px #0000008c;
@@ -64,6 +65,7 @@ header {
     font-size: 1.5rem;
     top: -10px;
     right: -10px;
+    /* los colores deben estar en variables para reutilizarlos */
     background-color: #e75353;
     border-radius: 100%;
     color: #fff;
@@ -91,6 +93,7 @@ header {
     position: absolute;
     right: 0;
     top: 0;
+    /* los colores deben estar en variables para reutilizarlos */
     background: rgb(48, 46, 46);
     background: #1f0d32;
     border-radius: 0 12px 10px 0;
