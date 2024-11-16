@@ -1,24 +1,28 @@
 import {fetchData, fetchCategories} from "./js/api.js";
-import {renderAllData} from "./js/dom.js";
-import {renderCategory} from "./js/dom.js";
-import {selectProduct} from "./js/filters.js";
+import {renderAllData, renderCategory} from "./js/dom.js";
+import {selectProduct, searchProduct} from "./js/filters.js";
 
 const contentCards = document.querySelector(".content-cards");
 const categorySelect = document.querySelector("#category-select");
+const searchInput = document.querySelector("#search");
 
 async function initApp() {
     const productsData = await fetchData();
+    console.log(productsData)
     const productsCategories = await fetchCategories();
 
+    renderAllData(productsData, contentCards);
     renderCategory(productsCategories, categorySelect);
 
-    renderAllData(productsData, contentCards);
-
-    // Agrega el evento al select para filtrar productos
     categorySelect.addEventListener("change", () => {
         const selectedCategory = categorySelect.value;
         selectProduct(productsData, selectedCategory, contentCards);
     });
+
+    searchInput.addEventListener("input", (event) => {
+        const searchTerm = event.target.value.toLowerCase();
+        searchProduct(productsData, searchTerm, contentCards);  
+    })
 }
 
-initApp();
+initApp(); // Inicia mi aplicación
