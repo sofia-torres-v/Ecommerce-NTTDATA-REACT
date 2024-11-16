@@ -1,5 +1,6 @@
 // Renderizar los productos en la card
 export function renderAllData(products, container) {
+    container.innerHTML = ""; // Limpia el contenedor
     products.forEach((element) => {
         const card = document.createElement("div");
         card.classList.add("card");
@@ -48,20 +49,26 @@ export function renderAllData(products, container) {
 
         const iconCartButton = document.createElement('img');
         iconCartButton.classList.add('icon-cart-button');
-        iconCartButton.src = '../images/cart-regular.png';
+        iconCartButton.src = './src/assets/cart-button.png';
         buttonAdd.appendChild(iconCartButton)
 
         container.appendChild(card);
     });
 }
 
-// Renderizar las categorias en el select 
-export function renderCategory(categories, categorySelect) {
-  categorySelect.innerHTML = `<option value="all">Todas las categorías</option>`; // Opción "Todas"
-  categories.forEach(category => {
-      const option = document.createElement('option');
-      option.value = category;
-      option.textContent = category;
-      categorySelect.appendChild(option);
-  });
+// Renderiza las categorías en el select
+export function renderCategory(categories, selectElement) {
+    // Agregar opción para "todas las categorías"
+    const allOption = document.createElement("option");
+    allOption.value = "all";
+    allOption.textContent = "Todas las categorías";
+    selectElement.appendChild(allOption);
+
+    // Agregar categorías dinámicas
+    categories.forEach((category) => {
+        const option = document.createElement("option");
+        option.value = category; 
+        option.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+        selectElement.appendChild(option);
+    });
 }

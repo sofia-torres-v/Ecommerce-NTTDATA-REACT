@@ -33,5 +33,5 @@ function mapperProducts(products) {
 
 // Mapper para las categorías (API devuelve un objeto con más propiedades)
 function mapperCategories(categories) {
-    return categories.map((category) => category.name); 
+    return categories.map((category) => category.slug); 
 }
