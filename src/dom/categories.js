@@ -1,4 +1,5 @@
 // Renderizar las categorias en el select
+
 export function renderCategory(categories, categorySelect) {
   const allOption = document.createElement("option");
   allOption.value = "all";

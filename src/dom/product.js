@@ -1,4 +1,7 @@
+import {addToCart} from './cart.js'
+
 // Renderizar los productos en la card
+
 export function renderAllData(products, container) {
     products.forEach((element) => {
         const card = document.createElement("div");
@@ -40,6 +43,7 @@ export function renderAllData(products, container) {
         spanPrice.textContent = element.price;
         textPrice.appendChild(spanPrice);
 
+         // Botón Agregar al carrito
         const buttonAdd = document.createElement("button");
         buttonAdd.classList.add("button-add");
         buttonAdd.textContent = "Agregar ";
@@ -49,6 +53,11 @@ export function renderAllData(products, container) {
         iconCartButton.classList.add("icon-cart-button");
         iconCartButton.src = "./src/assets/cart-button.png";
         buttonAdd.appendChild(iconCartButton);
+
+          // Evento al botón de agregar
+          buttonAdd.addEventListener("click", () => {
+            addToCart();  // Actualizará el contador 
+        });
 
         container.appendChild(card);
     });

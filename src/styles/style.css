@@ -97,7 +97,8 @@ header {
 }
 
 .icon-search {
-    width: 49px;
+    height: 100%;
+    padding: 6px;
     position: absolute;
     right: 0;
     top: 0;
@@ -112,10 +113,10 @@ select {
     border-radius: 10px;
     outline: none;
     padding: 14px 6px;
-    font-size: 1.6rem;
     font-weight: bold;
     color: var(--color-input-border);
     border: 2px solid var(--color-input-border);
+    font-size: 1.2rem;
 }
 
 select {
@@ -135,6 +136,7 @@ h2 {
 }
 
 .content-cards {
+    min-height: 50vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -262,6 +264,20 @@ footer {
     border-top: 1px solid  var(--color-border-grey);
 }
 
+.message-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.message-text{
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--color-black);
+}
+.message-image{
+    width: 200px;
+}
+
 @media (min-width: 750px) {
     .image-logo {
         width: 65px;
@@ -271,6 +287,16 @@ footer {
     }
     .box-icon-cart {
         margin-right: 0px;
+    }
+    input,
+    select{
+        font-size: 1.7rem;
+    }  
+    .message-text{
+        font-size: 2.5rem;
+    } 
+    .message-image{
+        width: 250px;
     }
 }
 

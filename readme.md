@@ -1,47 +1,70 @@
-# Proyecto: Diseño de Interfaz - HTML y CSS
+# **Market App - Semana 2 JavaScript Challenge**
 
-Este proyecto presenta una estructura inicial para crear una interfaz intuitiva y profesional utilizando HTML y CSS. Se aplica un enfoque **mobile-first** con **Flexbox** y **media queries** para asegurar un diseño responsivo en pantallas más grandes. El proyecto continuará optimizándose a medida que avanza.
+## ✨ **Descripción del proyecto**
 
-## Paleta de Colores
+Este proyecto expande un sitio previamente creado con HTML y CSS, añadiendo funcionalidades dinámicas mediante JavaScript Vanilla, como la carga de productos y categorías desde APIs públicas, junto con mejoras para optimizar la experiencia del usuario.
 
-- **#1F0D32**: Color principal para el header (tono oscuro).
-- **#F5F5F5**: Color de fondo claro para destacar los elementos.
-- **#131212**: Tono oscuro para el footer.
-- **#045AA8**: Color del botón “Agregar al Carrito” (azul vibrante).
-- **#B31765**: Color del botón de categoría en las tarjetas de productos.
+---
 
-## Tipografía
+## ✅ **Requisitos mínimos cumplidos**
 
-- **Fuente**: Roboto
-- **Pesos**: 700 (headers y títulos), 400 y 300 (contenido y botones)
+- [x] Cargar dinámicamente todos los productos desde [DummyJSON Products](https://dummyjson.com/docs/products#products-all).
+- [x] Consumir servicios con `fetch`, `async` y `await` (sin librerías externas).
+- [x] Insertar contenido dinámico sin usar `innerHTML`.
+- [x] Filtrar productos en tiempo real al escribir en la caja de búsqueda.
+- [x] Cargar categorías dinámicamente desde [DummyJSON Categories](https://dummyjson.com/docs/products#products-categories).
+- [x] Filtrar productos por categorías seleccionadas.
+- [x] Incrementar un contador en el menú superior al agregar productos al carrito.
 
-## Componentes Principales
+---
 
-- **Header**: Contiene el logo y un icono de carrito. Enlaces de navegación se agregarán en el futuro.
-- **Barra de Búsqueda**: Campo de búsqueda y un selector para filtrar productos por categoría.
-- **Título Principal**: “Nuestros Productos” – Introduce las tarjetas de productos.
-- **Tarjetas de Productos**:
-  - Imagen del producto
-  - Nombre y descripción
-  - **Categoría**: Botón distintivo resaltado en color #B31765.
-  - Precio
-  - **Botón de Agregar al Carrito**: Con efecto de agrandamiento (hover).
-- **Footer**: Iconos de redes sociales con bordes del color de la categoría y efecto hover.
+## 🌟 **Funcionalidades adicionales**
 
-## Organización del Código
+1. **Mensajes personalizados**: 
+   - Se muestran mensajes cuando no hay productos disponibles en la categoría seleccionada o si no se encuentran resultados en la búsqueda.
 
-- **index.html**: Estructura HTML del proyecto.
-- **/style/style.css**: Archivo CSS que define los estilos.
-- **/images/**: Carpeta que contiene imágenes del logo y productos.
+2. **Sincronización entre filtros**:
+   - Las búsquedas funcionan en conjunto con la categoría seleccionada, mostrando solo los productos que coincidan con ambos filtros.
 
-## Ejecución Local
+3.  **Uso de mappers**:
+   - Para estructurar los datos de productos y categorías, garantizando que solo se manejen las propiedades necesarias, lo que mejora la eficiencia del código.
 
-1. Clona el repositorio:
-    ```bash
-    git clone https://github.com/sofia-torres-v/BOOTCAMP-FRONTEND-REACT-NTT.git
-    ```
-2. Abre el archivo **index.html** en tu navegador para ver el diseño.
 
-## Vista Previa del Proyecto
+---
 
-![Vista previa del proyecto](./images//interfaz-readme1.png)
+## 📂 **Estructura del proyecto**
+
+``` src/ 
+├── index.html
+├── app.js
+├── assets/
+├── api/
+│   └── fetch.js
+├── dom/
+│   ├── cart.js
+│   ├── categories.js
+│   ├── message.js
+│   └── product.js
+├── utils/
+│   └── filter.js
+├── styles/
+│   └── style.css
+└── vite.config.js
+```
+
+---
+
+## 🚀 **Cómo correr el proyecto**
+
+1. **Clona el repositorio**:
+   ```bash
+   git clone https://github.com/sofia-torres-v/BOOTCAMP-FRONTEND-REACT-NTT.git
+   cd BOOTCAMP-FRONTEND-REACT-NTT
+
+2. **Instala las dependencias: Asegúrate de tener Node.js instalado, luego ejecuta**: 
+   ```bash
+    npm install
+3. **Inicia el servidor de desarrollo**:
+     ```bash
+     npm run dev
+4. **Abre la aplicación en tu navegador**
