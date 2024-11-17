@@ -26,9 +26,8 @@ Este proyecto expande un sitio previamente creado con HTML y CSS, añadiendo fun
 2. **Sincronización entre filtros**:
    - Las búsquedas funcionan en conjunto con la categoría seleccionada, mostrando solo los productos que coincidan con ambos filtros.
 
-3.  **Uso de mappers**:
-   - Para estructurar los datos de productos y categorías, garantizando que solo se manejen las propiedades necesarias, lo que mejora la eficiencia del código.
-
+3. **Uso de mappers**:
+   - Se estructuran los datos de productos y categorías, manejando solo las propiedades necesarias para optimizar el código.
 
 ---
 

@@ -3,7 +3,7 @@ export async function fetchData() {
     try {
         const response = await fetch("https://dummyjson.com/products");
         if (!response.ok) {
-            throw new Error("Nose pudo obtener la data de la Api");
+            throw new Error("No se pudo obtener la data de la Api");
         }
         const dataProducts = await response.json();
         return mapperProducts(dataProducts.products);
@@ -18,7 +18,7 @@ export async function fetchCategories() {
     try {
         const response = await fetch("https://dummyjson.com/products/categories");
         if (!response.ok) {
-            throw new Error("Nose pudo obtener la data de la Api");
+            throw new Error("No se pudo obtener la data de la Api");
         }
         const categoryProducts = await response.json();
         return mapperCategories(categoryProducts);
