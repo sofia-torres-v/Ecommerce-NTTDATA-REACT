@@ -1,30 +1,33 @@
-import { fetchData, fetchCategories } from "./js/api.js";
-import { renderAllData, renderCategory } from "./js/dom.js";
-import { selectProduct, searchProduct } from "./js/filters.js";
+import {fetchData, fetchCategories} from "./api/fetch.js";
+import {renderAllData} from "./dom/product";
+import {renderCategory} from "./dom/categories";
+import {selectProduct, searchProduct} from "./utils/filter.js";
+import {showMessage} from "./dom/message.js";
 
 const contentCards = document.querySelector(".content-cards");
 const inputSelect = document.querySelector("#category-select");
 const searchInput = document.querySelector("#search");
 
-let selectedCategory = "all"; // Mantiene la categoría seleccionada
+let selectedCategory = "all"; // Categoría seleccionada
 
 async function initApp() {
-    const productsData = await fetchData();
-    const productsCategories = await fetchCategories();
 
+    const productsData = await fetchData(); 
+    const productsCategories = await fetchCategories(); 
+
+    renderAllData(productsData, contentCards); 
     renderCategory(productsCategories, inputSelect);
-    renderAllData(productsData, contentCards);
 
-    // Evento al select para filtrar productos por categoría
+    // Filtrar productos por categoría
     inputSelect.addEventListener("change", () => {
         selectedCategory = inputSelect.value;
-        const filteredProducts = selectProduct(productsData, selectedCategory);
+        const filteredProducts = selectProduct(productsData, selectedCategory, contentCards);
         searchProduct(filteredProducts, searchInput.value, contentCards);
     });
 
-    // Evento al input para filtrar productos por búsqueda
+    // Filtrar productos por búsqueda
     searchInput.addEventListener("input", () => {
-        const filteredProducts = selectProduct(productsData, selectedCategory);
+        const filteredProducts = selectProduct(productsData, selectedCategory, contentCards);
         searchProduct(filteredProducts, searchInput.value, contentCards);
     });
 }
