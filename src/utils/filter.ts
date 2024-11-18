@@ -1,10 +1,11 @@
-import { renderAllData } from "../dom/product.js";
+import { renderAllData } from "../dom/products.js";
 import { showMessage } from "../dom/message.js";
+import { Product } from "../types/product.js";
 
 
 // Filtrar productos por categoría 
 
-export function selectProduct(products, selectedCategory, container, imageUrl) {
+export function selectProduct(products:Product[], selectedCategory: string, container: HTMLElement, imageUrl: string): Product[] {
     container.innerHTML = "";
     const filteredProducts =
         selectedCategory === "all" ? products : products.filter((product) => product.category === selectedCategory);
@@ -18,7 +19,7 @@ export function selectProduct(products, selectedCategory, container, imageUrl) {
 
 // Filtrar productos por término de búsqueda 
 
-export function searchProduct(products, searchTerm, container, imageUrl) {
+export function searchProduct(products:Product[], searchTerm: string, container: HTMLElement, imageUrl:string): void {
     container.innerHTML = "";
     const searchedProducts = products.filter((product) =>
         product.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -34,7 +35,7 @@ export function searchProduct(products, searchTerm, container, imageUrl) {
 
 // Inicializar los filtros y eventos 
 
-export function initializeFilters(productsData, contentCards, inputSelect, searchInput) {
+export function initializeFilters(productsData: Product[], contentCards: HTMLElement, inputSelect: HTMLSelectElement, searchInput: HTMLInputElement) {
     let selectedCategory = "all";
     const imageUrl = '/src/assets/error.png';
 
@@ -55,3 +56,4 @@ export function initializeFilters(productsData, contentCards, inputSelect, searc
 
     renderAllData(productsData, contentCards);
 }
+
