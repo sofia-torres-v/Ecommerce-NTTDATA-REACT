@@ -1,54 +1,42 @@
-# **Market App - Semana 2 JavaScript Challenge**
+# **Market App - Semana TypeScript Challenge**
 
-## ✨ **Descripción del proyecto**
+## ✨ **Descripción del proyecto**  
+Este proyecto amplía y mejora el desarrollo del desafío anterior migrando todo el código de JavaScript a TypeScript. Se optimizó la estrura y mejores prácticas en modularización.
 
-Este proyecto expande un sitio previamente creado con HTML y CSS, añadiendo funcionalidades dinámicas mediante JavaScript Vanilla, como la carga de productos y categorías desde APIs públicas, junto con mejoras para optimizar la experiencia del usuario.
-
----
-
-## ✅ **Requisitos mínimos cumplidos**
-
-- [x] Cargar dinámicamente todos los productos desde [DummyJSON Products](https://dummyjson.com/docs/products#products-all).
-- [x] Consumir servicios con `fetch`, `async` y `await` (sin librerías externas).
-- [x] Insertar contenido dinámico sin usar `innerHTML`.
-- [x] Filtrar productos en tiempo real al escribir en la caja de búsqueda.
-- [x] Cargar categorías dinámicamente desde [DummyJSON Categories](https://dummyjson.com/docs/products#products-categories).
-- [x] Filtrar productos por categorías seleccionadas.
-- [x] Incrementar un contador en el menú superior al agregar productos al carrito.
-
----
-
-## 🌟 **Funcionalidades adicionales**
-
-1. **Mensajes personalizados**: 
-   - Se muestran mensajes cuando no hay productos disponibles en la categoría seleccionada o si no se encuentran resultados en la búsqueda.
-
-2. **Sincronización entre filtros**:
-   - Las búsquedas funcionan en conjunto con la categoría seleccionada, mostrando solo los productos que coincidan con ambos filtros.
-
-3. **Uso de mappers**:
-   - Se estructuran los datos de productos y categorías, manejando solo las propiedades necesarias para optimizar el código.
-
----
+## ✅ **Requisitos cumplidos**  
+- [x] Proyecto desarrollado con **Vite** como bundler.  
+- [x] Migración completa del proyecto de JavaScript a **TypeScript**.  
+- [x] Uso de **interfaces**  para definir estructuras y tipos.  
+- [x] Implementación de **mappers** para transformar las respuestas de las APIs y trabajar solo con las propiedades necesarias.  
+- [x] Modularización, separando la lógica de negocio, los tipos y las interfaces en carpetas específicas.  
+- [x] Filtrado dinámico de productos por categoría y búsqueda en tiempo real.
+##  **Funcionalidad adicional**   
+- [x] Sincronización de filtros de búsqueda y categorías seleccionadas.  
+- [x] Mensajes personalizados para resultados de búsqueda vacíos o categorías sin productos.  
 
 ## 📂 **Estructura del proyecto**
 
 ``` src/ 
 ├── index.html
-├── app.js
+├── app.ts
 ├── assets/
 ├── api/
-│   └── fetch.js
+│   └── fetch.ts
+|   └── mappers.ts
 ├── dom/
-│   ├── cart.js
-│   ├── categories.js
-│   ├── message.js
+│   ├── cart.ts
+│   ├── categories.ts
+│   ├── message.ts
+│   └── products.ts
+├── types/
 │   └── product.js
+|   └── category.ts
 ├── utils/
 │   └── filter.js
+|   └── format.ts
 ├── styles/
 │   └── style.css
-└── vite.config.js
+└── tsconfig.js
 ```
 
 ---

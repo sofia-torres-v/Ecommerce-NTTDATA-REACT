@@ -4,7 +4,6 @@ import { Product } from "../types/product.js";
 
 
 // Filtrar productos por categoría 
-
 export function selectProduct(products:Product[], selectedCategory: string, container: HTMLElement, imageUrl: string): Product[] {
     container.innerHTML = "";
     const filteredProducts =
@@ -18,7 +17,6 @@ export function selectProduct(products:Product[], selectedCategory: string, cont
 
 
 // Filtrar productos por término de búsqueda 
-
 export function searchProduct(products:Product[], searchTerm: string, container: HTMLElement, imageUrl:string): void {
     container.innerHTML = "";
     const searchedProducts = products.filter((product) =>
@@ -34,7 +32,6 @@ export function searchProduct(products:Product[], searchTerm: string, container:
 
 
 // Inicializar los filtros y eventos 
-
 export function initializeFilters(productsData: Product[], contentCards: HTMLElement, inputSelect: HTMLSelectElement, searchInput: HTMLInputElement) {
     let selectedCategory = "all";
     const imageUrl = '/src/assets/error.png';
