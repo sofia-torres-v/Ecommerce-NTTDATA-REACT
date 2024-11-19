@@ -2,7 +2,6 @@ import { renderAllData } from "../dom/products.js";
 import { showMessage } from "../dom/message.js";
 import { Product } from "../types/product.js";
 
-
 // Filtrar productos por categoría 
 export function selectProduct(products:Product[], selectedCategory: string, container: HTMLElement, imageUrl: string): Product[] {
     container.innerHTML = "";
@@ -14,7 +13,6 @@ export function selectProduct(products:Product[], selectedCategory: string, cont
     }
     return filteredProducts;
 }
-
 
 // Filtrar productos por término de búsqueda 
 export function searchProduct(products:Product[], searchTerm: string, container: HTMLElement, imageUrl:string): void {
@@ -29,7 +27,6 @@ export function searchProduct(products:Product[], searchTerm: string, container:
         renderAllData(searchedProducts, container);
     }
 }
-
 
 // Inicializar los filtros y eventos 
 export function initializeFilters(productsData: Product[], contentCards: HTMLElement, inputSelect: HTMLSelectElement, searchInput: HTMLInputElement) {
