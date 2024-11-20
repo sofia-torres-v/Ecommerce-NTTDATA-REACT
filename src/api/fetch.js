@@ -6,6 +6,7 @@ export async function fetchData() {
             throw new Error("No se pudo obtener la data de la Api");
         }
         const dataProducts = await response.json();
+        console.log(dataProducts)
         return mapperProducts(dataProducts.products);
 
     } catch (error) {
@@ -21,6 +22,7 @@ export async function fetchCategories() {
             throw new Error("No se pudo obtener la data de la Api");
         }
         const categoryProducts = await response.json();
+        console.log(categoryProducts);
         return mapperCategories(categoryProducts);
         
     } catch (error) {
@@ -40,5 +42,5 @@ function mapperProducts(products) {
 
 // Mapper para categorías (API devuelve un objeto con más propiedades)
 function mapperCategories(categories) {
-    return categories.map((category) => category.slug);
+    return categories.map((category) => category.name);
 }

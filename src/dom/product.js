@@ -29,7 +29,7 @@ export function renderAllData(products, container) {
 
         const buttonCategory = document.createElement("a");
         buttonCategory.classList.add("button-category");
-        buttonCategory.textContent = element.category;
+        buttonCategory.textContent = element.category.charAt(0).toUpperCase() + element.category.slice(1).toLowerCase();
         contentCategorie.appendChild(buttonCategory);
         cardInfo.appendChild(contentCategorie);
 
@@ -43,7 +43,7 @@ export function renderAllData(products, container) {
         spanPrice.textContent = element.price;
         textPrice.appendChild(spanPrice);
 
-         // Botón Agregar al carrito
+        // Botón Agregar al carrito
         const buttonAdd = document.createElement("button");
         buttonAdd.classList.add("button-add");
         buttonAdd.textContent = "Agregar ";

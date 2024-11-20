@@ -1,9 +1,7 @@
 import { renderAllData } from "../dom/product.js";
 import { showMessage } from "../dom/message.js";
 
-
 // Filtrar productos por categoría 
-
 export function selectProduct(products, selectedCategory, container, imageUrl) {
     container.innerHTML = "";
     const filteredProducts =
@@ -15,9 +13,7 @@ export function selectProduct(products, selectedCategory, container, imageUrl) {
     return filteredProducts;
 }
 
-
 // Filtrar productos por término de búsqueda 
-
 export function searchProduct(products, searchTerm, container, imageUrl) {
     container.innerHTML = "";
     const searchedProducts = products.filter((product) =>
@@ -31,9 +27,7 @@ export function searchProduct(products, searchTerm, container, imageUrl) {
     }
 }
 
-
 // Inicializar los filtros y eventos 
-
 export function initializeFilters(productsData, contentCards, inputSelect, searchInput) {
     let selectedCategory = "all";
     const imageUrl = '/src/assets/error.png';
