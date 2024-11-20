@@ -5,7 +5,7 @@ import { showMessage } from "../dom/message.js";
 export function selectProduct(products, selectedCategory, container, imageUrl) {
     container.innerHTML = "";
     const filteredProducts =
-        selectedCategory === "all" ? products : products.filter((product) => product.category === selectedCategory);
+        selectedCategory === "all" ? products : products.filter((product) =>  product.category.toLowerCase() === selectedCategory.toLowerCase());
 
     if (filteredProducts.length === 0) {
         showMessage(container, "No encontramos productos en esta categoría", imageUrl);
@@ -29,7 +29,7 @@ export function searchProduct(products, searchTerm, container, imageUrl) {
 
 // Inicializar los filtros y eventos 
 export function initializeFilters(productsData, contentCards, inputSelect, searchInput) {
-    let selectedCategory = "all";
+    let selectedCategory = "all"; //no hay ningún filtro aplicado (mostramos todos los productos)
     const imageUrl = '/src/assets/error.png';
 
     inputSelect.addEventListener("change", () => {

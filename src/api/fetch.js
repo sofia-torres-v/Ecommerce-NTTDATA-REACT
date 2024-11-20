@@ -1,3 +1,5 @@
+import { mapperProducts, mapperCategories } from "./mappers";
+
 // Obtener todos los productos
 export async function fetchData() {
     try {
@@ -6,7 +8,7 @@ export async function fetchData() {
             throw new Error("No se pudo obtener la data de la Api");
         }
         const dataProducts = await response.json();
-        console.log(dataProducts)
+
         return mapperProducts(dataProducts.products);
 
     } catch (error) {
@@ -30,17 +32,3 @@ export async function fetchCategories() {
     }
 }
 
-// Mapper para estructurar datos que necesito
-function mapperProducts(products) {
-    return products.map((product) => ({
-        title: product.title,
-        thumbnail: product.thumbnail,
-        category: product.category,
-        price: product.price,
-    }));
-}
-
-// Mapper para categorías (API devuelve un objeto con más propiedades)
-function mapperCategories(categories) {
-    return categories.map((category) => category.name);
-}

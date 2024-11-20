@@ -8,10 +8,12 @@ const searchInput = document.querySelector("#search");
 
 async function initApp() {
     const productsData = await fetchData();
+    
     const productsCategories = await fetchCategories();
 
+    initializeFilters(productsData, contentCards, inputSelect, searchInput);//dentro llama a renderAllData
+
     renderCategory(productsCategories, inputSelect);
-    initializeFilters(productsData, contentCards, inputSelect, searchInput);
 }
 
 initApp();
