@@ -1,5 +1,5 @@
 let cartCount: number = 0; 
-const cartElement = document.querySelector("#cart-counter") as HTMLElement | null;
+const cartElement = document.querySelector<HTMLElement>("#cart-counter");
 
 export function addToCart() {
     cartCount++; 
