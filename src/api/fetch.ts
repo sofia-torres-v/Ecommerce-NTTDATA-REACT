@@ -9,7 +9,6 @@ export async function fetchData(): Promise<Product[]> {
             throw new Error("No se pudo obtener la data de la Api");
         }
         const dataProducts = await response.json();
-        console.log(dataProducts)
         return mapperProducts(dataProducts.products);
 
     } catch (error) {
@@ -26,7 +25,6 @@ export async function fetchCategories(): Promise<string[]> {
             throw new Error("No se pudo obtener la data de la Api");
         }
         const categoryProducts = await response.json();
-        console.log(categoryProducts)
         return mapperCategories(categoryProducts);
         
     } catch (error) {

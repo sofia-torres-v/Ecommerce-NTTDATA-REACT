@@ -5,6 +5,8 @@ import { Product } from "../types/product.js";
 // Filtrar productos por categoría 
 export function selectProduct(products:Product[], selectedCategory: string, container: HTMLElement, imageUrl: string): Product[] {
     container.innerHTML = "";
+    // usemos enum para palabras m'agicas
+    // cambiar el ternario por if
     const filteredProducts =
         selectedCategory === "all" ? products : products.filter((product) => product.category === selectedCategory);
 

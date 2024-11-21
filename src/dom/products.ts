@@ -4,7 +4,7 @@ import { capitalizeFirstLetter } from '../utils/format.js';
 import { Product } from '../types/product.js';
 
 // Renderizar los productos en la card
-
+// el nombre podr'ia ser m'as enfocado a lo que hace, en este caso renderAllProducts, data es muu general
 export function renderAllData(products: Product[], container: HTMLElement): void {
     products.forEach((element) => {
 
