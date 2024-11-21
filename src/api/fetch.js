@@ -1,3 +1,5 @@
+// en lugar de fetch podr'ia llamarse product.service.js o categories.service.js
+
 // Obtener todos los productos
 export async function fetchData() {
     try {
@@ -28,6 +30,7 @@ export async function fetchCategories() {
     }
 }
 
+// esto deber'ia ir en otro archivo ya que sino se mezclan responsabilidades
 // Mapper para estructurar datos que necesito
 function mapperProducts(products) {
     return products.map((product) => ({
@@ -38,6 +41,7 @@ function mapperProducts(products) {
     }));
 }
 
+// esto deber'ia ir en otro archivo ya que sino se mezclan responsabilidades
 // Mapper para categorías (API devuelve un objeto con más propiedades)
 function mapperCategories(categories) {
     return categories.map((category) => category.slug);

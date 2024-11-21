@@ -9,6 +9,7 @@ export function renderCategory(categories, categorySelect) {
   categories.forEach((category) => {
       const option = document.createElement("option");
       option.value = category;
+      // esto se podr'ia reemplazar con un text-transform: capitalize; en css
       option.textContent = category.charAt(0).toUpperCase() + category.slice(1);
       categorySelect.appendChild(option);
   });

@@ -6,6 +6,8 @@ import { showMessage } from "../dom/message.js";
 
 export function selectProduct(products, selectedCategory, container, imageUrl) {
     container.innerHTML = "";
+    // no palabras magicas estos valores escritos manualmente deben estar en enum para evitar errores
+    // usemos un if cl'asico los ternarios son para condicionales simples usarlos para validaciones que tienen dentro cada evaluaci'on l'ogica compleja se vuelve tedioso de leer
     const filteredProducts =
         selectedCategory === "all" ? products : products.filter((product) => product.category === selectedCategory);
 
@@ -36,6 +38,7 @@ export function searchProduct(products, searchTerm, container, imageUrl) {
 
 export function initializeFilters(productsData, contentCards, inputSelect, searchInput) {
     let selectedCategory = "all";
+    // esto podr'ia estar en una constante global
     const imageUrl = '/src/assets/error.png';
 
     inputSelect.addEventListener("change", () => {
