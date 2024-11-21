@@ -1,0 +1,45 @@
+.nav__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.nav__logo-box {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.nav__logo-image {
+    width: 52px;
+}
+
+.nav__logo-text {
+    font-weight: bold;
+    font-size: 2.4rem;
+    font-family: "Playwrite NG Modern", cursive;
+    color: var(--color-white);
+}
+
+.nav__cart-box {
+    position: relative;
+    margin-right: 10px;
+}
+
+.nav__cart-icon {
+    color: white;
+    font-size: 3.5rem;
+}
+
+.nav__cart-counter {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    padding: 0 8px;
+    border-radius: 100%;
+    color: var(--color-white);
+    background-color: var(--color-icon);
+}
