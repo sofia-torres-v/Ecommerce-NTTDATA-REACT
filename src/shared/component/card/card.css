@@ -1,0 +1,90 @@
+.card {
+    flex: 0 1 250px;
+    max-width: 100%;
+    position: relative;
+    border-radius: 10px;
+    border-radius: 20px;
+    padding: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--color-border-card);
+    background-color: var(--color-white);
+}
+
+.card:hover {
+    border: 1px solid var(--color-hover-border);
+}
+
+.card__discount {
+    width: 60px;
+    padding: 4px 10px 5px 4px;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    border-radius: 10px 0 0 5px;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+    background-color: var(--color-icon);
+}
+
+.card__discount-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+.card__image {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    background-color: var(--color-bg-image);
+}
+
+.card__title {
+    font-size: 1.8rem;
+    min-height: 68px;
+    padding: 20px 0px 5px;
+}
+
+.card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 1.8rem;
+    padding: 0 0 10px;
+    font-weight: 400;
+}
+
+.card__info-price {
+    font-size: 2.1rem;
+    color: var(--color-icon);
+}
+
+.card__info-category {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.card__button {
+    width: 100%;
+    max-width: 215px;
+    margin: 10px auto 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 5px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.3s ease;
+    color: var(--color-white);
+    background-color: var(--color-button-primary);
+}
+
+.card__button:hover {
+    transform: scale(0.98);
+}
+
+.card__button-icon {
+    font-size: 2.5rem;
+}

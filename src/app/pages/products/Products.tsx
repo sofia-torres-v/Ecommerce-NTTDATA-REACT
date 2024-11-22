@@ -1,11 +1,21 @@
-
+import {useContext} from "react";
+import {ProductContext} from "../../../store/contexts/ProductContext";
+import Card from "../../../shared/component/card/Card";
+import './products.css';
 
 const Products = () => {
-  return (
-    <div>
-      <h1>Bienvenidos a Products</h1>
-    </div>
-  )
-}
+    const {productsData} = useContext(ProductContext);
 
-export default Products
+    return (
+        <>
+            <h1 className="products__title" >Nuestros Productos</h1>
+            <div className="products__content container">
+                {productsData.map((product) => (
+                    <Card key={product.title} product={product} />
+                ))}
+            </div>
+        </>
+    );
+};
+
+export default Products;

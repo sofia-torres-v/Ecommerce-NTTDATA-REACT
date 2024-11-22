@@ -1,3 +1,17 @@
+:root {
+    --color-bg: #fff;
+    --color-primary-bg: #140920;
+    --color-bg-image: #e0e0e0;
+    --color-input-border: #170925e1;
+    --color-hover-border: #3e95e6de;
+    --color-border-grey:  #2c2a2a86;
+    --color-border-card:  rgb(201, 190, 190);
+    --color-button-primary: #06539b;
+    --color-button-category: #b31765;
+    --color-white: #fff;
+    --color-black: #000000ee;
+    --color-icon: #db4444;
+}
 * {
     margin: 0;
     padding: 0;
