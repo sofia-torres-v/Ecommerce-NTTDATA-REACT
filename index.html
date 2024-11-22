@@ -2,63 +2,17 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Market - Tienda Online</title>
-        <link rel="stylesheet" href="./src/styles/style.css" />
+        <title>Market</title>
         <!-- Link a Google Fonts  -->
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playwrite+NG+Modern:wght@100..400&display=swap"
             rel="stylesheet"
         />
-        <script src="./src/app.ts" defer type="module"></script>
     </head>
-
     <body>
-        <!-- header  -->
-        <header>
-            <div class="content-logo container">
-                <div class="box-icon-logo">
-                    <img class="image-logo" src="./src/assets/icon-logo.webp" alt="Logo de Market" />
-                    <span class="span-logo">Market</span>
-                </div>
-                <div class="box-icon-cart">
-                    <img class="icon-cart" src="./src/assets/cart-header.png" alt="Icono Carrito de compras" />
-                    <span id="cart-counter" class="span-cart">0</span>
-                </div>
-            </div>
-        </header>
-        <!-- main  -->
-        <main>
-            <section>
-                <div class="content-inputs">
-                    <div class="box-input-search">
-                        <input id="search" type="search" placeholder="Buscar productos..." />
-                        <img class="icon-search" src="./src/assets/search-b.png" alt="Icono de buscador" />
-                    </div>
-                    <select id="category-select">
-                    </select>
-                </div>
-
-                <div>
-                    <h2 class="container">Nuestros Productos</h2>
-                    <div class="content-cards container">
-                        <!-- Creando desde js  -->
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!-- footer  -->
-        <footer>
-            <div class="content-footer container">
-                <p class="text-footer">Síguenos en redes:</p>
-                <div>
-                    <img class="icon-social" src="./src/assets/icon-whatsapp.png" alt="Icono de WhatsApp" />
-                    <img class="icon-social" src="./src/assets/icono-tiktok.png" alt="Icono de Tiktok" />
-                    <img class="icon-social" src="./src/assets/icon-instagram.png" alt="Icono de Instagram" />
-                    <img class="icon-social" src="./src/assets/icon-facebook.png" alt="Icono de facebook" />
-                </div>
-            </div>
-            <p class="text-copyrigth">© 2024 Market. Todos los derechos reservados</p>
-        </footer>
+        <div id="root"></div>
+        <script type="module" src="/src/main.tsx"></script>
     </body>
 </html>

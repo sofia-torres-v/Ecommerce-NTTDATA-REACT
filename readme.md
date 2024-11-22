@@ -1,57 +1,50 @@
-# **Market App - Semana TypeScript Challenge**
+# React + TypeScript + Vite
 
-## ✨ **Descripción del proyecto**  
-Este proyecto amplía y mejora el desarrollo del desafío anterior migrando todo el código de JavaScript a TypeScript. Se optimizó la estrura y mejores prácticas en modularización.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## ✅ **Requisitos cumplidos**  
-- [x] Proyecto desarrollado con **Vite** como bundler.  
-- [x] Migración completa del proyecto de JavaScript a **TypeScript**.  
-- [x] Uso de **interfaces**  para definir estructuras y tipos.  
-- [x] Implementación de **mappers** para transformar las respuestas de las APIs y trabajar solo con las propiedades necesarias.  
-- [x] Modularización, separando la lógica de negocio, los tipos y las interfaces en carpetas específicas.  
-- [x] Filtrado dinámico de productos por categoría y búsqueda en tiempo real.
-##  **Funcionalidad adicional**   
-- [x] Sincronización de filtros de búsqueda y categorías seleccionadas.  
-- [x] Mensajes personalizados para resultados de búsqueda vacíos o categorías sin productos.  
+Currently, two official plugins are available:
 
-## 📂 **Estructura del proyecto**
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-``` src/ 
-├── index.html
-├── app.ts
-├── assets/
-├── api/
-│   └── fetch.ts
-|   └── mappers.ts
-├── dom/
-│   ├── cart.ts
-│   ├── categories.ts
-│   ├── message.ts
-│   └── products.ts
-├── types/
-│   └── product.js
-|   └── category.ts
-├── utils/
-│   └── filter.js
-|   └── format.ts
-├── styles/
-│   └── style.css
-└── tsconfig.js
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+- Configure the top-level `parserOptions` property like this:
+
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
----
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-## 🚀 **Cómo correr el proyecto**
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-1. **Clona el repositorio**:
-   ```bash
-   git clone https://github.com/sofia-torres-v/BOOTCAMP-FRONTEND-REACT-NTT.git
-   cd BOOTCAMP-FRONTEND-REACT-NTT
-
-2. **Instala las dependencias: Asegúrate de tener Node.js instalado, luego ejecuta**: 
-   ```bash
-    npm install
-3. **Inicia el servidor de desarrollo**:
-     ```bash
-     npm run dev
-4. **Abre la aplicación en tu navegador**
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```

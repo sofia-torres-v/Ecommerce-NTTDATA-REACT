@@ -1,0 +1,33 @@
+.products__content {
+  min-height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  row-gap: 40px;
+  padding: 45px 0 60px;
+}
+
+.products__inputs {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 45px 25px 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.products__title{
+  font-size: 2.8rem;
+  text-align: center;
+  color: var(--color-primary-bg);
+}
+
+@media (min-width: 1024px) {
+  .products__title{
+      text-align: start;
+      padding:0 0 0 50px;
+      font-size: 3.5rem;
+  }
+}
