@@ -1,7 +1,6 @@
-select {
+.select-category {
   width: 100%;
   border-radius: 10px;
-  border: 1px solid #1f0d32;
   outline: none;
   padding: 14px 6px;
   font-size: 1.3rem;
@@ -11,8 +10,7 @@ select {
 }
 
 @media(min-width:750px){
-  select{
-    width: 100%;
+  .select-category{
     font-size: 1.6rem;
   }
 }

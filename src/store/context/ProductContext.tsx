@@ -3,7 +3,7 @@ import { ProductContextType } from "../domains/product.domains";
 import { fetchProducts } from "../../services/productService";
 import { mapperProducts } from "../mappers/productMapper";
 
-// Valor inicial para evitar null
+// Crear contexto siguiendo la interfaz definida
 export const ProductContext = createContext<ProductContextType>({
   products: [],
   fetchProducts: () => {},

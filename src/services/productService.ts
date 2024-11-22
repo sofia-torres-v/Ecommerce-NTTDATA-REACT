@@ -18,7 +18,6 @@ export async function fetchCategories(){
             throw new Error("No se pudo obtener la data de la Api");
         }
         const data = await response.json();
-        console.log(data)
         return data;
     } catch (error) {
         console.error("Error al cargar las categorías:", error);

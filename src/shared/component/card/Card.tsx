@@ -1,7 +1,6 @@
 import {LuShoppingCart} from "react-icons/lu";
 import {ProductResponse} from "../../../store/domains/product.domains";
-import {roundPercentage} from '../../utils/formatPrice';
-
+import {roundPercentage} from "../../utils/formatPrice";
 import "./card.css";
 
 const Card = ({product}: {product: ProductResponse}) => {

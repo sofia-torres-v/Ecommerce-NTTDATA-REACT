@@ -4,9 +4,9 @@ import "./inputCategory.css";
 const InputCategory = () => {
     return (
         <>
-            <div className="box-input-search">
-                <input id="search" type="search" placeholder="Buscar productos..." />
-                <IoIosSearch className="icon-search" />
+            <div className="input-category">
+                <input className="input-category__input" id="search" type="search" placeholder="Buscar productos..." />
+                <IoIosSearch className="input-category__icon" />
             </div>
         </>
     );

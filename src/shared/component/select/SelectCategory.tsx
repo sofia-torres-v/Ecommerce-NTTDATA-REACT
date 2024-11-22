@@ -3,8 +3,8 @@ import './selectCategory.css';
 const SelectCategory = () => {
   return (
     <>
-      <select name="" id="">
-        <option value="">Todas las categorías</option>
+      <select className='select-category' name="" id="">
+        <option className='select-category__select' value="">Todas las categorías</option>
       </select>
     </>
   )

@@ -1,4 +1,3 @@
-// Interfaz para describir un producto
 export interface ProductResponse {
   category: string;
   discountPercentage: number;
