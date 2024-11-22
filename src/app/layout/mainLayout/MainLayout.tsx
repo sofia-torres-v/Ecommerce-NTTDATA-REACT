@@ -6,15 +6,15 @@ import Footer from "../../../shared/component/footer/Footer";
 const MainLayout = () => {
     return (
         <>
-            <header className="header">
+            <header className="main-layout__header">
                 <Nav />
             </header>
-            <main>
+            <main className="main-layout__main">
                 <section className="container">
                     <Outlet />
                 </section>
             </main>
-            <footer>
+            <footer className="main-layout__footer">
                 <Footer />
             </footer>
         </>
