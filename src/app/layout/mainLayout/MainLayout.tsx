@@ -6,11 +6,11 @@ import Footer from "../../../shared/component/footer/Footer";
 const MainLayout = () => {
     return (
         <>
-            <header>
+            <header className="header">
                 <Nav />
             </header>
             <main>
-                <section>
+                <section className="container">
                     <Outlet />
                 </section>
             </main>

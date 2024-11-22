@@ -1,16 +1,11 @@
 import { createContext, useEffect, ReactNode, useState } from "react";
-import { ProductResponse } from "../domains/product.domains";
+import { ProductContextType } from "../domains/product.domains";  
 import { fetchProducts } from "../../services/productService";
 import { mapperProducts } from "../mappers/productMapper";
 
-interface ProductContextType {
-  productsData: ProductResponse[];
-  fetchProducts: () => void;
-}
-
-// valor para evitar null
+// Valor inicial para evitar null
 export const ProductContext = createContext<ProductContextType>({
-  productsData: [],
+  products: [],
   fetchProducts: () => {},
 });
 
@@ -19,13 +14,13 @@ interface ProductProviderProps {
 }
 
 export const ProductProvider = ({ children }: ProductProviderProps) => {
-  const [productsData, setProductsData] = useState<ProductResponse[]>([]);
+  const [products, setProducts] = useState<ProductContextType["products"]>([]);
 
   const fetchAndMapProducts = async () => {
     try {
       const data = await fetchProducts();
       const mappedProducts = mapperProducts(data);
-      setProductsData(mappedProducts);
+      setProducts(mappedProducts);
     } catch (error) {
       console.error("Error al cargar los productos:", error);
     }
@@ -36,7 +31,7 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   }, []);
 
   return (
-    <ProductContext.Provider value={{ productsData, fetchProducts: fetchAndMapProducts }}>
+    <ProductContext.Provider value={{ products, fetchProducts: fetchAndMapProducts }}>
       {children}
     </ProductContext.Provider>
   );

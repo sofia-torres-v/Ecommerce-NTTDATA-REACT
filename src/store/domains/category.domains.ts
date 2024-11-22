@@ -1,3 +1,3 @@
-export interface Category {
-  slug: string;
+export interface CategoryResponse {
+  name: string;
 }

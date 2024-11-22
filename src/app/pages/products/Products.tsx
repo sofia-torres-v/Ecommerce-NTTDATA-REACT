@@ -1,12 +1,12 @@
 import {useContext} from "react";
-import {ProductContext} from "../../../store/contexts/ProductContext";
+import {ProductContext} from "../../../store/context/ProductContext";
 import Card from "../../../shared/component/card/Card";
 import SelectCategory from "../../../shared/component/select/SelectCategory";
 import InputCategory from "../../../shared/component/input/InputCategory";
 import "./products.css";
 
 const Products = () => {
-    const {productsData} = useContext(ProductContext);
+    const {products} = useContext(ProductContext);
 
     return (
         <>
@@ -17,10 +17,10 @@ const Products = () => {
                 </div>
             </div>
 
-            <h1 className="products__title container">Nuestros Productos</h1>
+            <h1 className="products__title">Nuestros Productos</h1>
 
-            <div className="products__content container">
-                {productsData.map((product) => (
+            <div className="products__content">
+                {products.map((product) => (
                     <Card key={product.title} product={product} />
                 ))}
             </div>

@@ -1,5 +1,5 @@
 import { ProductResponse } from "../domains/product.domains";
-import { Category } from "../domains/category.domains";
+import { CategoryResponse } from "../domains/category.domains";
 
 
 export function mapperProducts(products: ProductResponse[]): ProductResponse[] {
@@ -12,6 +12,6 @@ export function mapperProducts(products: ProductResponse[]): ProductResponse[] {
   }));
 }
 
-export function mapperCategories(categories: Category[]): string[] {
-  return categories.map((category) => category.slug);
+export function mapperCategories(categories: CategoryResponse[]): string[] {
+  return categories.map((category) => category.name);
 }
