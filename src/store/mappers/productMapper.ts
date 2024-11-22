@@ -1,8 +1,8 @@
-import { Product } from "../domains/product.domains";
+import { ProductResponse } from "../domains/product.domains";
 import { Category } from "../domains/category.domains";
 
 
-export function mapperProducts(products: Product[]): Product[] {
+export function mapperProducts(products: ProductResponse[]): ProductResponse[] {
   return products.map((product) => ({
       category: product.category,
       discountPercentage: product.discountPercentage,

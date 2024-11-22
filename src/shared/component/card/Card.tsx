@@ -1,12 +1,14 @@
 import {LuShoppingCart} from "react-icons/lu";
 import {ProductResponse} from "../../../store/domains/product.domains";
+import {roundPercentage} from '../../utils/formatPrice';
+
 import "./card.css";
 
 const Card = ({product}: {product: ProductResponse}) => {
     return (
         <div className="card">
             <div className="card__discount">
-                <p className="card__discount-text">-{product.discountPercentage}%</p>
+                <p className="card__discount-text">-{roundPercentage(product.discountPercentage)}%</p>
             </div>
             <img className="card__image" src={product.thumbnail} alt={product.title} />
             <h3 className="card__title">{product.title}</h3>

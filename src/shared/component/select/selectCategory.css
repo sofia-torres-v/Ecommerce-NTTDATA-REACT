@@ -1,0 +1,18 @@
+select {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #1f0d32;
+  outline: none;
+  padding: 14px 6px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-input-border);
+  border: 2px solid var(--color-input-border);
+}
+
+@media(min-width:750px){
+  select{
+    width: 100%;
+    font-size: 1.6rem;
+  }
+}

@@ -5,10 +5,7 @@ import "./App.css";
 import Home from "./app/pages/home/Home";
 import Products from "./app/pages/products/Products";
 
-
 function App() {
-
-
     return (
         <>
             <Routes>
