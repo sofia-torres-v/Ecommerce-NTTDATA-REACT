@@ -1,6 +1,5 @@
-import { ProductResponse } from "../domains/product.domains";
-import { CategoryResponse } from "../domains/category.domains";
-
+import { CategoryResponse } from "../../domain/category.domain";
+import { ProductResponse } from "../../domain/product.domain";
 
 export function mapperProducts(products: ProductResponse[]): ProductResponse[] {
   return products.map((product) => ({

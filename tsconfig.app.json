@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "src/shared/component/footer", "src/shared/component/navbar"]
+  "include": ["src", "src/component/footer", "src/component/navbar"]
 }

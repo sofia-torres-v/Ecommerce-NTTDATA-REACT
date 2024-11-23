@@ -8,6 +8,7 @@ export async function fetchProducts() {
         return data.products; 
     } catch (error) {
         console.error("Error al cargar toda la data:", error);
+        return []; // Devuelve un arreglo vacío en caso de error
     }
 }
 
@@ -21,5 +22,6 @@ export async function fetchCategories(){
         return data;
     } catch (error) {
         console.error("Error al cargar las categorías:", error);
+        return [];
     }
 }
