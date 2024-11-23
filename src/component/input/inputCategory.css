@@ -1,0 +1,40 @@
+.input-category {
+  width: 90%;
+  position: relative;
+}
+
+.input-category__input{
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  padding: 14px 6px;
+  font-weight: 600;
+  color: var(--color-input-border);
+  border: 2px solid var(--color-input-border);
+  font-size: 1.3rem;
+}
+
+.input-category__icon{
+  font-size: 4.8rem;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0 12px 10px 0;
+  color: var(--color-white);
+  background: var(--color-primary-bg);
+}
+
+.input-category__input::placeholder {
+  padding-left: 6px;
+  color: var(--color-input-border);
+}
+
+@media(min-width:750px){
+  .input-category {
+    width: 40%;
+  }
+  .input-category__input{
+    font-size: 1.6rem;
+  } 
+}
