@@ -1,4 +1,4 @@
-.products__content {
+/* .products__content {
   min-height: 50vh;
   display: flex;
   flex-wrap: wrap;
@@ -6,7 +6,7 @@
   gap: 35px;
   row-gap: 40px;
   padding: 45px 0 60px;
-}
+} */
 
 .products__inputs {
   max-width: 1050px;

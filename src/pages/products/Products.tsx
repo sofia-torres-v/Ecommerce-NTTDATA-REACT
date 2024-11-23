@@ -1,26 +1,25 @@
-import {useGlobalAppState} from "../../context/app-context";
-import "./products.css";
+import React from "react";
+import { useGlobalAppState } from "../../context/app-context";
+import ProductList from "../../component/productList/ProductList";
+import { CartActions, useCartDispatch } from "../../context/cart-context";
 
-const Products = () => {
-    const {products, categories} = useGlobalAppState();
 
-    return (
-        <div>
-            <h1>Productos</h1>
-            <ul>
-                {products.map((product) => (
-                    <li key={product.title}>{product.title}</li>
-                ))}
-            </ul>
 
-            <h2>Categorías</h2>
-            <ul>
-                {categories.map((category) => (
-                    <li key={category}>{category}</li>
-                ))}
-            </ul>
-        </div>
-    );
+const Products: React.FC = () => {
+
+  const { products } = useGlobalAppState(); // Accedemos a los productos del contexto
+  const dispatch = useCartDispatch(); // Obtenemos el dispatch del contexto del carrito
+
+  const handleAddToCart = (productId: number) => {
+    // Llamamos a la acción de agregar al carrito
+    dispatch({ type: CartActions.AddToCart, payload: { productId } });
+  };
+  return (
+    <div>
+      <h1>Productos Disponibles</h1>
+      <ProductList products={products} onAddToCart={handleAddToCart} />
+    </div>
+  );
 };
 
 export default Products;

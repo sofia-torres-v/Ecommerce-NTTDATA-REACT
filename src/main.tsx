@@ -4,13 +4,16 @@ import {BrowserRouter} from "react-router-dom";
 import {GlobalAppProvider} from "./context/app-context.tsx";
 import "./index.css";
 import App from "./App.tsx";
+import {CartProvider} from "./context/cart-context.tsx";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <GlobalAppProvider>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </GlobalAppProvider>
+        <CartProvider>
+            <GlobalAppProvider>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </GlobalAppProvider>
+        </CartProvider>
     </StrictMode>
 );

@@ -8,6 +8,7 @@ export function mapperProducts(products: ProductResponse[]): ProductResponse[] {
       price: product.price,
       thumbnail: product.thumbnail,
       title: product.title,
+      id:product.id
   }));
 }
 

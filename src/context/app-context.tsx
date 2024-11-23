@@ -1,7 +1,7 @@
 // app-context.tsx (contexto)
 import {createContext, PropsWithChildren, useReducer, useEffect, FC, useContext} from "react";
 import {AppDispatch} from "../domain/app-store";
-import {appReducer, AppState, initialState} from "./reducer";
+import {appReducer, AppState, initialState} from "./app-reducer";
 import {AppActions} from "../domain/app-store";
 import {fetchCategories, fetchProducts} from "../services/api/product.service";
 import {mapperCategories, mapperProducts} from "../services/mappers/product.mapper";

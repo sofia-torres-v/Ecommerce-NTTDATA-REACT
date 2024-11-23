@@ -1,32 +1,37 @@
+import {FC} from "react";
 import {LuShoppingCart} from "react-icons/lu";
-import {roundPercentage} from "../../shared/utils/formatPrice";
-import "./card.css";
-import { ProductResponse } from "../../domain/product.domain";
 
-const Card = ({product}: {product: ProductResponse}) => {
+import "./card.css";
+import Button from "../button/Button";
+
+interface CardProps {
+    title: string;
+    image: string;
+    price: number;
+    category: string;
+    discount: number;
+    onAddToCart: () => void;
+    roundPercentage: (discount: number) => string;
+}
+
+const Card: FC<CardProps> = ({title, image, price, category, discount, roundPercentage, onAddToCart}) => {
     return (
         <div className="card">
             <div className="card__discount">
-                <p className="card__discount-text">-{roundPercentage(product.discountPercentage)}%</p>
+                <p className="card__discount-text">{roundPercentage(discount)}</p>
             </div>
-            <img className="card__image" src={product.thumbnail} alt={product.title} />
-            <h3 className="card__title">{product.title}</h3>
+            <img className="card__image" src={image} alt={title} />
+            <h3 className="card__title">{title}</h3>
             <div className="card__info">
-                <div className="card__info-item">
-                    <p className="card__info-label">
-                        Precio: <span className="card__info-price">s/{product.price}</span>
-                    </p>
-                </div>
-                <div className="card__info-item">
-                    <p className="card__info-label">
-                        Categoría: <span className="card__info-category">{product.category}</span>
-                    </p>
-                </div>
+                <p className="card__info-label">
+                    Precio: <span className="card__info-price">s/{price}</span>
+                </p>
+                <p className="card__info-label">
+                    Categoría: <span className="card__info-category">{category}</span>
+                </p>
             </div>
-            <button className="card__button">
-                Agregar
-                <LuShoppingCart className="card__button-icon" />
-            </button>
+
+            <Button label="Agregar" onClick={onAddToCart} icon={<LuShoppingCart />} className="card__button" />
         </div>
     );
 };

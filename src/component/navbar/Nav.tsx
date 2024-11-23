@@ -1,7 +1,14 @@
 import {LuShoppingCart} from "react-icons/lu";
+import {useCartState} from "../../context/cart-context";
 import "./nav.css";
 
 const Nav = () => {
+    const {items} = useCartState();
+    console.log("Cart Items:", items);
+
+    // El contador será la cantidad total de productos en el carrito
+    const cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
+
     return (
         <nav className="nav">
             <div className="nav__content container">
@@ -10,14 +17,13 @@ const Nav = () => {
                     <span className="nav__logo-text">Market</span>
                 </div>
                 <div className="nav__cart-box">
-                    <LuShoppingCart className="nav__cart-icon"  />
+                    <LuShoppingCart className="nav__cart-icon" />
                     <span id="cart-counter" className="nav__cart-counter">
-                        0
+                        {cartItemCount}
                     </span>
                 </div>
             </div>
         </nav>
     );
 };
-
 export default Nav;

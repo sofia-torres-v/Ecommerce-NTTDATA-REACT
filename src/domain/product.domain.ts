@@ -4,4 +4,5 @@ export interface ProductResponse {
   price: number;
   thumbnail: string;
   title: string;
+  id:number;
 }
