@@ -1,20 +1,6 @@
-import {AppActions} from "../domain/app-store";
+import {AppActions} from "../types/app-types";
 import {ProductResponse} from "../domain/product.domain";
-
-export interface DispatchObject<A, T = any> {
-    type: A;
-    payload?: T;
-}
-
-export interface AppState {
-    products: ProductResponse[];
-    categories: string[];
-}
-
-export const initialState: AppState = {
-    products: [],
-    categories: [],
-};
+import { AppState, DispatchObject } from "../domain/app.domain";
 
 export const appReducer = (state: AppState, {type, payload}: DispatchObject<AppActions>) => {
     switch (type) {

@@ -1,10 +1,10 @@
-// app-context.tsx (contexto)
 import {createContext, PropsWithChildren, useReducer, useEffect, FC, useContext} from "react";
-import {AppDispatch} from "../domain/app-store";
-import {appReducer, AppState, initialState} from "./app-reducer";
-import {AppActions} from "../domain/app-store";
+import {AppDispatch} from "../types/app-types";
+import {appReducer} from "./app-reducer";
+import {AppActions} from "../types/app-types";
 import {fetchCategories, fetchProducts} from "../services/api/product.service";
 import {mapperCategories, mapperProducts} from "../services/mappers/product.mapper";
+import { AppState, initialState } from "../domain/app.domain";
 
 const AppStateContext = createContext<AppState | undefined>(undefined);
 const AppDispatchContext = createContext<AppDispatch | undefined>(undefined);
@@ -19,7 +19,7 @@ const GlobalAppProvider: FC<PropsWithChildren> = ({children}) => {
             const products = await fetchProducts();
             const categories = await fetchCategories();
 
-            // Aplicamos los mappers para transformar los datos
+            // Transformar los datos
             const mappedProducts = mapperProducts(products);
             const mappedCategories = mapperCategories(categories);
 

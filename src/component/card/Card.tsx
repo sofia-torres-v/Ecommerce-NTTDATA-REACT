@@ -1,8 +1,7 @@
 import {FC} from "react";
 import {LuShoppingCart} from "react-icons/lu";
-
-import "./card.css";
 import Button from "../button/Button";
+import "./card.css";
 
 interface CardProps {
     title: string;

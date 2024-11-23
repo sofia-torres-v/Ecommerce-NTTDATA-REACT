@@ -1,3 +1,5 @@
+import { CartAction, CartActions } from "../types/cart-types";
+
 export interface CartItem {
   productId: number;
   quantity: number;
@@ -11,13 +13,7 @@ export const initialCartState: CartState = {
   items: [],
 };
 
-export enum CartActions {
-  AddToCart = "AddToCart",
-  RemoveFromCart = "RemoveFromCart",
-  UpdateQuantity = "UpdateQuantity",
-}
-
-export const cartReducer = (state: CartState, action: any): CartState => {
+export const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case CartActions.AddToCart:
       const existingItemIndex = state.items.findIndex(item => item.productId === action.payload.productId);
