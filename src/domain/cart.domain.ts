@@ -7,7 +7,7 @@ export interface CartItemType {
 }
 
 export enum CartActions {
-  AddToCart = "AddToCart",
-  RemoveFromCart = "RemoveFromCart",
-  UpdateQuantity = "UpdateQuantity",
+  AddToCart = "ADD_TO_CART",
+  RemoveFromCart = "REMOVE_FROM_CART",
+  UpdateQuantity = "UPDATE_QUANTITY",
 }
