@@ -1,23 +1,33 @@
-import { useCartState } from "../../context/CartContext";
+import { FC } from 'react'; 
+import CartItemCard from "../../component/cartItem/CartItem";
+import { useCart } from "../../shared/hooks/useCart";
 
-const CartSumary = () => {
-  const { items } = useCartState(); // Obtener los productos del carrito
+const CartSummary: FC = () => {
+  const { items, incrementItem, decrementItem, removeItem } = useCart();
+
+  console.log(items);  
 
   return (
-      <div>
-          <h2>Carrito</h2>
-          {items.length > 0 ? (
-              <ul>
-                  {items.map(item => (
-                      <li key={item.productId}>
-                          Producto ID: {item.productId}, Cantidad: {item.quantity}
-                      </li>
-                  ))}
-              </ul>
-          ) : (
-              <p>No hay productos en el carrito.</p>
-          )}
-      </div>
+    <div>
+      <h2>Carrito</h2>
+      {items.length > 0 ? (
+        items.map((item) => {
+          console.log(item); 
+          return (
+            <CartItemCard
+              key={item.productId}
+              item={item}
+              incrementItem={incrementItem}
+              decrementItem={decrementItem}
+              removeItem={removeItem}
+            />
+          );
+        })
+      ) : (
+        <p>No hay productos en el carrito.</p>
+      )}
+    </div>
   );
 };
-export default CartSumary;
+
+export default CartSummary;
