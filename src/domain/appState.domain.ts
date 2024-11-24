@@ -1,6 +1,6 @@
 import {ProductResponse} from "./product.domain";
 
-// Objeto Dispatch contiene la acción y su payload
+// Dispatch contiene la acción y su payload
 export interface DispatchObject<A, T = unknown> {
     type: A;
     payload?: T;

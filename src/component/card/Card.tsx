@@ -1,5 +1,5 @@
-import {FC} from "react";
-import {LuShoppingCart} from "react-icons/lu";
+import { FC } from "react";
+import { LuShoppingCart } from "react-icons/lu";
 import Button from "../button/Button";
 import "./card.css";
 
@@ -13,7 +13,7 @@ interface CardProps {
     roundPercentage: (discount: number) => string;
 }
 
-const Card: FC<CardProps> = ({title, image, price, category, discount, roundPercentage, onAddToCart}) => {
+const Card: FC<CardProps> = ({ title, image, price, category, discount, roundPercentage, onAddToCart }) => {
     return (
         <div className="card">
             <div className="card__discount">

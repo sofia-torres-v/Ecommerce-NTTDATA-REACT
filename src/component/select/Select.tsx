@@ -1,4 +1,5 @@
-import React from "react";
+import { FC } from "react";
+import './select.css'
 
 interface SelectProps {
   options: string[];
@@ -6,13 +7,13 @@ interface SelectProps {
   onChange: (value: string) => void;
 }
 
-const Select: React.FC<SelectProps> = ({ options, value, onChange }) => {
+const Select: FC<SelectProps> = ({ options, value, onChange }) => {
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     onChange(event.target.value);
   };
 
   return (
-    <select value={value || ""} onChange={handleChange}>
+    <select  className="select-category " value={value || ""} onChange={handleChange}>
       {options.map((option, index) => (
         <option key={index} value={option}>
           {option}

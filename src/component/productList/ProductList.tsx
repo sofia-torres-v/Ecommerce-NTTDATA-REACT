@@ -1,6 +1,4 @@
-// ProductList.tsx
-
-import React, { FC } from "react";
+import { FC } from "react";
 import { ProductResponse } from "../../domain/product.domain";
 import { roundPercentage } from "../../shared/utils/formatPrice";
 import Card from "../card/Card";

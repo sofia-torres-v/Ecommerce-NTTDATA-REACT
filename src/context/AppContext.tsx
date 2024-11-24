@@ -1,10 +1,10 @@
 import {createContext, PropsWithChildren, useReducer, useEffect, FC, useContext} from "react";
+import {fetchCategories, fetchProducts} from "../services/api/product.service";
+import {mapperCategories, mapperProducts} from "../services/mappers/product.mapper";
+import {AppState, initialState} from "../domain/appState.domain";
 import {AppDispatch} from "../types/app-types";
 import {appReducer} from "./appReducer";
 import {AppActions} from "../types/app-types";
-import {fetchCategories, fetchProducts} from "../services/api/product.service";
-import {mapperCategories, mapperProducts} from "../services/mappers/product.mapper";
-import { AppState, initialState } from "../domain/appState.domain";
 
 const AppStateContext = createContext<AppState | undefined>(undefined);
 const AppDispatchContext = createContext<AppDispatch | undefined>(undefined);
@@ -18,11 +18,11 @@ const GlobalAppProvider: FC<PropsWithChildren> = ({children}) => {
             const categories = await fetchCategories();
 
             const mappedProducts = mapperProducts(products);
-            console.log(mappedProducts)
+            console.log(mappedProducts);
             const mappedCategories = mapperCategories(categories);
-            console.log(mappedCategories)
+            console.log(mappedCategories);
 
-            // Actualizamos el estado global con los datos mapeados
+            // Actualizamos el estado global
             dispatch({type: AppActions.SaveProducts, payload: mappedProducts});
             dispatch({type: AppActions.SaveCategories, payload: mappedCategories});
         };
