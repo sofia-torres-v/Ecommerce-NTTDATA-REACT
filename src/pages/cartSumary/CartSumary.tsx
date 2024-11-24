@@ -1,4 +1,4 @@
-import { FC } from 'react'; 
+import { FC } from 'react';
 import CartItemCard from "../../component/cartItem/CartItem";
 import { useCart } from "../../shared/hooks/useCart";
 
@@ -13,22 +13,20 @@ const CartSummary: FC = () => {
       <h2>Carrito</h2>
       {items.length > 0 ? (
         <>
-          <div>
-            {items.map((item) => {
-              return (
-                <CartItemCard
-                  key={item.productId}
-                  item={item}
-                  incrementItem={incrementItem}
-                  decrementItem={decrementItem}
-                  removeItem={removeItem}
-                />
-              );
-            })}
-          </div>
+
+          {items.map((item) => (
+            <CartItemCard
+              key={item.productId}
+              item={item}
+              incrementItem={incrementItem}
+              decrementItem={decrementItem}
+              removeItem={removeItem}
+            />
+          ))}
+
           {/* Mostrar el total a pagar */}
           <div className="total-amount">
-            <h2>Total a pagar: ${totalAmount.toFixed(2)}</h2> {/* Formato con 2 decimales */}
+            <h2>Total a pagar: S/{totalAmount.toFixed(2)}</h2> 
           </div>
         </>
       ) : (

@@ -16,7 +16,7 @@ const Products: FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("Todas las categorías");
 
   const handleAddToCart = (productId: number) => {
-    const product = products.find((p) => p.id === productId); // Encuentra el producto por id
+    const product = products.find((p) => p.id === productId); // producto por id
 
     if (product) {
       dispatch({

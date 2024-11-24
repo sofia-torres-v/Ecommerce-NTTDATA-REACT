@@ -1,0 +1,19 @@
+/* carrito */
+.cart-item-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-card.cart {
+  flex-direction: row;
+  justify-content: space-between;
+  grid-template-columns: repeat(5, 1fr); 
+}
+
+/* modal */
+.cart-item-card.modal {
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}

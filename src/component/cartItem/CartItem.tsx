@@ -1,20 +1,27 @@
 import { FC } from "react";
+import QuantityControls from "../common/QuantityControls";
 import { CartItemProps } from "../../types/cart-types";
+import ImageProduct from "../common/ImageProduct";
+import DetailsProduct from "../common/DetailsProduct";
+import './carItem.css'
 
-const CartItemCard: FC<CartItemProps> = ({ item, incrementItem, decrementItem, removeItem }) => {
+interface CartItemCardProps extends CartItemProps {
+  layout?: "cart" | "modal"; 
+}
+
+const CartItemCard: FC<CartItemCardProps> = ({ item, incrementItem, decrementItem, removeItem, layout = "cart" }) => {
   return (
-    <div>
-      <img src={item.image} alt={item.name} />
-      <div>
-        <h4>{item.name}</h4>
-        <p>Precio: ${item.price}</p>
-      </div>
-      <div>
-        <button onClick={() => decrementItem(item.productId)}>-</button>
-        <span>{item.quantity}</span>
-        <button onClick={() => incrementItem(item.productId)}>+</button>
-      </div>
-      <button onClick={() => removeItem(item.productId)}>Eliminar</button>
+    <div className={`cart-item-card ${layout}`}>
+      <ImageProduct src={item.image} alt={item.name} className="cart-item-image" />
+      <DetailsProduct title={item.name} price={item.price} />
+      {layout === "cart" && (
+        <QuantityControls
+          quantity={item.quantity}
+          increment={() => incrementItem(item.productId)}
+          decrement={() => decrementItem(item.productId)}
+        />
+      )}
+      {layout === "cart" && <button onClick={() => removeItem(item.productId)}>Eliminar</button>}
     </div>
   );
 };

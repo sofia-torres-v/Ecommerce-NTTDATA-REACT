@@ -1,5 +1,4 @@
-import { CartActions } from "../domain/cart.domain";
-import { CartAction} from "../types/cart-types";
+import { CartAction, CartActions } from "../domain/cart.domain";
 
 export interface CartItem {
   productId: number;

@@ -4,7 +4,7 @@ import "./input.css";
 interface InputProps {
   value: string;
   onChange: (value: string) => void;
-  icon?: React.ReactNode; // El prop icon es opcional y se define aquí
+  icon?: React.ReactNode;
 }
 
 const Input: FC<InputProps> = ({ value, onChange, icon }) => {
