@@ -2,11 +2,11 @@ import {FC, useState} from "react";
 import {useGlobalAppState} from "../../context/AppContext";
 import ProductList from "../../component/productList/ProductList";
 import {useCartDispatch} from "../../context/CartContext";
-import {CartActions} from "../../types/cart-types";
 import Input from "../../component/input/Input";
 import Select from "../../component/select/Select";
-import "./products.css";
 import { IoIosSearch } from "react-icons/io";
+import { CartActions } from "../../domain/cart.domain";
+import "./products.css";
 
 const Products: FC = () => {
     const {products, categories} = useGlobalAppState();
@@ -19,7 +19,7 @@ const Products: FC = () => {
         dispatch({
             type: CartActions.AddToCart,
             payload: {
-                productId, // Usamos el argumento aquí
+                productId, 
                 name: 'Producto Ejemplo',
                 price: 100,
                 image: 'url-de-imagen',
@@ -27,8 +27,7 @@ const Products: FC = () => {
         });
     };
     
-
-    // Filtrar búsqueda y categoría
+    // Filtrar por búsqueda y categoría
     const filteredProducts = products.filter((product) => {
         const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesCategory =

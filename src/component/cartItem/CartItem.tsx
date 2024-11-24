@@ -1,18 +1,5 @@
 import { FC } from "react";
-interface CartItemProps {
-  item: CartItemType;
-
-  incrementItem: (productId: number) => void;
-  decrementItem: (productId: number) => void;
-  removeItem: (productId: number) => void;
-}
-export interface CartItemType {
-  productId: number;
-  name: string;
-  price: number;
-  image: string;
-  quantity: number;
-}
+import { CartItemProps } from "../../types/cart-types";
 
 const CartItemCard: FC<CartItemProps> = ({ item, incrementItem, decrementItem, removeItem }) => {
   return (

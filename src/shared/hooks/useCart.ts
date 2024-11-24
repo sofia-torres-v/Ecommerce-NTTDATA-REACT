@@ -1,13 +1,5 @@
 import { useCartDispatch, useCartState } from "../../context/CartContext";
-import { CartActions, CartItemType } from "../../types/cart-types";
-
-export type UseCartReturnType = {
-  items: CartItemType[];
-  incrementItem: (productId: number) => void;
-  decrementItem: (productId: number) => void;
-  removeItem: (productId: number) => void;
-};
-
+import { CartActions } from "../../domain/cart.domain";
 
 // Hook combinado
 export const useCart = () => {

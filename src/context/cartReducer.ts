@@ -1,4 +1,5 @@
-import { CartAction, CartActions } from "../types/cart-types";
+import { CartActions } from "../domain/cart.domain";
+import { CartAction} from "../types/cart-types";
 
 export interface CartItem {
   productId: number;
@@ -7,7 +8,6 @@ export interface CartItem {
   image: string;
   quantity: number;
 }
-
 
 export interface CartState {
   items: CartItem[];
