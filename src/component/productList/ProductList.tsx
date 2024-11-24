@@ -1,17 +1,15 @@
 import { FC } from "react";
 import { ProductResponse } from "../../domain/product.domain";
-import Card from "../card/Card";
-import './productList.css';
 import { roundPercentage } from "../../shared/utils/formatPrice";
-import { CartActions, useCartDispatch } from "../../context/cart-context"; // Importar CartActions
+import Card from "../card/Card";
+import "./productList.css";
 
-const ProductList: FC<{ products: ProductResponse[] }> = ({ products }) => {
-  const dispatch = useCartDispatch(); // Obtienes el dispatch del carrito
-  
-  const handleAddToCart = (product: ProductResponse) => {
-    dispatch({ type: CartActions.AddToCart, payload: { productId: product.id } });
-  };
+interface ProductListProps {
+  products: ProductResponse[];
+  onAddToCart: (productId: number) => void;
+}
 
+const ProductList: FC<ProductListProps> = ({ products, onAddToCart }) => {
   return (
     <div className="products__content">
       {products.map((product) => (
@@ -22,7 +20,7 @@ const ProductList: FC<{ products: ProductResponse[] }> = ({ products }) => {
           price={product.price}
           category={product.category}
           discount={product.discountPercentage}
-          onAddToCart={() => handleAddToCart(product)}
+          onAddToCart={() => onAddToCart(product.id)} 
           roundPercentage={roundPercentage}
         />
       ))}

@@ -1,12 +1,9 @@
 import {LuShoppingCart} from "react-icons/lu";
-import {useCartState} from "../../context/cart-context";
+import {useCartState} from "../../context/CartContext";
 import "./nav.css";
 
 const Nav = () => {
     const {items} = useCartState();
-    console.log("Cart Items:", items);
-
-    // El contador será la cantidad total de productos en el carrito
     const cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
 
     return (

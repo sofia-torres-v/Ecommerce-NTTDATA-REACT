@@ -7,8 +7,7 @@ export async function fetchProducts() {
         const data = await response.json();
         return data.products; 
     } catch (error) {
-        console.error("Error al cargar toda la data:", error);
-        return []; // Devuelve un arreglo vacío en caso de error
+        return []; 
     }
 }
 
@@ -21,7 +20,6 @@ export async function fetchCategories(){
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error("Error al cargar las categorías:", error);
         return [];
     }
 }

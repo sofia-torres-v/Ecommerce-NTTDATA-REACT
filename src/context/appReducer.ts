@@ -1,20 +1,6 @@
-import {AppActions} from "../domain/app-store";
+import {AppActions} from "../types/app-types";
 import {ProductResponse} from "../domain/product.domain";
-
-export interface DispatchObject<A, T = any> {
-    type: A;
-    payload?: T;
-}
-
-export interface AppState {
-    products: ProductResponse[];
-    categories: string[];
-}
-
-export const initialState: AppState = {
-    products: [],
-    categories: [],
-};
+import { AppState, DispatchObject } from "../domain/appState.domain";
 
 export const appReducer = (state: AppState, {type, payload}: DispatchObject<AppActions>) => {
     switch (type) {
@@ -27,7 +13,7 @@ export const appReducer = (state: AppState, {type, payload}: DispatchObject<AppA
             return {
                 ...state,
                 categories: payload as string[],
-            };
+            };         
         default:
             throw new Error("No hay action disponible");
     }
