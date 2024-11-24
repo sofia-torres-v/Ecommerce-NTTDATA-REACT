@@ -1,9 +1,9 @@
 import { Dispatch } from "react";
-import { DispatchObject } from "../domain/app.domain";
+import { DispatchObject } from "../domain/appState.domain";
 
 export type AppDispatch = Dispatch<DispatchObject<AppActions>>; 
 
-export const enum AppActions {
-  SaveProducts = 'SaveProducts',
-  SaveCategories = 'SaveCategories',
+export enum AppActions {
+  SaveProducts = "SAVE_PRODUCTS",
+  SaveCategories = "SAVE_CATEGORIES",
 }

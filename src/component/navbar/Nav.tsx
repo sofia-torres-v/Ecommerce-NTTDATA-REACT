@@ -1,5 +1,5 @@
 import {LuShoppingCart} from "react-icons/lu";
-import {useCartState} from "../../context/cart-context";
+import {useCartState} from "../../context/CartContext";
 import "./nav.css";
 
 const Nav = () => {

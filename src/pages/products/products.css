@@ -1,13 +1,3 @@
-/* .products__content {
-  min-height: 50vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 35px;
-  row-gap: 40px;
-  padding: 45px 0 60px;
-} */
-
 .products__inputs {
   max-width: 1050px;
   margin: 0 auto;
