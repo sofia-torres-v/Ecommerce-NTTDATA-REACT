@@ -1,10 +1,9 @@
-import {LuShoppingCart} from "react-icons/lu";
-import {useCartState} from "../../context/CartContext";
+
+
+import CartIcon from "../cartIcon/CartIcon";
 import "./nav.css";
 
 const Nav = () => {
-    const {items} = useCartState();
-    const cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
 
     return (
         <nav className="nav">
@@ -14,10 +13,7 @@ const Nav = () => {
                     <span className="nav__logo-text">Market</span>
                 </div>
                 <div className="nav__cart-box">
-                    <LuShoppingCart className="nav__cart-icon" />
-                    <span id="cart-counter" className="nav__cart-counter">
-                        {cartItemCount}
-                    </span>
+                    <CartIcon />
                 </div>
             </div>
         </nav>

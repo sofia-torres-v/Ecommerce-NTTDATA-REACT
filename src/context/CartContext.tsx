@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useContext, FC, PropsWithChildren } from "react";
+import React, { createContext, useReducer, useContext, FC, PropsWithChildren, useEffect } from "react";
 import { cartReducer, CartState, initialCartState } from "./cartReducer";
 import { CartAction } from "../types/cart-types";
 
@@ -17,12 +17,26 @@ export const useCartDispatch = () => {
   return context;
 };
 
+// Componente CartProvider
 export const CartProvider: FC<PropsWithChildren> = ({ children }) => {
-  const [state, dispatch] = useReducer(cartReducer, initialCartState);
+  const savedCartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
+
+  const initialState = savedCartItems.length > 0
+    ? { items: savedCartItems }
+    : initialCartState;
+
+  const [state, dispatch] = useReducer(cartReducer, initialState);
+
+  // Guardar el estado del carrito en el localStorage cada vez que se actualice
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(state.items));
+  }, [state.items]);
 
   return (
     <CartStateContext.Provider value={state}>
-      <CartDispatchContext.Provider value={dispatch}>{children}</CartDispatchContext.Provider>
+      <CartDispatchContext.Provider value={dispatch}>
+        {children}
+      </CartDispatchContext.Provider>
     </CartStateContext.Provider>
   );
 };

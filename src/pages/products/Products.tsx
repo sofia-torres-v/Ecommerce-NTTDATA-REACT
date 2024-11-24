@@ -8,6 +8,7 @@ import ProductList from "../../component/productList/ProductList";
 import Input from "../../component/input/Input";
 import Select from "../../component/select/Select";
 import "./products.css";
+// import Cart from "../../component/cart/Cart";
 
 const Products: FC = () => {
     const { products, categories } = useGlobalAppState();
@@ -17,6 +18,7 @@ const Products: FC = () => {
     const [selectedCategory, setSelectedCategory] = useState("Todas las categorías");
 
     const handleAddToCart = (productId: number) => {
+        console.log("Producto agregado al carrito:", productId); 
         dispatch({ type: CartActions.AddToCart, payload: { productId } });
     };
 
@@ -52,6 +54,8 @@ const Products: FC = () => {
                     products={filteredProducts}
                     onAddToCart={handleAddToCart} />
             </div>
+            {/* <Cart /> */}
+
         </div>
     );
 };

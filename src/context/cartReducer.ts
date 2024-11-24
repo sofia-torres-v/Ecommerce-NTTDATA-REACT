@@ -16,16 +16,24 @@ export const initialCartState: CartState = {
 export const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case CartActions.AddToCart:
-      const existingItemIndex = state.items.findIndex(item => item.productId === action.payload.productId);
-      if (existingItemIndex !== -1) {
-        const updatedItems = [...state.items];
-        updatedItems[existingItemIndex].quantity += 1;
-        console.log("Updated Cart:", { items: updatedItems });
-        return { items: updatedItems };
+      const existingProduct = state.items.find(item => item.productId === action.payload.productId);
+      
+      if (existingProduct) {
+          // Si el producto ya está en el carrito, incrementa la cantidad
+          return {
+              ...state,
+              items: state.items.map(item =>
+                  item.productId === action.payload.productId
+                      ? { ...item, quantity: item.quantity + 1 }
+                      : item
+              )
+          };
       } else {
-        const newItems = [...state.items, { productId: action.payload.productId, quantity: 1 }];
-        console.log("Updated Cart with New Product:", { items: newItems });
-        return { items: newItems };
+          // Si el producto no está en el carrito, agrégalo con cantidad 1
+          return {
+              ...state,
+              items: [...state.items, { productId: action.payload.productId, quantity: 1 }]
+          };
       }
     
     case CartActions.RemoveFromCart:
