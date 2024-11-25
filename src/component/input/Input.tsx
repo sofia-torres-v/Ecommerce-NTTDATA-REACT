@@ -9,7 +9,7 @@ interface InputProps {
   placeholder?: string; 
 }
 
-const Input: FC<InputProps> = ({ value, onChange, icon }) => {
+const Input: FC<InputProps> = ({ value, onChange, icon, placeholder }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     onChange(event.target.value);
   };
@@ -19,7 +19,7 @@ const Input: FC<InputProps> = ({ value, onChange, icon }) => {
       <input
         className="input-category__input"
         type="text"
-        placeholder="Buscar productos..."
+        placeholder={placeholder} 
         value={value}
         onChange={handleChange}
       />

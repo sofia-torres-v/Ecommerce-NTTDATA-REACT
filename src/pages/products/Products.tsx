@@ -32,7 +32,7 @@ const Products: FC = () => {
     }
   };
 
-  // Filtrar productos por búsqueda y categoría
+  // Filtrar por búsqueda y categoría
   const filteredProducts = products.filter((product) => {
     const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory =
@@ -47,7 +47,7 @@ const Products: FC = () => {
   return (
     <div>
       <div className="products__inputs">
-        <Input  value={searchTerm} onChange={setSearchTerm} icon={<IoIosSearch className="icon-search" />} />
+        <Input  value={searchTerm} onChange={setSearchTerm} icon={<IoIosSearch className="icon-search" />}  placeholder="Buscar productos..."/>
         <Select options={categoryOptions} value={selectedCategory} onChange={setSelectedCategory} />
       </div>
 

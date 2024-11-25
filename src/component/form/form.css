@@ -7,11 +7,13 @@
   margin-bottom: 1rem;
   outline: none;
 }
+
 form {
   display: grid;
   gap: 20px;
   padding: 20px 0;
 }
+
 .button-form{
   padding: 12px ;
   width: 200px;
@@ -22,6 +24,15 @@ form {
   background-color: rgb(17, 16, 16);
   font-size: 1.8rem;
 }
+
 .label-form{
   font-size: 1.7rem;
 }
+
+.label-distric {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+

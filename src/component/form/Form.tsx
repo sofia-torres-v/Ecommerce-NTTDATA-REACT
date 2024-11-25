@@ -1,6 +1,9 @@
 import React, { FC, useState } from "react";
 import Input from "../input/Input";
+import Select from "../select/Select";// Usamos el nuevo nombre del hook
 import './form.css'
+import { usePlaces } from "../../shared/hooks/usePlace";
+
 
 const Form: FC = () => {
   const [nombre, setNombre] = useState("");
@@ -10,6 +13,8 @@ const Form: FC = () => {
   const [referencia, setReferencia] = useState("");
   const [celular, setCelular] = useState("");
 
+  // Llamada al hook para obtener los lugares (distritos o similares)
+  const { districts } = usePlaces();  // Ahora usamos `districts`
 
   const handleInputChange = (setter: React.Dispatch<React.SetStateAction<string>>) => {
     return (value: string) => setter(value);
@@ -27,7 +32,7 @@ const Form: FC = () => {
             className="form-input"
           />
         </div>
-        
+
         <div>
           <label className="label-form">Apellido</label>
           <Input
@@ -38,12 +43,22 @@ const Form: FC = () => {
           />
         </div>
 
-        <div>
+        <div className="label-distric">
           <label className="label-form">Distrito</label>
-          <Input
+          <Select
+            options={districts.map((d) => d.name)}
             value={distrito}
-            onChange={handleInputChange(setDistrito)}
-            placeholder="Ingrese su distrito"
+            onChange={setDistrito}
+            className="form-select"
+          />
+        </div>
+
+        <div>
+          <label className="label-form">Celular</label>
+          <Input
+            value={celular}
+            onChange={handleInputChange(setCelular)}
+            placeholder="Ingrese su celular"
             className="form-input"
           />
         </div>
@@ -68,17 +83,7 @@ const Form: FC = () => {
           />
         </div>
 
-        <div>
-          <label className="label-form">Celular</label>
-          <Input
-            value={celular}
-            onChange={handleInputChange(setCelular)}
-            placeholder="Ingrese su celular"
-            className="form-input"
-          />
-        </div>
-
-        <button  className="button-form" type="submit">Comprar</button>
+        <button className="button-form" type="submit">Comprar</button>
       </form>
     </>
   );

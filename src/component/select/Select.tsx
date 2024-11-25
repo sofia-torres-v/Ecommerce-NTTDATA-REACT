@@ -6,6 +6,8 @@ interface SelectProps {
   value: string | null;
   onChange: (value: string) => void;
   error?: string;
+  className?: string;
+  placeholder?: string; 
 }
 
 const Select: FC<SelectProps> = ({ options, value, onChange}) => {
