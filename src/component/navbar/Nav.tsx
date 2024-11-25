@@ -1,10 +1,8 @@
-import {LuShoppingCart} from "react-icons/lu";
-import {useCartState} from "../../context/CartContext";
+import { Link } from "react-router-dom";
+import CartIcon from "../cartIcon/CartIcon";
 import "./nav.css";
 
 const Nav = () => {
-    const {items} = useCartState();
-    const cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
 
     return (
         <nav className="nav">
@@ -13,11 +11,12 @@ const Nav = () => {
                     <img className="nav__logo-image" src="./src/assets/icon-logo.webp" alt="Logo de Market" />
                     <span className="nav__logo-text">Market</span>
                 </div>
+                <div className="nav__links"> 
+                    <Link to="/" className="nav__link">Home</Link> 
+                    <Link to="/Products" className="nav__link">Products</Link> 
+                </div>
                 <div className="nav__cart-box">
-                    <LuShoppingCart className="nav__cart-icon" />
-                    <span id="cart-counter" className="nav__cart-counter">
-                        {cartItemCount}
-                    </span>
+                    <CartIcon />
                 </div>
             </div>
         </nav>

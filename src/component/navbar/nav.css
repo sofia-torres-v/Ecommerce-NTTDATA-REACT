@@ -5,6 +5,17 @@
     padding: 15px 0;
 }
 
+.nav__links{
+    display: flex;
+    gap: 20px;
+}
+
+.nav__link{
+    color: var(--color-white);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
 .nav__logo-box {
     display: flex;
     align-items: center;

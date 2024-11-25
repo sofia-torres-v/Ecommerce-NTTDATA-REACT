@@ -18,9 +18,7 @@ const GlobalAppProvider: FC<PropsWithChildren> = ({children}) => {
             const categories = await fetchCategories();
 
             const mappedProducts = mapperProducts(products);
-            console.log(mappedProducts);
             const mappedCategories = mapperCategories(categories);
-            console.log(mappedCategories);
 
             // Actualizamos el estado global
             dispatch({type: AppActions.SaveProducts, payload: mappedProducts});

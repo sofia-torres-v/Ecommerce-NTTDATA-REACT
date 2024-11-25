@@ -6,11 +6,13 @@
   font-size: 1.3rem;
   font-weight: bold;
   color: var(--color-input-border);
-  border: 2px solid var(--color-input-border);
+  border: 1px solid var(--color-input-border);
+  font-weight: 300;
 }
 
 @media(min-width:750px){
   .select-category{
+    width: 40%;
     font-size: 1.6rem;
   }
 }

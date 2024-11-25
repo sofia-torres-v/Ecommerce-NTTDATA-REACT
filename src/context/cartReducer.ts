@@ -1,7 +1,10 @@
-import { CartAction, CartActions } from "../types/cart-types";
+import { CartAction, CartActions } from "../domain/cart.domain";
 
 export interface CartItem {
   productId: number;
+  name: string;
+  price: number;
+  image: string;
   quantity: number;
 }
 
@@ -16,16 +19,31 @@ export const initialCartState: CartState = {
 export const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case CartActions.AddToCart:
-      const existingItemIndex = state.items.findIndex(item => item.productId === action.payload.productId);
-      if (existingItemIndex !== -1) {
-        const updatedItems = [...state.items];
-        updatedItems[existingItemIndex].quantity += 1;
-        console.log("Updated Cart:", { items: updatedItems });
-        return { items: updatedItems };
+      const existingProduct = state.items.find(item => item.productId === action.payload.productId);
+
+      if (existingProduct) {
+        return {
+          ...state,
+          items: state.items.map(item =>
+            item.productId === action.payload.productId
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
+          ),
+        };
       } else {
-        const newItems = [...state.items, { productId: action.payload.productId, quantity: 1 }];
-        console.log("Updated Cart with New Product:", { items: newItems });
-        return { items: newItems };
+        return {
+          ...state,
+          items: [
+            ...state.items,
+            {
+              productId: action.payload.productId,
+              name: action.payload.name, 
+              price: action.payload.price, 
+              image: action.payload.image,  
+              quantity: 1,
+            },
+          ],
+        };
       }
     
     case CartActions.RemoveFromCart:

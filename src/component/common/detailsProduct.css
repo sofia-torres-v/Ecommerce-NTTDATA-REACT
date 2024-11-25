@@ -1,0 +1,17 @@
+/* Estilos comunes */
+.details-product {
+  font-size: 1rem;
+  padding: 10px;
+}
+
+/* Estilos para vista de productos */
+.details-product.products h3 {
+  font-size: 1.5rem;
+}
+
+/* Estilos para vista de modal */
+.details-product.modal h3 {
+  font-size: 1.2rem;
+}
+
+

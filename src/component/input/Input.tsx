@@ -1,25 +1,23 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import "./input.css";
 
 interface InputProps {
   value: string;
   onChange: (value: string) => void;
-  icon?: React.ReactNode; // El prop icon es opcional y se define aquí
+  icon?: React.ReactNode;
+  placeholder?: string;
+  className?: string;
 }
 
-const Input: FC<InputProps> = ({ value, onChange, icon }) => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(event.target.value);
-  };
-
+const Input: FC<InputProps> = ({ value, onChange, icon, placeholder, className }) => {
   return (
     <div className="input-category">
       <input
-        className="input-category__input"
+        className={`input-category__input ${className}`}
         type="text"
-        placeholder="Buscar productos..."
+        placeholder={placeholder}
         value={value}
-        onChange={handleChange}
+        onChange={(e) => onChange(e.target.value)}  
       />
       {icon && <div className="input-category__icon">{icon}</div>}
     </div>

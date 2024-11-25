@@ -1,5 +1,5 @@
 .products__inputs {
-  max-width: 1050px;
+  max-width: 850px;
   margin: 0 auto;
   padding: 45px 25px 30px;
   display: flex;
@@ -14,9 +14,20 @@
   color: var(--color-primary-bg);
 }
 
+.total-amount {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  display: block;
+}
+
 @media (min-width: 1024px) {
   .products__inputs {
-    padding: 50px 25px 40px;
+    padding: 50px 40px 40px;
   }
   .products__title{
       text-align: start;

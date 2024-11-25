@@ -1,0 +1,25 @@
+.button{
+  width: 100%;
+  max-width: 215px;
+  margin: 10px auto 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 5px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.3s ease;
+  color: var(--color-white);
+  background-color: var(--color-button-primary);
+}
+
+.button:hover {
+  transform: scale(0.98);
+}
+
+.button__icon{
+  font-size: 2.5rem;
+}
