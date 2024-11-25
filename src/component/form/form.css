@@ -3,7 +3,6 @@
   background-color: #fff;
   border-color: #aca0a0;
   padding: 15px;
-  font-size: 1rem;
   margin-bottom: 1rem;
   outline: none;
 }
@@ -36,3 +35,9 @@ form {
   gap: 20px;
 }
 
+.error {
+  color: rgba(218, 54, 54, 0.966);        
+  font-size: 12px;   
+  margin-top: 5px;  
+  font-weight: bold; 
+}
