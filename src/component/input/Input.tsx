@@ -5,6 +5,8 @@ interface InputProps {
   value: string;
   onChange: (value: string) => void;
   icon?: React.ReactNode;
+  className?: string;
+  placeholder?: string; 
 }
 
 const Input: FC<InputProps> = ({ value, onChange, icon }) => {

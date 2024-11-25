@@ -11,12 +11,12 @@ const CartIcon = () => {
 
   return (
     <Link to={'./CartSumary'}>
-    <div className="nav__cart-box">
-      <LuShoppingCart className="nav__cart-icon" />
-      <span id="cart-counter" className="nav__cart-counter">
-      {cartItemCount > 0 ? cartItemCount : 0}
-      </span>
-    </div>
+      <div className="nav__cart-box">
+        <LuShoppingCart className="nav__cart-icon" />
+        <span id="cart-counter" className="nav__cart-counter">
+          {cartItemCount > 0 ? cartItemCount : 0}
+        </span>
+      </div>
     </Link>
   );
 };

@@ -1,5 +1,5 @@
 .products__inputs {
-  max-width: 1050px;
+  max-width: 850px;
   margin: 0 auto;
   padding: 45px 25px 30px;
   display: flex;
@@ -27,7 +27,7 @@
 
 @media (min-width: 1024px) {
   .products__inputs {
-    padding: 50px 25px 40px;
+    padding: 50px 40px 40px;
   }
   .products__title{
       text-align: start;

@@ -12,8 +12,10 @@ interface CartItemCardProps extends CartItemProps {
 const CartItemCard: FC<CartItemCardProps> = ({ item, incrementItem, decrementItem, removeItem, layout = "cart" }) => {
   return (
     <div className={`cart-item-card ${layout}`}>
+
       <ImageProduct src={item.image} alt={item.name} className="cart-item-image" />
       <DetailsProduct title={item.name} price={item.price} />
+
       {layout === "cart" && (
         <QuantityControls
           quantity={item.quantity}
@@ -21,7 +23,8 @@ const CartItemCard: FC<CartItemCardProps> = ({ item, incrementItem, decrementIte
           decrement={() => decrementItem(item.productId)}
         />
       )}
-      {layout === "cart" && <button onClick={() => removeItem(item.productId)}>Eliminar</button>}
+      
+      {layout === "cart" && <button  className="button-delete" onClick={() => removeItem(item.productId)}>Eliminar</button>}
     </div>
   );
 };

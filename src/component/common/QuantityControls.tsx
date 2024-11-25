@@ -10,9 +10,9 @@ interface QuantityControlsProps {
 const QuantityControls: FC<QuantityControlsProps> = ({ quantity, increment, decrement }) => {
   return (
     <div className="quantity-controls">
-      <button onClick={decrement}>-</button>
+      <button className="quantity-controls__button" onClick={decrement}>-</button>
       <span>{quantity}</span>
-      <button onClick={increment}>+</button>
+      <button className="quantity-controls__button" onClick={increment}>+</button>
     </div>
   );
 };

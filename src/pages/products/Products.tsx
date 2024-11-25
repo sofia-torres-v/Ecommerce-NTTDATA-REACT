@@ -47,7 +47,7 @@ const Products: FC = () => {
   return (
     <div>
       <div className="products__inputs">
-        <Input value={searchTerm} onChange={setSearchTerm} icon={<IoIosSearch className="icon-search" />} />
+        <Input  value={searchTerm} onChange={setSearchTerm} icon={<IoIosSearch className="icon-search" />} />
         <Select options={categoryOptions} value={selectedCategory} onChange={setSelectedCategory} />
       </div>
 

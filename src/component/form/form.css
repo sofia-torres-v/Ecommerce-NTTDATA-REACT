@@ -1,0 +1,27 @@
+.form-input {
+  width: 100%;
+  background-color: #fff;
+  border-color: #aca0a0;
+  padding: 15px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+}
+form {
+  display: grid;
+  gap: 20px;
+  padding: 20px 0;
+}
+.button-form{
+  padding: 12px ;
+  width: 200px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: rgb(17, 16, 16);
+  font-size: 1.8rem;
+}
+.label-form{
+  font-size: 1.7rem;
+}

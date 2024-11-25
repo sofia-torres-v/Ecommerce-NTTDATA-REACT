@@ -2,13 +2,21 @@
 .cart-item-card {
   display: flex;
   align-items: center;
-  gap: 10px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .cart-item-card.cart {
   flex-direction: row;
   justify-content: space-between;
-  grid-template-columns: repeat(5, 1fr); 
+}
+
+.button-delete{
+  padding: 10px 15px;
+  background-color: #111010;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 8px;
 }
 
 /* modal */
