@@ -2,12 +2,13 @@ import { FC } from 'react';
 import CartItemCard from "../../component/cartItem/CartItem";
 import { useCart } from "../../shared/hooks/useCart";
 import './cardSumary.css'
-import Form from '../../component/form/Form';
+import FormPuch from '../../component/forms/FormPuch';
+
 
 
 const CartSummary: FC = () => {
   const { items, incrementItem, decrementItem, removeItem } = useCart();
-  //  total a pagar
+  
   const totalAmount = items.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
@@ -34,7 +35,7 @@ const CartSummary: FC = () => {
         )}
       </div>
       <div className='form-cart'>
-        <Form />
+        <FormPuch />
       </div>
     </div>
   );

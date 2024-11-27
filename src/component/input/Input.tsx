@@ -3,7 +3,7 @@ import "./input.css";
 
 interface InputProps {
   value: string;
-  onChange: (value: string) => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; // Recibe el evento completo
   icon?: React.ReactNode;
   placeholder?: string;
   className?: string;
@@ -17,7 +17,7 @@ const Input: FC<InputProps> = ({ value, onChange, icon, placeholder, className }
         type="text"
         placeholder={placeholder}
         value={value}
-        onChange={(e) => onChange(e.target.value)}  
+        onChange={onChange} // Pasa el evento completo
       />
       {icon && <div className="input-category__icon">{icon}</div>}
     </div>
