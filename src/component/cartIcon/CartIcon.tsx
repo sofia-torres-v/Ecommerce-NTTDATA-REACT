@@ -9,6 +9,7 @@ const CartIcon = () => {
   const { items } = useCartState();
   const cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
 
+  // usemos enum para los path
   return (
     <Link to={'./CartSumary'}>
       <div className="nav__cart-box">

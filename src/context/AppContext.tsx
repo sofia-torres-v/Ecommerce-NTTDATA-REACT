@@ -13,6 +13,7 @@ const GlobalAppProvider: FC<PropsWithChildren> = ({children}) => {
     const [state, dispatch] = useReducer(appReducer, initialState);
 
     useEffect(() => {
+        // esto deber'ia estar fuera del provider en caso se necesite cargar al inicio se puede llamar en el router
         const loadProductsAndCategories = async () => {
             const products = await fetchProducts();
             const categories = await fetchCategories();
