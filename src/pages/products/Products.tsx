@@ -13,6 +13,7 @@ const Products: FC = () => {
   const dispatch = useCartDispatch();
 
   const [searchTerm, setSearchTerm] = useState("");
+  // los valores fijos ponerlo en constantes
   const [selectedCategory, setSelectedCategory] = useState("Todas las categorías");
 
   const handleAddToCart = (productId: number) => {

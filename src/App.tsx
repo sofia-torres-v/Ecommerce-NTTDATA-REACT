@@ -5,6 +5,7 @@ import MainLayout from "./component/mainLayout/MainLayout";
 import CartSumary from "./pages/cartSumary/CartSumary";
 
 function App() {
+    // los paths deben estar en enum
     return (
         <>
             <Routes>

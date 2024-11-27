@@ -1,3 +1,4 @@
+// el distrito tiene un valor por defecto y al registrar sin cambiarlo generar error de validaci'on
 import React, { FC, useState } from "react";
 import Input from "../input/Input";
 import Select from "../select/Select";
@@ -13,6 +14,7 @@ import {
 } from "../../shared/utils/validations";
 
 const Form: FC = () => {
+  // un solo state ser'ia suficiente 
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [distrito, setDistrito] = useState("");

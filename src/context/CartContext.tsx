@@ -21,6 +21,7 @@ export const useCartDispatch = () => {
 
 export const CartProvider: FC<PropsWithChildren> = ({ children }) => {
   // Obtener el estado del carrito del localStorage (si existe)
+  // esta l'ogica no debe estar aqu'i
   const savedCartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
 
  
@@ -32,6 +33,7 @@ export const CartProvider: FC<PropsWithChildren> = ({ children }) => {
 
   // Guardar el estado del carrito en el localStorage cada vez que se actualice
   useEffect(() => {
+    // esta l'ogica no debe estar aqu'i
     localStorage.setItem("cartItems", JSON.stringify(state.items));
   }, [state.items]);
 
