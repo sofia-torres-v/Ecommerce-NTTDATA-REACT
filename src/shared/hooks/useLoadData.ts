@@ -15,7 +15,6 @@ const useLoadData = () => {
 
             const mappedProducts = mapperProducts(products);
             const mappedCategories = mapperCategories(categories);
-
             // Actualizar estado global con productos y categorías
             dispatch({ type: AppActions.SaveProducts, payload: mappedProducts });
             dispatch({ type: AppActions.SaveCategories, payload: mappedCategories });

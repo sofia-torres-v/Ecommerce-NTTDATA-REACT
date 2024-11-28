@@ -10,7 +10,7 @@ export async function fetchProducts() {
         return data.products; 
     } catch (error) {
         console.error("Error al obtener productos:", error);
-        return []; 
+      
     }
 }
 
@@ -24,6 +24,6 @@ export async function fetchCategories(){
         return data;
     } catch (error) {
         console.error("Error al obtener las categorias:", error);
-        return [];
+        
     }
 }
