@@ -1,7 +1,6 @@
 import { useCartDispatch, useCartState } from "../../context/CartContext";
 import { CartActions } from "../../domain/cart.domain";
 
-// Hook combinado
 export const useCart = () => {
   const state = useCartState();
   const dispatch = useCartDispatch();

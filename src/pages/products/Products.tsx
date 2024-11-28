@@ -3,12 +3,11 @@ import { useGlobalAppState } from "../../context/AppContext";
 import { useCartDispatch } from "../../context/CartContext";
 import { IoIosSearch } from "react-icons/io";
 import { CartActions } from "../../domain/cart.domain";
-
+import { TEXTS } from "../../shared/utils/textContants";
 import ProductList from "../../component/productList/ProductList";
 import Select from "../../component/select/Select";
 import Input from "../../component/input/Input";
 import "./products.css";
-import { TEXTS } from "../../shared/utils/textContants";
 
 const Products: FC = () => {
   const { products, categories } = useGlobalAppState();
@@ -63,9 +62,9 @@ const Products: FC = () => {
       </div>
 
       <h1 className="products__title container">Productos Disponibles</h1>
-      <div className="product__content">
+      <>
         <ProductList products={filteredProducts} onAddToCart={handleAddToCart} />
-      </div>
+      </>
     </div>
   );
 };

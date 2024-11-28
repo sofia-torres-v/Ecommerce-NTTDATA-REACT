@@ -1,19 +1,17 @@
 import { FC } from "react";
-import './imageProduct.css'
+import './imageProduct.css';
 
 interface ProductImageProps {
   src: string;
   alt: string;
   className?: string;
-  layout?: "products" | "modal"; 
 }
 
-const ImageProduct: FC<ProductImageProps> = ({ src, alt, layout = "products" }) => {
-  return <img className={`product-image ${layout}`} 
-  src={src} 
-  alt={alt} 
-  />;
-
+const ImageProduct: FC<ProductImageProps> = ({ src, alt, className }) => {
+  return <img
+    src={src}
+    alt={alt}
+    className={className} />;
 };
 
 export default ImageProduct;

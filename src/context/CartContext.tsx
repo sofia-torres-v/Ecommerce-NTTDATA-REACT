@@ -1,18 +1,19 @@
-import React, { createContext, useReducer, useContext, FC, PropsWithChildren, useEffect } from "react";
-import { cartReducer, CartState, initialCartState } from "./cartReducer";
-import { CartAction } from "../domain/cart.domain";
+import React, { createContext, useReducer, useContext, FC, PropsWithChildren } from "react";
+import { cartReducer, initialCartState } from "./cartReducer";
+import useCartStorage from "../shared/hooks/useCartStorage";
+import { CartAction, CartState } from "../domain/cart.domain";
 
 const CartStateContext = createContext<CartState | undefined>(undefined);
-const CartDispatchContext = createContext<React.Dispatch<CartAction> | undefined>(undefined);
+const CartDispatchContext = createContext<React.Dispatch<CartAction> | undefined>(undefined); 
 
-// Hook, acceder al estado del carrito
+// acceder al estado del cart
 export const useCartState = () => {
   const context = useContext(CartStateContext);
   if (!context) throw new Error("useCartState debe usarse dentro de un CartProvider");
   return context;
 };
 
-// Hook, acceder al dispatch del carrito
+// Acceder al dispatch del cart
 export const useCartDispatch = () => {
   const context = useContext(CartDispatchContext);
   if (!context) throw new Error("useCartDispatch debe usarse dentro de un CartProvider");
@@ -20,24 +21,12 @@ export const useCartDispatch = () => {
 };
 
 export const CartProvider: FC<PropsWithChildren> = ({ children }) => {
-  // Obtener el estado del carrito del localStorage (si existe)
-  const savedCartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
-
- 
-  const initialState = savedCartItems.length > 0
-    ? { items: savedCartItems }
-    : initialCartState;
-
-  const [state, dispatch] = useReducer(cartReducer, initialState);
-
-  // Guardar el estado del carrito en el localStorage cada vez que se actualice
-  useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(state.items));
-  }, [state.items]);
+  const savedCartItems = useCartStorage(initialCartState.items);
+  const [state, dispatch] = useReducer(cartReducer, { items: savedCartItems });
 
   return (
     <CartStateContext.Provider value={state}>
-      <CartDispatchContext.Provider value={dispatch}>
+      <CartDispatchContext.Provider value={dispatch}>  {/*dispatch de tipo Dispatch<CartAction> */}
         {children}
       </CartDispatchContext.Provider>
     </CartStateContext.Provider>

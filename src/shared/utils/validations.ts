@@ -28,11 +28,11 @@ export const validateCelular = (value: string) => {
   return "";
 };
 
-export const validateDistrito = (value: string) => {
-  if (!value.trim()) {
-    return "Campo obligatorio";
+export const validateDistrito = (distrito: string): string => {
+  if (!distrito || distrito === "Seleccionar distrito") {
+    return "Debe seleccionar un distrito"; 
   }
-  return "";
+  return ""; 
 };
 
 export const validateDireccion = (value: string) => {
