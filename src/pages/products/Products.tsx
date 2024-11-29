@@ -6,8 +6,8 @@ import { CartActions } from "../../domain/cart.domain";
 import { TEXTS } from "../../shared/utils/textContants";
 import ProductList from "../../component/productList/ProductList";
 import Select from "../../component/select/Select";
-import Input from "../../component/input/Input";
 import "./products.css";
+import InputComponent from "../../component/input/InputComponent";
 
 const Products: FC = () => {
   const { products, categories } = useGlobalAppState();
@@ -47,16 +47,17 @@ const Products: FC = () => {
   return (
     <div>
       <div className="products__inputs">
-        <Input
-          name="search"
+        <InputComponent
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           icon={<IoIosSearch className="icon-search" />}
           placeholder="Buscar productos..."
+          className='input-category__input '
         />
+        
         <Select
           options={categoryOptions}
-          value={selectedCategory}
+          value={selectedCategory }
           onChange={setSelectedCategory}
         />
       </div>

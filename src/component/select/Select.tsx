@@ -3,7 +3,7 @@ import './select.css'
 
 interface SelectProps {
   options: string[];        
-  value: string | null;      
+  value: string | undefined;      
   onChange: (value: string) => void; 
   className?: string;
   placeholder?: string; 

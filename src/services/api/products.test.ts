@@ -53,4 +53,3 @@ describe("fetchCategories", () => {
         expect(categories[0].name).toBe("Beauty");
     });
 });
-

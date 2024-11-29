@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import Input from "../input/Input";
+import Input from "../input/InputComponent";
 import Select from "../select/Select";
 import './form.css';
 import { usePlaces } from "../../shared/hooks/usePlace";
@@ -11,6 +11,7 @@ import {
   validateDireccion,
   validateReferencia
 } from "../../shared/utils/validations";
+import InputComponent from "../input/InputComponent";
 
 const Form: FC = () => {
   const [formData, setFormData] = useState({
@@ -116,9 +117,9 @@ const Form: FC = () => {
       <div className="label-distric">
         <label className="label-form">Distrito</label>
         <Select
-          options={districts.map((d) => d)} // distritos
+          options={districts.map((d) => d)} 
           placeholder="Seleccione distrito"
-          value={formData.distrito}
+          value={formData.distrito || undefined }
           onChange={(value: string) => handleInputChange("distrito")({ target: { value } } as React.ChangeEvent<HTMLSelectElement>)} 
           className="form-select"
         />
@@ -149,7 +150,7 @@ const Form: FC = () => {
 
       <div>
         <label className="label-form">Referencia</label>
-        <Input
+        <InputComponent
           value={formData.referencia}
           onChange={handleInputChange("referencia")}
           placeholder="Referencia de ubicación"

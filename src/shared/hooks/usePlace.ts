@@ -14,7 +14,6 @@ export function usePlaces() {
           throw new Error("No se pudo obtener los distritos");
         }
         const data: District[] = await response.json(); 
-        
         const districtNames = mapDistrictsNames(data);
         
         // Guardamos solo los nombres de los distritos en el estado
