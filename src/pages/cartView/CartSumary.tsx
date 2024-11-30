@@ -4,9 +4,6 @@ import { useCart } from "../../shared/hooks/useCart";
 import './cardSumary.css'
 import FormPuch from '../../component/forms/FormPuch';
 
-
-
-
 const CartSummary: FC = () => {
   const { items, incrementItem, decrementItem, removeItem } = useCart();
   

@@ -7,12 +7,12 @@ export const appReducer = (state: AppState, {type, payload}: DispatchObject<AppA
         case AppActions.SaveProducts:
             return {
                 ...state,
-                products: payload as ProductResponse[],
+                products: payload as ProductResponse[], 
             };
         case AppActions.SaveCategories:
             return {
                 ...state,
-                categories: payload as string[],
+                categories: payload as string[], 
             };         
         default:
             throw new Error("No hay action disponible");

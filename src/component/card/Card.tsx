@@ -29,7 +29,12 @@ const Card: FC<CardProps> = ({ title, image, price, category, discount, roundPer
                 discount={roundPercentage(discount)}
                 className="card__info"
             />
-            <Button label="Agregar" onClick={onAddToCart} icon={<LuShoppingCart />} className="card-button" />
+            <Button
+                label="Agregar"
+                icon={<LuShoppingCart />}
+                onClick={onAddToCart}
+                className="button__icon" 
+            />
         </div>
     );
 };

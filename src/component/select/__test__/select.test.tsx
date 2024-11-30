@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Select from './Select';  
+import Select from '../Select';
 
 describe('Componte Select', () => {
   const mockOnChange = jest.fn();

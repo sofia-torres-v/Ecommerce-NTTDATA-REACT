@@ -1,17 +1,9 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { useGlobalAppState } from '../../context/AppContext';
 import { useCartDispatch } from '../../context/CartContext';
-import Products from './Products';
+import Products from '../productsView/Products';
 import { CartActions } from '../../domain/cart.domain';
 
-// Mock de los contextos
-jest.mock('../../context/AppContext', () => ({
-  useGlobalAppState: jest.fn(),
-}));
-
-jest.mock('../../context/CartContext', () => ({
-  useCartDispatch: jest.fn(),
-}));
 
 describe('Products Component', () => {
   const mockProducts = [
@@ -38,7 +30,7 @@ describe('Products Component', () => {
 
     expect(screen.getByPlaceholderText(/Buscar productos/i)).toBeInTheDocument();
     expect(screen.getByText(/Productos Disponibles/i)).toBeInTheDocument();
-    expect(screen.getAllByText(/Agregar al carrito/i)).toHaveLength(3); // Verifica 3 productos inicialmente
+    expect(screen.getAllByText(/Agregar/i)).toHaveLength(3); // Verifica 3 productos inicialmente
   });
 
   test('filters products by search term', () => {
@@ -62,10 +54,10 @@ describe('Products Component', () => {
     expect(screen.queryByText('Producto 2')).not.toBeInTheDocument();
   });
 
-  test('adds product to cart', () => {
+  test('Agregar productos al carrito', () => {
     render(<Products />);
 
-    const addToCartButton = screen.getAllByText(/Agregar al carrito/i)[0]; // Primer producto
+    const addToCartButton = screen.getAllByText(/Agregar/i)[0]; // Primer producto
     fireEvent.click(addToCartButton);
 
     expect(mockDispatch).toHaveBeenCalledWith({

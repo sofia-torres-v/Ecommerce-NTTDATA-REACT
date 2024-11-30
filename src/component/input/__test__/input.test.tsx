@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { IoIosSearch } from 'react-icons/io'; 
-import InputComponent from './InputComponent';
+import InputComponent from '../InputComponent';
+
 
 test('Renderizar el componente con un ícono', () => {
   render(

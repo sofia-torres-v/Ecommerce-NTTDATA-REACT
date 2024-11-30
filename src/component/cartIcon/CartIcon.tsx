@@ -3,9 +3,11 @@ import { useCartState } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import "./cartIcon.css";
 import { RoutesEnum } from "../../shared/utils/routes.enum";
+import { CartItemType } from "../../domain/cart.domain";
+
 
 const CartIcon = () => {
-  const { items } = useCartState();
+  const { items }:{ items:CartItemType[]} = useCartState();
   const cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
 
   return (

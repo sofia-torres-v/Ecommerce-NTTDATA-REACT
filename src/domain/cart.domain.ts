@@ -4,6 +4,7 @@ export interface CartItemType {
   price: number;
   image: string;
   quantity: number;
+  id:string;
 }
 
 export enum CartActions {

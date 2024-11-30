@@ -1,25 +1,24 @@
-import { fetchCategories, fetchProducts } from "./services/api/product.service";
-import { mapperCategories, mapperProducts } from "./services/mappers/product.mapper";
+import { loadProductsAndCategories } from "./shared/actions/appActions";
 import { useGlobalAppDispatch } from "./context/AppContext";
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { RoutesEnum } from "./shared/utils/routes.enum";
-import { AppActions } from "./types/app-types";
 import { useEffect } from "react";
-import CartSumary from "./pages/cartSumary/CartSumary";
+import CartSumary from "./pages/cartView/CartSumary";
 import MainLayout from "./component/mainLayout/MainLayout";
-import Products from "./pages/products/Products";
-import Home from "./pages/home/Home";
-import useLoadData from "./shared/hooks/useLoadData";
+import Products from "./pages/productsView/Products";
 
 function App() {
-    
-    useLoadData();
+    const dispatch = useGlobalAppDispatch(); 
+
+    useEffect(() => {
+        loadProductsAndCategories(dispatch); 
+    }, [dispatch]);
 
     return (
         <>
             <Routes>
                 <Route element={<MainLayout />}>
-                    <Route path={RoutesEnum.HOME} element={<Home />} />
+                    <Route path="/" element={<Products />} /> 
                     <Route path={RoutesEnum.CART_SUMMARY} element={<CartSumary />} />
                     <Route path={RoutesEnum.PRODUCTS} element={<Products />} />
                 </Route>

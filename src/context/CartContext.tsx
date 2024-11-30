@@ -1,5 +1,5 @@
 import React, { createContext, useReducer, useContext, FC, PropsWithChildren } from "react";
-import { cartReducer, initialCartState } from "./cartReducer";
+import { cartReducer, initialCartState } from "../reducer/cartReducer";
 import useCartStorage from "../shared/hooks/useCartStorage";
 import { CartAction, CartState } from "../domain/cart.domain";
 
@@ -26,7 +26,7 @@ export const CartProvider: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <CartStateContext.Provider value={state}>
-      <CartDispatchContext.Provider value={dispatch}>  {/*dispatch de tipo Dispatch<CartAction> */}
+      <CartDispatchContext.Provider value={dispatch}>  
         {children}
       </CartDispatchContext.Provider>
     </CartStateContext.Provider>
