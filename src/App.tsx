@@ -1,17 +1,26 @@
-import {Route, Routes} from "react-router-dom";
-import Home from "./pages/home/Home";
-import Products from "./pages/products/Products";
+import { loadProductsAndCategories } from "./shared/actions/appActions";
+import { useGlobalAppDispatch } from "./context/AppContext";
+import { Route, Routes } from "react-router-dom";
+import { RoutesEnum } from "./shared/utils/routes.enum";
+import { useEffect } from "react";
+import CartSumary from "./pages/cartView/CartSumary";
 import MainLayout from "./component/mainLayout/MainLayout";
-import CartSumary from "./pages/cartSumary/CartSumary";
+import Products from "./pages/productsView/Products";
 
 function App() {
+    const dispatch = useGlobalAppDispatch(); 
+
+    useEffect(() => {
+        loadProductsAndCategories(dispatch); 
+    }, [dispatch]);
+
     return (
         <>
             <Routes>
                 <Route element={<MainLayout />}>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/CartSumary" element={<CartSumary />} />
-                    <Route path="/Products" element={<Products />} />
+                    <Route path="/" element={<Products />} /> 
+                    <Route path={RoutesEnum.CART_SUMMARY} element={<CartSumary />} />
+                    <Route path={RoutesEnum.PRODUCTS} element={<Products />} />
                 </Route>
             </Routes>
         </>

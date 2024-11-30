@@ -1,17 +1,41 @@
-/* Estilos comunes */
-.details-product {
-  font-size: 1rem;
-  padding: 10px;
+.card__title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  min-height: 68px;
+  padding: 20px 0px 5px;
 }
 
-/* Estilos para vista de productos */
-.details-product.products h3 {
-  font-size: 1.5rem;
+.card__info{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 0 10px;
+}
+.card__info-price {
+  font-weight: 500;
+  font-size: 2.1rem;
+  color: var(--color-icon);
 }
 
-/* Estilos para vista de modal */
-.details-product.modal h3 {
-  font-size: 1.2rem;
+.card__info-category {
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
+.card__discount {
+  width: 60px;
+  padding: 4px 10px 5px 4px;
+  position: absolute;
+  top: 6px;
+  left: 0;
+  border-radius: 10px 0 0 5px;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+  color: var(--color-white);
+  background-color: var(--color-icon);
+}
 
+.card__discount-text {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-white);
+}

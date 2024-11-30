@@ -22,7 +22,6 @@ const ProductList: FC<ProductListProps> = ({ products, onAddToCart }) => {
           discount={product.discountPercentage}
           onAddToCart={() => onAddToCart(product.id)} 
           roundPercentage={roundPercentage}
-          layout="modal"
         />
       ))}
     </div>

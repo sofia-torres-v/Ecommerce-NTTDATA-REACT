@@ -1,18 +1,21 @@
-import {FC} from "react";
-import "./button.css";
+import { FC } from "react";
 
 interface ButtonProps {
-    label: string;
-    onClick: () => void; 
-    icon?: React.ReactNode; 
-    className?: string; 
-}
-
-const Button: FC<ButtonProps> = ({label, onClick, icon, className}) => (
-    <button className={`button ${className}`} onClick={onClick}>
-        {label}
+    label?: string; 
+    icon?: React.ReactNode;
+    onClick: () => void;
+    className?: string;
+  }
+  
+  const Button: FC<ButtonProps> = ({ label,  onClick, icon, className }) => {
+    return (
+      <button
+        className={className}
+        onClick={onClick}
+      >
+        {label && <span className="label">{label}</span>}
         {icon && <span className="button__icon">{icon}</span>}
-    </button>
-);
-
-export default Button;
+      </button>
+    );
+  };
+export default Button;  

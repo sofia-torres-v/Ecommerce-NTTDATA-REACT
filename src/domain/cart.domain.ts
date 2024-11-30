@@ -1,10 +1,10 @@
-// Acciones y  lógica del carrito
 export interface CartItemType {
   productId: number;
   name: string;
   price: number;
   image: string;
   quantity: number;
+  id:string;
 }
 
 export enum CartActions {
@@ -13,6 +13,7 @@ export enum CartActions {
   UpdateQuantity = "UPDATE_QUANTITY",
 }
 
+// Acciones del carrito
 export interface AddToCartAction {
   type: CartActions.AddToCart;
   payload: CartItemType;
@@ -29,3 +30,7 @@ export interface UpdateQuantityAction {
 }
 
 export type CartAction = AddToCartAction | RemoveFromCartAction | UpdateQuantityAction;
+
+export interface CartState {
+  items: CartItemType[];
+}

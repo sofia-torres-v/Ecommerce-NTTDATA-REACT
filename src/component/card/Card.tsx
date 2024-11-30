@@ -13,21 +13,28 @@ interface CardProps {
     discount: number;
     onAddToCart: () => void;
     roundPercentage: (discount: number) => string;
-    layout?: "products" | "modal";
 }
 
-const Card: FC<CardProps> = ({ title, image, price, category, discount, roundPercentage, onAddToCart, layout = "products" }) => {
+const Card: FC<CardProps> = ({ title, image, price, category, discount, roundPercentage, onAddToCart }) => {
     return (
         <div className="card">
-            <ImageProduct src={image} alt={title} layout={layout} />
+            <ImageProduct
+                src={image}
+                alt={title}
+                className="card__image" />
             <DetailsProduct
                 title={title}
                 price={price}
                 category={category}
                 discount={roundPercentage(discount)}
-                layout={layout}
+                className="card__info"
             />
-            <Button label="Agregar" onClick={onAddToCart} icon={<LuShoppingCart />} className="card-button" />
+            <Button
+                label="Agregar"
+                icon={<LuShoppingCart />}
+                onClick={onAddToCart}
+                className="button__icon" 
+            />
         </div>
     );
 };
