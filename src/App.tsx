@@ -8,10 +8,10 @@ import MainLayout from "./component/mainLayout/MainLayout";
 import Products from "./pages/productsView/Products";
 
 function App() {
-    const dispatch = useGlobalAppDispatch(); 
+    const dispatch = useGlobalAppDispatch();
 
     useEffect(() => {
-        loadProductsAndCategories(dispatch); 
+        loadProductsAndCategories(dispatch);
     }, [dispatch]);
 
     return (
@@ -23,6 +23,7 @@ function App() {
                     <Route path={RoutesEnum.PRODUCTS} element={<Products />} />
                 </Route>
             </Routes>
+
         </>
     );
 }

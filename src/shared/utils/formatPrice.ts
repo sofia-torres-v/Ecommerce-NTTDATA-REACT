@@ -1,3 +1,4 @@
 export const roundPercentage = (value: number): string => {
-  return `-${Math.round(value)}%`;
+  const roundedValue = Math.round(value); // Usamos Math.round() para valores positivos y negativos
+  return `${roundedValue}%`;
 };

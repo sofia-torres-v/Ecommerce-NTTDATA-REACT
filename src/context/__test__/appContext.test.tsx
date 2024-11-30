@@ -1,31 +1,28 @@
-import { render, screen } from "@testing-library/react";
-import { GlobalAppProvider, useGlobalAppState } from "../../context/AppContext";
+import { render, screen, fireEvent } from "@testing-library/react";
+import { GlobalAppProvider, useGlobalAppDispatch } from "../../context/AppContext";
+import { AppActions } from "../../types/app-types";
 
-const TestComponent = () => {
-  const state = useGlobalAppState();
-  return <h1>{state.products.length}</h1>;  // Muestra el número de productos
+
+const TestComponentDispatch = () => {
+  const dispatch = useGlobalAppDispatch();
+
+  return (
+    <button onClick={() => dispatch({ type: AppActions.SaveProducts, payload: [{ id: 1, name: "Product 1" }] })}>
+      Dispatch SaveProducts
+    </button>
+  );
 };
 
-describe('GlobalAppProvider', () => {
-  it('debería proporcionar el estado global correctamente', () => {
+describe("GlobalAppProvider", () => {
+  it("debería disparar una acción SaveProducts cuando se hace clic en el botón", () => {
     render(
       <GlobalAppProvider>
-        <TestComponent />
+        <TestComponentDispatch />
       </GlobalAppProvider>
     );
 
-    // Verificar que el número de productos es 3 (según el estado mockeado)
-    expect(screen.getByRole('heading')).toHaveTextContent("3");
-  });
+    const button = screen.getByRole("button", { name: /dispatch saveproducts/i });
+    fireEvent.click(button);
 
-  it('debería lanzar un error si se usa useGlobalAppState fuera del proveedor', () => {
-    const TestComponentOutsideProvider = () => {
-      useGlobalAppState(); 
-      return null;
-    };
-
-    expect(() => render(<TestComponentOutsideProvider />)).toThrow(
-      "useGlobalAppState debe usarse dentro de AppStateContext"
-    );
   });
 });

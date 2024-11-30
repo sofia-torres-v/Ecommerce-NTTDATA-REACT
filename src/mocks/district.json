@@ -1,12 +1,14 @@
-[
-  { "id": 1, "name": "Puente Piedra", "isCapital": false },
-  { "id": 2, "name": "Lince", "isCapital": false },
-  { "id": 3, "name": "Macdalena", "isCapital": false },
-  { "id": 4, "name": "Jesús María", "isCapital": false },
-  { "id": 5, "name": "Comas", "isCapital": false },
-  { "id": 6, "name": "Miraflores", "isCapital": false },
-  { "id": 7, "name": "Chorrillos", "isCapital": false },
-  { "id": 8, "name": "La Molina", "isCapital": false },
-  { "id": 9, "name": "San Isidro", "isCapital": false},
-  { "id": 10, "name": "Barranco", "isCapital": false }
-]
+{
+  "districts" : [
+    { "id": 1, "name": "Puente Piedra", "isCapital": false },
+    { "id": 2, "name": "Lince", "isCapital": false },
+    { "id": 3, "name": "Macdalena", "isCapital": false },
+    { "id": 4, "name": "Jesús María", "isCapital": false },
+    { "id": 5, "name": "Comas", "isCapital": false },
+    { "id": 6, "name": "Miraflores", "isCapital": false },
+    { "id": 7, "name": "Chorrillos", "isCapital": false },
+    { "id": 8, "name": "La Molina", "isCapital": false },
+    { "id": 9, "name": "San Isidro", "isCapital": false},
+    { "id": 10, "name": "Barranco", "isCapital": false }
+  ]
+}

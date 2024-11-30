@@ -1,7 +1,7 @@
 import { fetchCategories, fetchProducts } from "../api/product.service";
 
+
 global.fetch = jest.fn();
-jest.mock("../../services/api/product.service");
 
 describe("fetchProducts", () => {
     it("should return a list of products", async () => {

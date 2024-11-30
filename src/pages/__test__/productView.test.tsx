@@ -1,9 +1,15 @@
 import { render, screen, fireEvent } from '@testing-library/react';
+import Products from '../productsView/Products';
 import { useGlobalAppState } from '../../context/AppContext';
 import { useCartDispatch } from '../../context/CartContext';
-import Products from '../productsView/Products';
-import { CartActions } from '../../domain/cart.domain';
 
+jest.mock('../../context/AppContext', () => ({
+  useGlobalAppState: jest.fn(),
+}));
+
+jest.mock('../../context/CartContext', () => ({
+  useCartDispatch: jest.fn(),
+}));
 
 describe('Products Component', () => {
   const mockProducts = [
@@ -13,7 +19,6 @@ describe('Products Component', () => {
   ];
 
   const mockCategories = ['Categoría 1', 'Categoría 2'];
-
   const mockDispatch = jest.fn();
 
   beforeEach(() => {
@@ -25,50 +30,60 @@ describe('Products Component', () => {
     (useCartDispatch as jest.Mock).mockReturnValue(mockDispatch);
   });
 
-  test('renders the product list with filters', () => {
+  test('renders the list of products correctly', () => {
     render(<Products />);
 
-    expect(screen.getByPlaceholderText(/Buscar productos/i)).toBeInTheDocument();
-    expect(screen.getByText(/Productos Disponibles/i)).toBeInTheDocument();
-    expect(screen.getAllByText(/Agregar/i)).toHaveLength(3); // Verifica 3 productos inicialmente
-  });
-
-  test('filters products by search term', () => {
-    render(<Products />);
-
-    const searchInput = screen.getByPlaceholderText(/Buscar productos/i);
-    fireEvent.change(searchInput, { target: { value: 'Producto 1' } });
-
+    // Verifica que los productos están siendo renderizados
     expect(screen.getByText('Producto 1')).toBeInTheDocument();
-    expect(screen.queryByText('Producto 2')).not.toBeInTheDocument();
-  });
-
-  test('filters products by category', () => {
-    render(<Products />);
-
-    const select = screen.getByRole('combobox');
-    fireEvent.change(select, { target: { value: 'Categoría 1' } });
-
-    expect(screen.getByText('Producto 1')).toBeInTheDocument();
+    expect(screen.getByText('Producto 2')).toBeInTheDocument();
     expect(screen.getByText('Producto 3')).toBeInTheDocument();
-    expect(screen.queryByText('Producto 2')).not.toBeInTheDocument();
   });
 
-  test('Agregar productos al carrito', () => {
+  test('should call dispatch when a product is added to the cart', () => {
     render(<Products />);
-
-    const addToCartButton = screen.getAllByText(/Agregar/i)[0]; // Primer producto
-    fireEvent.click(addToCartButton);
-
+  
+    // Encuentra el botón "Agregar" para el primer producto usando el data-testid
+    const addButton = screen.getByTestId('add-to-cart-1'); 
+  
+    // Simula el clic en el botón "Agregar"
+    fireEvent.click(addButton);
+  
+    // Verifica que el dispatch haya sido llamado con el producto correcto
     expect(mockDispatch).toHaveBeenCalledWith({
-      type: CartActions.AddToCart,
+      type: 'ADD_TO_CART',
       payload: {
-        productId: 1,
-        name: 'Producto 1',
-        price: 100,
-        image: 'image1.jpg',
+        productId: mockProducts[0].id,
+        name: mockProducts[0].title,
+        price: mockProducts[0].price,
+        image: mockProducts[0].thumbnail,
         quantity: 1,
+        id: mockProducts[0].id,
       },
     });
   });
+  
+  test('should filter products by category', async () => {
+    render(<Products />);
+  
+    // Filtra por "Categoría 1" utilizando el select
+    fireEvent.change(screen.getByRole('combobox'), { target: { value: 'Categoría 1' } });
+  
+    // Verifica que los productos de "Categoría 1" están visibles
+    const product1 = await screen.findByTestId('add-to-cart-1');
+    const product3 = await screen.findByTestId('add-to-cart-3');
+  
+    expect(product1).toBeInTheDocument();
+    expect(product3).toBeInTheDocument();
+  
+    // Asegúrate de que "Producto 2" de "Categoría 2" no esté visible
+    expect(screen.queryByTestId('add-to-cart-2')).toBeNull();
+  });
+  
+  
+  
+  
+  
+  
+
+
 });

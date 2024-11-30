@@ -5,6 +5,7 @@ import "./mainLayout.css";
 
 
 const MainLayout = () => {
+    console.log("MainLayout rendered"); 
     return (
         <>
             <header className="main-layout__header">

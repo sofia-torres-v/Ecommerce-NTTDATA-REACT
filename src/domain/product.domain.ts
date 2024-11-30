@@ -5,5 +5,4 @@ export interface ProductResponse {
   thumbnail: string;
   title: string;
   id:number;
-  
 }
