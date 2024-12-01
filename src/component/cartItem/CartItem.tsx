@@ -3,6 +3,7 @@ import DetailsProduct from "../common/DetailsProduct";
 import ImageProduct from "../common/ImageProduct";
 import QuantityControls from "../common/QuantityControls";
 import { CartItemType } from "../../domain/cart.domain";
+import './carItem.css'
 
 interface CartItemCardProps {
   item: CartItemType;

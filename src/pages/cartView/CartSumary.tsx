@@ -3,6 +3,7 @@ import CartItemCard from "../../component/cartItem/CartItem";
 import { useCart } from "../../shared/hooks/useCart";
 import './cardSumary.css'
 import FormPuch from '../../component/forms/FormPuch';
+import './cardSumary.css'
 
 const CartSummary: FC = () => {
   const { items, incrementItem, decrementItem, removeItem } = useCart();
@@ -10,11 +11,12 @@ const CartSummary: FC = () => {
   const totalAmount = items.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
-    <div>
-      <div>
+    <>
+      
         {items.length > 0 ? (
           <>
             {items.map((item) => (
+
               <CartItemCard
                 key={item.productId}
                 item={item}
@@ -22,6 +24,7 @@ const CartSummary: FC = () => {
                 decrementItem={decrementItem}
                 removeItem={removeItem}
               />
+
             ))}
 
             <div className="total-amount">
@@ -31,11 +34,13 @@ const CartSummary: FC = () => {
         ) : (
           <p className='cart-empty'>&#58;&#40; No hay productos en el carrito</p>
         )}
-      </div>
+     
+
       <div className='form-cart'>
         <FormPuch />
       </div>
-    </div>
+
+    </>
   );
 };
 

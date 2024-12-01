@@ -2,10 +2,13 @@
 .cart-item-card {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 90%;
   margin: 0 auto;
 }
-
+.cart-item-card__image{
+  width: 300px;
+}
 .cart-item-card.cart {
   flex-direction: row;
   justify-content: space-between;
@@ -24,4 +27,12 @@
   flex-direction: column;
   text-align: center;
   gap: 20px;
+}
+
+.cart-item-card__button-delete{
+  padding: 10px;
+  border-radius:8px ;
+  border: 1px solid grey;
+  /* border: none; */
+  cursor: pointer;
 }
