@@ -1,7 +1,7 @@
 import { loadProductsAndCategories } from "./shared/actions/appActions";
 import { useGlobalAppDispatch } from "./context/AppContext";
 import { Route, Routes } from "react-router-dom";
-import { RoutesEnum } from "./shared/utils/routes.enum";
+import { RoutesEnum } from "./shared/enums/routes.enum";
 import { useEffect } from "react";
 import CartSumary from "./pages/cartView/CartSumary";
 import MainLayout from "./component/mainLayout/MainLayout";

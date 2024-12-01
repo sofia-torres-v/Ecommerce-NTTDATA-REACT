@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { GlobalAppProvider, useGlobalAppDispatch } from "../../context/AppContext";
 import { AppActions } from "../../types/app-types";
 
-
+// Componente de prueba que dispara la acción SaveProducts cuando se hace clic en el botón
 const TestComponentDispatch = () => {
   const dispatch = useGlobalAppDispatch();
 
@@ -13,16 +13,15 @@ const TestComponentDispatch = () => {
   );
 };
 
-describe("GlobalAppProvider", () => {
-  it("debería disparar una acción SaveProducts cuando se hace clic en el botón", () => {
+
+describe("Contexto GlobalAppProvider", () => {
+  it("Debería disparar una acción SaveProducts cuando se hace clic en el botón", () => {
     render(
       <GlobalAppProvider>
         <TestComponentDispatch />
       </GlobalAppProvider>
     );
-
     const button = screen.getByRole("button", { name: /dispatch saveproducts/i });
     fireEvent.click(button);
-
   });
 });

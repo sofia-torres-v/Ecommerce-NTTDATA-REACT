@@ -5,7 +5,7 @@ interface ButtonProps {
   icon?: React.ReactNode;
   onClick: () => void;
   className?: string;
-  'data-testid'?: string; // Agrega data-testid como una propiedad opcional
+  'data-testid'?: string; 
 }
 
 const Button: FC<ButtonProps> = ({ label, onClick, icon, className, 'data-testid': testId }) => {
@@ -13,7 +13,7 @@ const Button: FC<ButtonProps> = ({ label, onClick, icon, className, 'data-testid
     <button
       className={className}
       onClick={onClick}
-      data-testid={testId} // Asigna el data-testid aquí
+      data-testid={testId} 
     >
       {label && <span className="label">{label}</span>}
       {icon && <span className="button__icon">{icon}</span>}

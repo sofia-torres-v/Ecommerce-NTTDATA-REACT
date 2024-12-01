@@ -1,5 +1,5 @@
 import { ProductResponse } from "../../domain/product.domain";
-import { TEXTS } from "../../shared/utils/textContants";
+import { TEXTS } from "./textContants";
 
 export const filterProducts = (products: ProductResponse[], searchTerm: string, selectedCategory: string): ProductResponse[] => {
   return products.filter((product) => {

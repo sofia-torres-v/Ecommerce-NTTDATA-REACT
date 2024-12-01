@@ -1,9 +1,9 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import Select from '../Select';
 
-describe('Componte Select', () => {
+describe('Componente Select', () => {
   const mockOnChange = jest.fn();
-  test('Renderizar select', () => {
+  test('Debería renderizar el componente select con las opciones correspondientes', () => {
     const options = ['Opcion 1', 'Opcion 2', 'Opcion 3'];
     render(
       <Select
@@ -21,8 +21,7 @@ describe('Componte Select', () => {
   });
 
 
-
-  test('calls onChange when an option is selected', () => {
+  test('Debería llamar a onChange cuando se selecciona una opción', () => {
     const options = ['Opcion 1', 'Opcion 2', 'Opcion 3'];
     render(
       <Select
@@ -31,13 +30,12 @@ describe('Componte Select', () => {
         onChange={mockOnChange}
       />
     );
-    // Simular seleccionar una opción diferente
     fireEvent.change(screen.getByRole('combobox'), { target: { value: 'Opcion 2' } });
     expect(mockOnChange).toHaveBeenCalledWith('Opcion 2');
   });
 
 
-  test('renders placeholder when provided', () => {
+  test('Debería renderizar el placeholder cuando se le proporciona', () => {
     const options = ['Opcion 1', 'Opcion 2', 'Opcion 3'];
     render(
       <Select
@@ -47,14 +45,13 @@ describe('Componte Select', () => {
         placeholder="Select an option"
       />
     );
-    // placeholder muestra opción deshabilitada
     const placeholderOption = screen.getByText('Select an option');
     expect(placeholderOption).toBeInTheDocument();
     expect(placeholderOption).toBeDisabled();
   });
 
 
-  test('does not render placeholder if not provided', () => {
+  test('No Debería renderizar el placeholder si no se le proporciona', () => {
     const options = ['Opcion 1', 'Opcion 2', 'Opcion 3'];
     render(
       <Select
@@ -68,7 +65,7 @@ describe('Componte Select', () => {
   });
 
 
-  test('renders select with an empty value when no value is provided', () => {
+  test('Debería renderizar el select con un valor vacío cuando no se proporciona valor', () => {
     const options = ['Opcion 1', 'Opcion 2', 'Opcion 3'];
     render(
       <Select

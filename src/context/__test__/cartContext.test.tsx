@@ -6,14 +6,14 @@ const TestComponent = () => {
   return <p data-testid="cart-items-count">{cartState.items.length}</p>;
 };
 
-describe('CartContext', () => {
-  test('should provide initial state with empty cart', () => {
+describe('Contexto CartContext', () => {
+  test('Debería renderizar un botón con un icono', () => {
     render(
       <CartProvider>
         <TestComponent />
       </CartProvider>
     );
-    // Verifica que el carrito está vacío al principio (debería mostrar 0)
+    // (debería mostrar 0)
     expect(screen.getByTestId('cart-items-count')).toHaveTextContent('0');
   });
 });

@@ -1,22 +1,21 @@
-import { FC, useState } from "react";
 import { useGlobalAppState } from "../../context/AppContext";
 import { useCartDispatch } from "../../context/CartContext";
+import { roundPercentage } from "../../shared/utils/formatPrice";
+import { filterProducts } from "../../shared/utils/filterProducts";
+import { FC, useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { CartActions } from "../../domain/cart.domain";
-
-import Card from "../../component/card/Card"; 
-import Select from "../../component/select/Select";
-import InputComponent from "../../component/input/InputComponent";
-import "./products.css";
-import { filterProducts } from "../../shared/utils/filterProducts";
-import { roundPercentage } from "../../shared/utils/formatPrice";
 import { TEXTS } from "../../shared/utils/textContants";
+import InputComponent from "../../component/input/InputComponent";
+import Select from "../../component/select/Select";
+import Card from "../../component/card/Card";
+import "./products.css";
 
 const Products: FC = () => {
   const { products, categories } = useGlobalAppState();
   const dispatch = useCartDispatch();
 
-  const [searchTerm, setSearchTerm] = useState<string>(""); // El estado es de tipo string
+  const [searchTerm, setSearchTerm] = useState<string>("");
   const [selectedCategory, setSelectedCategory] = useState(TEXTS.defaultCategory);
 
   const handleAddToCart = (productId: number) => {
@@ -39,9 +38,8 @@ const Products: FC = () => {
   const categoryOptions = [TEXTS.defaultCategory, ...categories];
   const filteredProducts = filterProducts(products, searchTerm, selectedCategory);
 
-  // Asegúrate de que el evento sea correctamente tipado
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value); // e.target.value será un string
+    setSearchTerm(e.target.value);
   };
 
   return (
@@ -49,7 +47,7 @@ const Products: FC = () => {
       <div className="products__inputs">
         <InputComponent
           value={searchTerm}
-          onChange={handleSearchChange} // Usamos el manejador con el tipo de evento
+          onChange={handleSearchChange}
           icon={<IoIosSearch className="icon-search" />}
           placeholder="Buscar productos..."
           className="input-category__input"
@@ -61,7 +59,7 @@ const Products: FC = () => {
         />
       </div>
 
-      <h1 className="products__title container">Productos Disponibles</h1>
+      <h1 className="products__title container">Nuestros Productos</h1>
       <div className="products__content">
         {filteredProducts.map((product) => (
           <Card
@@ -73,7 +71,7 @@ const Products: FC = () => {
             discount={product.discountPercentage}
             onAddToCart={() => handleAddToCart(product.id)}
             roundPercentage={roundPercentage}
-            data-testid={`add-to-cart-${product.id}`} 
+            data-testid={`add-to-cart-${product.id}`}
           />
         ))}
       </div>

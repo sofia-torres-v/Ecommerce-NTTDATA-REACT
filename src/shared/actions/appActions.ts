@@ -1,5 +1,5 @@
-import { fetchCategories, fetchProducts } from "../../services/api/product.service";
 import { mapperCategories, mapperProducts } from "../../services/mappers/product.mapper";
+import { fetchCategories, fetchProducts } from "../../services/api/product.service";
 import { AppActions, AppDispatch } from "../../types/app-types";
 
 export const loadProductsAndCategories = async (dispatch: AppDispatch) => {

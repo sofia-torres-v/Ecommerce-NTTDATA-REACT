@@ -36,13 +36,11 @@ const Form: FC = () => {
 
   const { districtNames } = useDistricts();
 
-
-  // Función genérica 
   const handleInputChange = (field: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const value = e.target.value;
     setFormData(prevData => ({
       ...prevData,
-      [field]: value, // Actualiza el valor del campo
+      [field]: value, 
     }));
 
     // validación para cada campo
@@ -59,7 +57,7 @@ const Form: FC = () => {
     const errorMessage = validators[field]?.(value) || "";
     setErrors((prevErrors) => ({
       ...prevErrors,
-      [field]: errorMessage, // Actualizamos el error de acuerdo al campo
+      [field]: errorMessage, 
     }));
   };
 

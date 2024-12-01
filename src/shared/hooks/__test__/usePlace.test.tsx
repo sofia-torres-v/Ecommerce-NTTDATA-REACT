@@ -1,9 +1,6 @@
-// useDistricts.test.tsx
 import { render, screen } from "@testing-library/react";
 import useDistricts from "../usePlace";
 
-
-// Simular los datos de district.json
 jest.mock("../../../mocks/district.json", () => ({
   districts: [
     { id: 1, name: "Puente Piedra", isCapital: false },
@@ -12,7 +9,7 @@ jest.mock("../../../mocks/district.json", () => ({
   ],
 }));
 
-// Componente de prueba que usa el hook
+// Componente de prueba 
 const TestComponent = () => {
   const { districtNames } = useDistricts();
   return (
@@ -24,11 +21,10 @@ const TestComponent = () => {
   );
 };
 
-describe("useDistricts Hook", () => {
-  it("debe devolver los nombres de los distritos correctos", () => {
+describe("Hook useDistricts ", () => {
+  it("Debería devolver los nombres de los distritos correctos", () => {
     render(<TestComponent />);
     
-    // Verificar que los nombres de los distritos se muestren correctamente
     expect(screen.getByText("Puente Piedra")).toBeInTheDocument();
     expect(screen.getByText("Lince")).toBeInTheDocument();
     expect(screen.getByText("Macdalena")).toBeInTheDocument();

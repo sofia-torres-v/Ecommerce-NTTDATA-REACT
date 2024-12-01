@@ -1,4 +1,3 @@
-
 export interface CartItemType {
   item: CartItemType;  // CartItemType para definir item
   incrementItem: (productId: number) => void;

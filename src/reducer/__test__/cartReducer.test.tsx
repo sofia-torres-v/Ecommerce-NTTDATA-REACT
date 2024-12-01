@@ -1,9 +1,8 @@
 import { CartAction, CartActions, CartItemType, CartState } from "../../domain/cart.domain";
 import { cartReducer, initialCartState } from "../cartReducer";
 
-
 describe('cartReducer', () => {
-  it('debe agregar un producto al carrito', () => {
+  it('Debería agregar un producto al carrito', () => {
     const product: CartItemType = {
       productId: 1,
       name: 'Product 1',
@@ -24,7 +23,8 @@ describe('cartReducer', () => {
     expect(newState.items[0]).toEqual(product);
   });
 
-  it('debe eliminar un producto del carrito', () => {
+  
+  it('Debería eliminar un producto del carrito', () => {
     const state: CartState = {
       items: [
         {
@@ -57,7 +57,8 @@ describe('cartReducer', () => {
     expect(newState.items[0].productId).toBe(2);
   });
 
-  it('debe actualizar la cantidad de un producto', () => {
+
+  it('Debería actualizar la cantidad de un producto', () => {
     const state: CartState = {
       items: [
         {
@@ -90,7 +91,8 @@ describe('cartReducer', () => {
     expect(newState.items[0].quantity).toBe(3);
   });
 
-  it('debe retornar el estado actual si se pasa una acción no válida', () => {
+
+  it('Debería retornar el estado actual si se pasa una acción no válida', () => {
     const state: CartState = {
       items: [
         {

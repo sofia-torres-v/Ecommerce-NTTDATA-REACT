@@ -1,12 +1,10 @@
+import { GlobalAppProvider } from "../../../context/AppContext";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartProvider } from "../../../context/CartContext"; 
 import { ReactNode } from "react";
 import MainLayout from "../MainLayout";
 import Products from "../../../pages/productsView/Products";
-
-// Asegúrate de importar los proveedores correctos
-import { CartProvider } from "../../../context/CartContext";  // O el path correcto
-import { GlobalAppProvider } from "../../../context/AppContext";  // O el path correcto
 
 const Wrapper = ({ children }: { children: ReactNode }) => (
   <BrowserRouter>
@@ -18,9 +16,9 @@ const Wrapper = ({ children }: { children: ReactNode }) => (
   </BrowserRouter>
 );
 
-// Aquí envolvemos 'Products' en los proveedores necesarios
-describe("MainLayout", () => {
-  test("renders the header with Nav component", () => {
+
+describe("Componente MainLayout", () => {
+  test("Debería renderizar el encabezado con un componente Nav", () => {
     render(
       <Products />,
       { wrapper: ({ children }) => (
@@ -35,7 +33,8 @@ describe("MainLayout", () => {
     expect(navElement).toBeInTheDocument();
   });
 
-  test("renders the main section with Outlet", () => {
+
+  test("Debería renderizar la sección principal con el Outlet que permite inserción", () => {
     render(
       <Products />,
       { wrapper: ({ children }) => (
@@ -50,7 +49,8 @@ describe("MainLayout", () => {
     expect(outletElement).toBeInTheDocument();
   });
 
-  test("renders the footer with Footer component", () => {
+
+  test("Debería renderizar el pie de página con el componente Footer", () => {
     render(
       <Products />,
       { wrapper: ({ children }) => (

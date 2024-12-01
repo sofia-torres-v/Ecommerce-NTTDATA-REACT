@@ -145,14 +145,11 @@
 <a name='L80'></a><a href='#L80'>80</a>
 <a name='L81'></a><a href='#L81'>81</a>
 <a name='L82'></a><a href='#L82'>82</a>
-<a name='L83'></a><a href='#L83'>83</a>
-<a name='L84'></a><a href='#L84'>84</a>
-<a name='L85'></a><a href='#L85'>85</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<a name='L83'></a><a href='#L83'>83</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -187,7 +184,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -231,25 +227,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { FC, useState } from "react";
-import { useGlobalAppState } from "../../context/AppContext";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useGlobalAppState } from "../../context/AppContext";
 import { useCartDispatch } from "../../context/CartContext";
+import { roundPercentage } from "../../shared/utils/formatPrice";
+import { filterProducts } from "../../shared/utils/filterProducts";
+import { FC, useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { CartActions } from "../../domain/cart.domain";
-&nbsp;
-import Card from "../../component/card/Card"; 
-import Select from "../../component/select/Select";
-import InputComponent from "../../component/input/InputComponent";
-import "./products.css";
-import { filterProducts } from "../../shared/utils/filterProducts";
-import { roundPercentage } from "../../shared/utils/formatPrice";
 import { TEXTS } from "../../shared/utils/textContants";
+import InputComponent from "../../component/input/InputComponent";
+import Select from "../../component/select/Select";
+import Card from "../../component/card/Card";
+import "./products.css";
 &nbsp;
 const Products: FC = () =&gt; {
   const { products, categories } = useGlobalAppState();
   const dispatch = useCartDispatch();
 &nbsp;
-  const [searchTerm, setSearchTerm] = useState&lt;string&gt;(""); // El estado es de tipo string
+  const [searchTerm, setSearchTerm] = useState&lt;string&gt;("");
   const [selectedCategory, setSelectedCategory] = useState(TEXTS.defaultCategory);
 &nbsp;
   const handleAddToCart = (productId: number) =&gt; {
@@ -272,9 +267,8 @@ const Products: FC = () =&gt; {
   const categoryOptions = [TEXTS.defaultCategory, ...categories];
   const filteredProducts = filterProducts(products, searchTerm, selectedCategory);
 &nbsp;
-  // Asegúrate de que el evento sea correctamente tipado
   const handleSearchChange = <span class="fstat-no" title="function not covered" >(e</span>: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
-<span class="cstat-no" title="statement not covered" >    setSearchTerm(e.target.value); </span>// e.target.value será un string
+<span class="cstat-no" title="statement not covered" >    setSearchTerm(e.target.value);</span>
   };
 &nbsp;
   return (
@@ -282,7 +276,7 @@ const Products: FC = () =&gt; {
       &lt;div className="products__inputs"&gt;
         &lt;InputComponent
           value={searchTerm}
-          onChange={handleSearchChange} // Usamos el manejador con el tipo de evento
+          onChange={handleSearchChange}
           icon={&lt;IoIosSearch className="icon-search" /&gt;}
           placeholder="Buscar productos..."
           className="input-category__input"
@@ -294,7 +288,7 @@ const Products: FC = () =&gt; {
         /&gt;
       &lt;/div&gt;
 &nbsp;
-      &lt;h1 className="products__title container"&gt;Productos Disponibles&lt;/h1&gt;
+      &lt;h1 className="products__title container"&gt;Nuestros Productos&lt;/h1&gt;
       &lt;div className="products__content"&gt;
         {filteredProducts.map((product) =&gt; (
           &lt;Card
@@ -306,7 +300,7 @@ const Products: FC = () =&gt; {
             discount={product.discountPercentage}
             onAddToCart={() =&gt; handleAddToCart(product.id)}
             roundPercentage={roundPercentage}
-            data-testid={`add-to-cart-${product.id}`} 
+            data-testid={`add-to-cart-${product.id}`}
           /&gt;
         ))}
       &lt;/div&gt;
@@ -322,7 +316,7 @@ export default Products;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-11-30T23:53:22.068Z
+                at 2024-12-01T03:03:24.352Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
