@@ -1,95 +1,112 @@
-# Market App - React Fundamentals Challenge 🚀
+# Market App - Testing Challenge with Jest 🚀
 
 ## Descripción del Proyecto
-
-Este proyecto amplía y mejora el desafío anterior de **Market App**, migrando todo el código de **HTML, CSS y JavaScript** a **componentes funcionales con React**. Se optimizó la estructura del proyecto, aplicando mejores prácticas en modularización, tipado con TypeScript, y organización de carpetas.
+Este proyecto implementa pruebas automáticas en una aplicación desarrollada con **React**
 
 ## Objetivos del Proyecto
-
 El desafío implementado se basó en los siguientes requisitos:
 
-1. **Migración a React**: Transformar el proyecto existente en componentes funcionales.
-2. **Uso de Hooks**:
-   - Implementación de `useEffect` y `useState`.
-3. **Consumo de API**:
-   - Uso de `fetch API` junto con `async` y `await` para la obtención de datos.
-4. **Estructura Escalable**:
-   - Separación de la lógica de negocio, hooks, componentes, páginas y utilitarios.
-   - Tipado fuerte en TypeScript (evitando `any`).
----
+- **Migración y Optimización:**
+  - Migración del proyecto a **React** utilizando componentes funcionales.
+  - Aplicación de mejores prácticas en la estructura del proyecto.
+  - Uso de **TypeScript** para el tipado fuerte del código.
+  
+- **Pruebas Unitarias con Jest:**
+  - Implementación de pruebas con **Jest** y **React Testing Library** para cubrir funcionalidades, componentes y hooks.
+  - Evaluación de la cobertura de código y la correcta definición de los nombres de los tests.
+  - Cobertura más del 70% de los archivos de la solución.
 
 ## Funcionalidades del Proyecto
-
-- **Renderizado de Productos**: Todos los productos se muestran dinámicamente en la página de **Products** gracias a la integración con el API.
-- **Buscador (Search)**: Un campo de búsqueda permite filtrar productos en tiempo real, mejorando la navegación.
-- **Filtrado por Categorías**:
-  - Un menú desplegable (**select**) permite filtrar los productos por categorías específicas.
+- **Renderizado de Productos:**
+  - Los productos se muestran dinámicamente en la página de productos gracias a la integración con el API.
+  
+- **Buscador (Search):**
+  - Un campo de búsqueda permite filtrar productos en tiempo real, mejorando la navegación.
+  
+- **Filtrado por Categorías:**
+  - Un menú desplegable permite filtrar los productos por categorías específicas.
   - La selección está sincronizada con los demás filtros, asegurando una experiencia consistente.
+    
+- **Carrito de Compras:**
+  - Permite agregar, eliminar y modificar la cantidad de productos.
+  - Los cambios en el carrito se reflejan inmediatamente en la UI, asegurando que el estado de la compra esté siempre actualizado.
 
----
+- **Formulario de Registro:**
+  - Un formulario de registro permite a los usuarios crear una cuenta con sus datos.
+  - Las validaciones del formulario aseguran que los campos requeridos sean completados correctamente antes de enviarlo.
+  
+## Estructura de Carpetas
 
-## 📂 Estructura de Carpetas
-
-``` ├── src/
+```plaintext
+├── src/
 │   ├── components/               
 │   │   ├── button/              
+│   │   │   ├── __test__/        
+│   │   │   │   └── button.test.tsx
+│   │   │   └── button.css      
 │   │   ├── footer/              
 │   │   ├── input/               
-│   │   ├── mainLayout/          
+│   │   ├── mainLayout/         
 │   │   └── navbar/              
 │   ├── context/                 
-│   │   ├── appContext.tsx       
-│   │   ├── appReducer.ts        
-│   │   └── cartReducer.ts       
+│   │   ├── __test__/            
+│   │   │   └── appContext.test.tsx
+│   │   ├── appContext.tsx      
+│   │   └── cartContext.tsx     
 │   ├── domain/                  
-│   │   ├── appState.domain.ts   
-│   │   ├── category.domain.ts   
-│   │   └── product.domain.ts    
+│   │   ├── appState.domain.ts  
+│   │   ├── category.domain.ts 
+│   │   └── product.domain.ts  
 │   ├── pages/                   
-│   │   ├── home/                
-│   │   └── products/            
+│   │   ├── home/               
+│   │   └── products/           
 │   ├── services/                
-│   │   ├── api/                 
-│   │   ├── product.service.ts   
-│   │   └── mappers/             
+│   │   ├── api/                
+│   │   ├── product.service.ts  
+│   │   └── mappers/            
 │   │       └── product.mappers.ts
-│   ├── shared/                  
-│   │   ├── hooks/               
-│   │   └── utils/               
-│   │       └── formatPrice.ts   
-│   ├── styles/                  
-│   │   └── style.css            
+│   ├── reducer/                
+│   │   ├── __test__/           
+│   │   │   ├── appReducer.test.tsx
+│   │   │   └── cartReducer.test.tsx
+│   │   ├── appReducer.tsx      
+│   │   └── cartReducer.tsx     
+│   ├── shared/                 
+│   │   ├── action/             
+│   │   │   └── __test__/       
+│   │   │       └── appAction.test.tsx
+│   │   ├── hooks/              
+│   │   │   ├── __test__/       
+│   │   │   │   ├── useCart.test.tsx
+│   │   │   │   ├── useCartStorage.test.tsx
+│   │   │   │   └── usePlace.test.tsx
+│   │   ├── utils/              
+│   │   │   ├── formatPrice.ts  
+│   │   │   └── validation.ts  
 │   ├── types/                   
-│   │   ├── appState.type.ts     
-│   │   ├── app.types.ts         
-│   │   └── cart.type.ts         
+│   │   ├── app.types.ts        
+│   │   └── cart.type.ts        
+│   ├── styles/                  
+│   │   └── style.css           
 │   ├── app.tsx                  
 │   ├── main.tsx                 
-│   ├── index.css                
-│   └── index.html    
+│   ├── index.css               
+│   └── index.html              
+
 ```
 ---
+## Cobertura de Código
+Se alcanzó una cobertura de código superior al **70%**, con una cobertura significativa en todos los componentes, funciones y páginas claves. 
 
-## 🛠️ Tecnologías Utilizadas
-
-- **React**: Librería para construir la interfaz de usuario.
-- **TypeScript**: Tipado estático para mayor robustez del código.
-- **CSS Vanilla**: Estilización de componentes.
-- **Fetch API**: Para consumo de servicios web.
-- **React Context API**: Para el manejo de estado global.
-- **Vite**: Herramienta de desarrollo rápida para React.
-
----
-
-## Estado Global
-
-- Uso de **React Context API** para manejar el estado global.
-- Implementación de reducers (`appReducer` y `cartReducer`) para gestionar estados específicos de la aplicación, como el carrito de compras.
-
----
+## Tecnologías Utilizadas
+- **React**: Librería principal para la construcción de la UI.
+- **Jest**: Framework de pruebas para JavaScript y React.
+- **React Testing Library**: Herramienta para pruebas de componentes de React.
+- **TypeScript**: Para el tipado estático y la robustez del código.
+- **Vite**: Herramienta de desarrollo para la creación de la aplicación React.
+- **CSS**: Estilización básica para los componentes.
 
 ## Instalación y Uso
-
 1. **Clona el repositorio**:
    ```bash
    git clone https://github.com/sofia-torres-v/BOOTCAMP-FRONTEND-REACT-NTT.git
@@ -98,7 +115,9 @@ El desafío implementado se basó en los siguientes requisitos:
 2. **Instala las dependencias: Asegúrate de tener Node.js instalado, luego ejecuta**: 
    ```bash
     npm install
-3. **Inicia el servidor de desarrollo**:
+3. **Ejecuta las pruebas: Para correr las pruebas, utiliza el siguiente comando**:
+     ```bash
+     npm run test
+4. **Inicia el servidor de desarrollo:**:
      ```bash
      npm run dev
-4. **Abre la aplicación en tu navegador**
