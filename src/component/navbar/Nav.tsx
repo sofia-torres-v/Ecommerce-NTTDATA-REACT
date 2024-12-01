@@ -13,7 +13,6 @@ const Nav = () => {
                         <span className="nav__logo-text">Market</span>
                     </div>
                     <div className="nav__links">
-                        <Link to="/" className="nav__link">Inicio</Link>
                         <Link to="/Products" className="nav__link">Productos</Link>
                     </div>
                 </div>

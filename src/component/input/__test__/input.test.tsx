@@ -2,8 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { IoIosSearch } from 'react-icons/io'; 
 import InputComponent from '../InputComponent';
 
-
-test('Renderizar el componente con un ícono', () => {
+test('Debería renderizar el componente con un ícono', () => {
   render(
     <InputComponent
       placeholder="Buscar producto"
@@ -20,7 +19,7 @@ test('Renderizar el componente con un ícono', () => {
 });
 
 
-test('Renderizar el componente sin ícono', () => {
+test('Debería renderizar el componente sin ícono', () => {
   render(
     <InputComponent
       placeholder="Buscar producto"

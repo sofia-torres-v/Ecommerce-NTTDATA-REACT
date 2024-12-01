@@ -7,7 +7,6 @@ const AppStateContext = createContext<AppState | undefined>(undefined);
 const AppDispatchContext = createContext<AppDispatch | undefined>(undefined);
 
 const GlobalAppProvider: FC<PropsWithChildren> = ({ children }) => {
-
     const [state, dispatch] = useReducer(appReducer, initialState);
 
     return (
@@ -19,22 +18,24 @@ const GlobalAppProvider: FC<PropsWithChildren> = ({ children }) => {
     );
 };
 
+// Hook para obtener el estado global
 const useGlobalAppState = (): AppState => {
-    const context = useContext(AppStateContext) as AppState;
+    const context = useContext(AppStateContext);
 
-    if (context) {
-        return context;
+    if (!context) {
+        throw new Error("useGlobalAppState debe usarse dentro de AppStateContext");
     }
-    throw new Error("useGlobalAppState debe usarse dentro de AppStateContext");
+    return context;
 };
 
+// Hook para obtener el dispatch global
 const useGlobalAppDispatch = (): AppDispatch => {
-    const context = useContext(AppDispatchContext) as AppDispatch;
+    const context = useContext(AppDispatchContext);
 
-    if (context) {
-        return context;
+    if (!context) {
+        throw new Error("useGlobalAppDispatch debe usarse dentro de AppDispatchContext");
     }
-    throw new Error("useGlobalAppDispatch debe usarse dentro de AppDispatchContext");
+    return context;
 };
 
 export { GlobalAppProvider, useGlobalAppState, useGlobalAppDispatch };

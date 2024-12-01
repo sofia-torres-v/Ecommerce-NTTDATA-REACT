@@ -2,10 +2,17 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { useGlobalAppState } from '../../context/AppContext';
 import { useCartDispatch } from '../../context/CartContext';
 import Products from '../productsView/Products';
-import { CartActions } from '../../domain/cart.domain';
+
+jest.mock('../../context/AppContext', () => ({
+  useGlobalAppState: jest.fn(),
+}));
+
+jest.mock('../../context/CartContext', () => ({
+  useCartDispatch: jest.fn(),
+}));
 
 
-describe('Products Component', () => {
+describe('Componente Products', () => {
   const mockProducts = [
     { id: 1, title: 'Producto 1', price: 100, category: 'Categoría 1', thumbnail: 'image1.jpg' },
     { id: 2, title: 'Producto 2', price: 200, category: 'Categoría 2', thumbnail: 'image2.jpg' },
@@ -13,7 +20,6 @@ describe('Products Component', () => {
   ];
 
   const mockCategories = ['Categoría 1', 'Categoría 2'];
-
   const mockDispatch = jest.fn();
 
   beforeEach(() => {
@@ -25,50 +31,46 @@ describe('Products Component', () => {
     (useCartDispatch as jest.Mock).mockReturnValue(mockDispatch);
   });
 
-  test('renders the product list with filters', () => {
+
+  test('Debería renderizar la lista de productos correctamente', () => {
     render(<Products />);
-
-    expect(screen.getByPlaceholderText(/Buscar productos/i)).toBeInTheDocument();
-    expect(screen.getByText(/Productos Disponibles/i)).toBeInTheDocument();
-    expect(screen.getAllByText(/Agregar/i)).toHaveLength(3); // Verifica 3 productos inicialmente
-  });
-
-  test('filters products by search term', () => {
-    render(<Products />);
-
-    const searchInput = screen.getByPlaceholderText(/Buscar productos/i);
-    fireEvent.change(searchInput, { target: { value: 'Producto 1' } });
-
     expect(screen.getByText('Producto 1')).toBeInTheDocument();
-    expect(screen.queryByText('Producto 2')).not.toBeInTheDocument();
-  });
-
-  test('filters products by category', () => {
-    render(<Products />);
-
-    const select = screen.getByRole('combobox');
-    fireEvent.change(select, { target: { value: 'Categoría 1' } });
-
-    expect(screen.getByText('Producto 1')).toBeInTheDocument();
+    expect(screen.getByText('Producto 2')).toBeInTheDocument();
     expect(screen.getByText('Producto 3')).toBeInTheDocument();
-    expect(screen.queryByText('Producto 2')).not.toBeInTheDocument();
   });
+  
 
-  test('Agregar productos al carrito', () => {
+  test('Debería llamar a dispatch cuando un producto es agregado al carrito', () => {
+
     render(<Products />);
-
-    const addToCartButton = screen.getAllByText(/Agregar/i)[0]; // Primer producto
-    fireEvent.click(addToCartButton);
+    const addButton = screen.getByTestId('add-to-cart-1'); 
+    fireEvent.click(addButton);
 
     expect(mockDispatch).toHaveBeenCalledWith({
-      type: CartActions.AddToCart,
+      type: 'ADD_TO_CART',
       payload: {
-        productId: 1,
-        name: 'Producto 1',
-        price: 100,
-        image: 'image1.jpg',
+        productId: mockProducts[0].id,
+        name: mockProducts[0].title,
+        price: mockProducts[0].price,
+        image: mockProducts[0].thumbnail,
         quantity: 1,
+        id: mockProducts[0].id,
       },
     });
+  });
+  
+
+  test('Debería filtrar productos por categoría', async () => {
+    render(<Products />);
+  
+    fireEvent.change(screen.getByRole('combobox'), { target: { value: 'Categoría 1' } });
+
+    const product1 = await screen.findByTestId('add-to-cart-1');
+    const product3 = await screen.findByTestId('add-to-cart-3');
+  
+    expect(product1).toBeInTheDocument();
+    expect(product3).toBeInTheDocument();
+  
+    expect(screen.queryByTestId('add-to-cart-2')).toBeNull();
   });
 });

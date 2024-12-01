@@ -4,6 +4,3 @@ export interface CategoryResponse {
   url: string;   
 }
 
-export enum Category {
-  All = "Todas las categorías",
-}

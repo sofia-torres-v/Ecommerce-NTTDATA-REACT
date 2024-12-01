@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { CartItemType } from "../../domain/cart.domain";
 
-
 const useCartStorage = (initialState: CartItemType[]) => {
   const [cartItems, setCartItems] = useState<CartItemType[]>(initialState);
 

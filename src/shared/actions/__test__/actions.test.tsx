@@ -1,7 +1,7 @@
 import { fetchCategories, fetchProducts } from "../../../services/api/product.service";
 import { mapperCategories, mapperProducts } from "../../../services/mappers/product.mapper";
-import { AppActions } from "../../../types/app-types";
 import { loadProductsAndCategories } from "../appActions";
+import { AppActions } from "../../../types/app-types";
 
 jest.mock("../../../services/api/product.service", () => ({
   fetchProducts: jest.fn(),
@@ -14,7 +14,7 @@ jest.mock("../../../services/mappers/product.mapper", () => ({
 }));
 
 describe("loadProductsAndCategories", () => {
-  it("should fetch products and categories and dispatch the correct actions", async () => {
+  it("Debería obtener productos y categorías y despachar las acciones correctas", async () => {
     const mockDispatch = jest.fn();
     const mockProducts = [{ id: 1, name: "Product 1" }];
     const mockCategories = [{ id: 1, name: "Category 1" }];
@@ -27,10 +27,8 @@ describe("loadProductsAndCategories", () => {
     (mapperProducts as jest.Mock).mockReturnValue(mappedProducts);
     (mapperCategories as jest.Mock).mockReturnValue(mappedCategories);
 
-    // Llamada a la acción
     await loadProductsAndCategories(mockDispatch);
 
-    // Verificar que los métodos fueron llamados
     expect(fetchProducts).toHaveBeenCalled();
     expect(fetchCategories).toHaveBeenCalled();
     expect(mapperProducts).toHaveBeenCalledWith(mockProducts);
@@ -47,7 +45,7 @@ describe("loadProductsAndCategories", () => {
     });
   });
 
-  it("should handle errors gracefully", async () => {
+  it("Debería manejar los errores de manera adecuada", async () => {
     const mockDispatch = jest.fn();
     const error = new Error("API error");
 
@@ -55,10 +53,8 @@ describe("loadProductsAndCategories", () => {
     (fetchProducts as jest.Mock).mockRejectedValue(error);
     console.error = jest.fn(); // Mock de console.error
 
-    // Llamada a la acción
     await loadProductsAndCategories(mockDispatch);
 
-    // Verificar que console.error fue llamado con el error esperado
     expect(console.error).toHaveBeenCalledWith(
       "Error al cargar productos y categorías:",
       error

@@ -2,7 +2,8 @@ import React, { FC, useState } from "react";
 import Input from "../input/InputComponent";
 import Select from "../select/Select";
 import './form.css';
-import { usePlaces } from "../../shared/hooks/usePlace";
+
+
 import {
   validateNombre,
   validateApellido,
@@ -12,6 +13,7 @@ import {
   validateReferencia
 } from "../../shared/utils/validations";
 import InputComponent from "../input/InputComponent";
+import useDistricts from "../../shared/hooks/usePlace";
 
 const Form: FC = () => {
   const [formData, setFormData] = useState({
@@ -32,14 +34,13 @@ const Form: FC = () => {
     referencia: "",
   });
 
-  const { districts } = usePlaces();
+  const { districtNames } = useDistricts();
 
-  // Función genérica 
   const handleInputChange = (field: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const value = e.target.value;
     setFormData(prevData => ({
       ...prevData,
-      [field]: value, // Actualiza el valor del campo
+      [field]: value, 
     }));
 
     // validación para cada campo
@@ -56,7 +57,7 @@ const Form: FC = () => {
     const errorMessage = validators[field]?.(value) || "";
     setErrors((prevErrors) => ({
       ...prevErrors,
-      [field]: errorMessage, // Actualizamos el error de acuerdo al campo
+      [field]: errorMessage, 
     }));
   };
 
@@ -117,7 +118,7 @@ const Form: FC = () => {
       <div className="label-distric">
         <label className="label-form">Distrito</label>
         <Select
-          options={districts.map((d) => d)} 
+         options={districtNames}
           placeholder="Seleccione distrito"
           value={formData.distrito || undefined }
           onChange={(value: string) => handleInputChange("distrito")({ target: { value } } as React.ChangeEvent<HTMLSelectElement>)} 

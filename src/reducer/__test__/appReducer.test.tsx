@@ -1,5 +1,5 @@
-import { AppState } from "../../domain/appState.domain";
 import { ProductResponse } from "../../domain/product.domain";
+import { AppState } from "../../domain/appState.domain";
 import { AppActions } from "../../types/app-types";
 import { appReducer } from "../appReducer";
 
@@ -13,7 +13,8 @@ describe("appReducer", () => {
     };
   });
 
-  it("debería guardar los productos cuando se despacha la acción SaveProducts", () => {
+  
+  it("Debería guardar los productos cuando se despacha la acción SaveProducts", () => {
     const products: ProductResponse[] = [
       { 
         id: 1, 
@@ -44,7 +45,8 @@ describe("appReducer", () => {
     expect(newState.categories).toEqual(initialState.categories);
   });
 
-  it("debería guardar las categorías cuando se despacha la acción SaveCategories", () => {
+
+  it("Debería guardar las categorías cuando se despacha la acción SaveCategories", () => {
     const categories = ["Categoría 1", "Categoría 2"];
 
     const action = {
@@ -58,7 +60,8 @@ describe("appReducer", () => {
     expect(newState.products).toEqual(initialState.products);  
   });
 
-  it("debería lanzar un error si se despacha una acción no definida", () => {
+
+  it("Debería lanzar un error si se despacha una acción no definida", () => {
     const action = {
       type: "UnknownAction",
       payload: {},

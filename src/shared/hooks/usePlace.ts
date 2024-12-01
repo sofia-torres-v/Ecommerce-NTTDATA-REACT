@@ -1,29 +1,10 @@
-import { useState, useEffect } from "react";
-import { District } from "../../services/api/districtApi";
-import { mapDistrictsNames } from "../../services/mappers/districtMapper";
+import districtsData from "../../mocks/district.json";
 
-export function usePlaces() {
-  const [districts, setDistricts] = useState<string[]>([]); 
-  const [error, setError] = useState<string | null>(null);
+const useDistricts = () => {
 
-  useEffect(() => {
-    const fetchDistricts = async () => {
-      try {
-        const response = await fetch("/src/mocks/district.json");
-        if (!response.ok) {
-          throw new Error("No se pudo obtener los distritos");
-        }
-        const data: District[] = await response.json(); 
-        const districtNames = mapDistrictsNames(data);
-        
-        setDistricts(districtNames);
-      } catch (err) {
-        setError("Hubo un error al obtener los distritos");
-      }
-    };
+  const districtNames = districtsData.districts.map((district) => district.name);
 
-    fetchDistricts();
-  }, []);
+  return { districtNames };
+};
 
-  return { districts, error };
-}
+export default useDistricts;

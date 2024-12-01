@@ -1,17 +1,17 @@
 import { loadProductsAndCategories } from "./shared/actions/appActions";
 import { useGlobalAppDispatch } from "./context/AppContext";
 import { Route, Routes } from "react-router-dom";
-import { RoutesEnum } from "./shared/utils/routes.enum";
+import { RoutesEnum } from "./shared/enums/routes.enum";
 import { useEffect } from "react";
 import CartSumary from "./pages/cartView/CartSumary";
 import MainLayout from "./component/mainLayout/MainLayout";
 import Products from "./pages/productsView/Products";
 
 function App() {
-    const dispatch = useGlobalAppDispatch(); 
+    const dispatch = useGlobalAppDispatch();
 
     useEffect(() => {
-        loadProductsAndCategories(dispatch); 
+        loadProductsAndCategories(dispatch);
     }, [dispatch]);
 
     return (
@@ -23,6 +23,7 @@ function App() {
                     <Route path={RoutesEnum.PRODUCTS} element={<Products />} />
                 </Route>
             </Routes>
+
         </>
     );
 }

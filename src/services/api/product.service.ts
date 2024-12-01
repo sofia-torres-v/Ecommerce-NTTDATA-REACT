@@ -8,9 +8,9 @@ export async function fetchProducts() {
         }
         const data = await response.json();
         return data.products; 
+        
     } catch (error) {
         console.error("Error al obtener productos:", error);
-      
     }
 }
 
@@ -22,6 +22,7 @@ export async function fetchCategories(){
         }
         const data = await response.json();
         return data;
+
     } catch (error) {
         console.error("Error al obtener las categorias:", error);
         

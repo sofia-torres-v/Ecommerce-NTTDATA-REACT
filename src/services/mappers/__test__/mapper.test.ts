@@ -1,7 +1,6 @@
-import { mapperCategories, mapperProducts } from '../../services/mappers/product.mapper';
+import { mapperCategories, mapperProducts } from '../product.mapper';
 
-// mapper de productos
-test('mapperProducts - mapea correctamente los productos', () => {
+test('mapperProducts debería mapear correctamente los productos y devolver lo especificado', () => {
   const products = [
     {
       id: 1,
@@ -28,8 +27,7 @@ test('mapperProducts - mapea correctamente los productos', () => {
 });
 
 
-// mapper de categorias
-test('mapperCategories - mapea correctamente las categorías', () => {
+test('mapperCategories debería mapear correctamente las categorías y devolver lo especificado', () => {
   const categories = [
     { name: "Beauty", slug: "beauty", url: "https://dummyjson.com/products/category/beauty" },];
 
