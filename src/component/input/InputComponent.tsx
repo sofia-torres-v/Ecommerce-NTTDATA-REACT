@@ -9,6 +9,7 @@ interface InputProps {
   className?: string;
   type?: string;
   iconClassName?: string
+  onBlur?: () => void; 
 }
 
 const InputComponent: FC<InputProps> = ({ value, onChange, placeholder, icon, className, type = "text", iconClassName }) => {

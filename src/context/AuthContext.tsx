@@ -1,42 +1,48 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-interface User {
-  username: string;
-  accessToken: string;
+interface AuthContextType {
+  isAuthenticated: boolean;
+  login: (token: string) => void;
+  logout: () => void;
 }
-
-type AuthContextType = {
-  user: User | null;
-  login: (user: User) => void; 
-  logout: () => void;          
-};
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [user, setUser] = useState<User | null>(null);
+export const useAuth = (): AuthContextType => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+};
 
-  const login = (user: User) => {
-    setUser(user);
-    localStorage.setItem('authToken', user.accessToken); 
+interface AuthProviderProps {
+  children: ReactNode;
+}
+
+export const AuthProvider = ({ children }: AuthProviderProps) => {
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
+  const login = (token: string) => {
+    localStorage.setItem('authToken', token);  
+    setIsAuthenticated(true);
   };
 
   const logout = () => {
-    setUser(null);
-    localStorage.removeItem('authToken');
+    localStorage.removeItem('authToken'); 
+    setIsAuthenticated(false);
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
-};
-
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error('useAuth debe ser usado dentro de AuthProvider');
-  }
-  return context;
 };

@@ -1,5 +1,4 @@
-import { validatePassword, validateUsername } from "../utils/validations";
-
+import { validatePassword, validateUsername } from "../utils/validationSchemas";
 
 export const useValidation = (username: string, password: string) => {
   const errors = {
@@ -8,5 +7,3 @@ export const useValidation = (username: string, password: string) => {
   };
   return errors;
 };
-
-

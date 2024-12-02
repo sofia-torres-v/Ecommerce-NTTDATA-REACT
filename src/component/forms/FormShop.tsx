@@ -5,7 +5,8 @@ import useDistricts from "../../shared/hooks/usePlace";
 import InputComponent from "../input/InputComponent";
 import useForm from "../../shared/hooks/useForm";
 import './formShop.css';
-import { validateApellido, validateCelular, validateDireccion, validateDistrito, validateNombre, validateReferencia } from "../../shared/utils/validations";
+import { validateApellido, validateCelular, validateDireccion, validateDistrito, validateNombre, validateReferencia } from "../../shared/utils/validationSchemas";
+
 
 const FormShop: FC = () => {
   const { districtNames } = useDistricts();
