@@ -6,6 +6,7 @@
 .input-login-input{
   width: 100%;
 }
+
 .input-category__input{
   width: 100%;
   border-radius: 10px;
@@ -20,6 +21,14 @@
 .input-category__input::placeholder {
   padding-left: 6px;
   color: var(--color-input-border);
+}
+
+.input-login{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
 }
 
 @media(min-width:750px){

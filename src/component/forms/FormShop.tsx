@@ -5,18 +5,32 @@ import useDistricts from "../../shared/hooks/usePlace";
 import InputComponent from "../input/InputComponent";
 import useForm from "../../shared/hooks/useForm";
 import './formShop.css';
+import { validateApellido, validateCelular, validateDireccion, validateDistrito, validateNombre, validateReferencia } from "../../shared/utils/validations";
 
 const FormShop: FC = () => {
   const { districtNames } = useDistricts();
 
-  const { formData, errors, handleInputChange, handleSubmit, setFormData } = useForm({
-    nombre: "",
-    apellido: "",
-    celular: "",
-    distrito: "",
-    direccion: "",
-    referencia: "",
-  });
+  // objeto de validaciones
+  const validations = {
+    nombre: validateNombre,
+    apellido: validateApellido,
+    celular: validateCelular,
+    distrito: validateDistrito,
+    direccion: validateDireccion,
+    referencia: validateReferencia,
+  };
+
+  const { formData, errors, handleInputChange, handleSubmit, setFormData } = useForm(
+    {
+      nombre: "",
+      apellido: "",
+      celular: "",
+      distrito: "",
+      direccion: "",
+      referencia: "",
+    },
+    validations 
+  );
 
   const onSuccess = () => {
     console.log(formData);
@@ -40,7 +54,7 @@ const FormShop: FC = () => {
 
   return (
     <div className="container-form">
-      <h1 className="title-form">Infomación de Envío</h1>
+      <h1 className="title-form">Información de Envío</h1>
       <form className="form-shop" onSubmit={(e) => handleSubmit(e, onSuccess)}>
         <div className="content-label">
           <label className="label-form">Nombre</label>
@@ -53,7 +67,7 @@ const FormShop: FC = () => {
           {errors.nombre && <div className="error">{errors.nombre}</div>}
         </div>
 
-        <div className="content-label" >
+        <div className="content-label">
           <label className="label-form">Apellido</label>
           <InputComponent
             value={formData.apellido}
@@ -114,7 +128,6 @@ const FormShop: FC = () => {
         <button className="button-form" type="submit">Comprar</button>
       </form>
     </div>
-
   );
 };
 

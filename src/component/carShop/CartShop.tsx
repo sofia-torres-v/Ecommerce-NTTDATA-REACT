@@ -13,7 +13,7 @@ interface CartItemCardProps {
 
 const CartShop: FC<CartItemCardProps> = ({ item, incrementItem, decrementItem, removeItem }) => {
   return (
-    <div className="cart-item-card">
+    <div className="cart-item-card container">
 
       <div className="box-products">
         <ImageProduct src={item.image} alt={item.name} className="cart-item-card__image" />

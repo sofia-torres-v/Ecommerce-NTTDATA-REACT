@@ -29,3 +29,13 @@ html {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.header{
+    background-color: var(--color-primary-bg);
+}
+
+.footer{
+    text-align: center;
+    background-color: var(--color-black);
+    color: var(--color-bg);
+}

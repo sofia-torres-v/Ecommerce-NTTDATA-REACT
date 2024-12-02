@@ -11,7 +11,7 @@ const QuantityControls: FC<QuantityControlsProps> = ({ quantity, increment, decr
   return (
     <div className="quantity-controls">
       <button className="quantity-controls__button" onClick={decrement}>-</button>
-      <span>{quantity}</span>
+      <span className="span-quantity">{quantity}</span>
       <button className="quantity-controls__button" onClick={increment}>+</button>
     </div>
   );

@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { useGlobalAppState } from '../../context/AppContext';
 import { useCartDispatch } from '../../context/CartContext';
-import Products from '../productsView/Products';
+import Products from '../productsView/ProductsView';
 
 jest.mock('../../context/AppContext', () => ({
   useGlobalAppState: jest.fn(),

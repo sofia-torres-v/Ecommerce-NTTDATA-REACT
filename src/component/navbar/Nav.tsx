@@ -12,7 +12,6 @@ const Nav = () => {
                     <span className="nav__logo-text">Market</span>
                 </div>
                 <div className="nav__links"> 
-                    <Link to="/" className="nav__link">Login</Link> 
                     <Link to="/Products" className="nav__link">Products</Link> 
                 </div>
                 <div className="nav__cart-box">

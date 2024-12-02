@@ -1,50 +1,64 @@
-export const validateNombre = (value: string) => {
-  if (!value.trim()) {
+type ValidationRules = {
+  required?: boolean;
+  pattern?: RegExp;
+  customMessage?: string;
+};
+
+export const validateField = (value: string, rules: ValidationRules) => {
+  if (rules.required && !value.trim()) {
     return "Campo obligatorio";
   }
-  if (/[^a-zA-ZáéíóúÁÉÍÓÚ\s]/.test(value)) {
-    return "Debe ingresar un valor válido";
+  if (rules.pattern && !rules.pattern.test(value)) {
+    return rules.customMessage || "Valor no válido";
   }
   return "";
+};
+
+// Funciones de validación específicas
+export const validateNombre = (value: string) => {
+  return validateField(value, {
+    required: true,
+    pattern: /^[a-zA-ZáéíóúÁÉÍÓÚ\s]+$/,
+    customMessage: "Debe ingresar un valor válido"
+  });
 };
 
 export const validateApellido = (value: string) => {
-  if (!value.trim()) {
-    return "Campo obligatorio";
-  }
-  if (/[^a-zA-ZáéíóúÁÉÍÓÚ\s]/.test(value)) {
-    return "Debe ingresar un valor válido";
-  }
-  return "";
+  return validateField(value, {
+    required: true,
+    pattern: /^[a-zA-ZáéíóúÁÉÍÓÚ\s]+$/,
+    customMessage: "Debe ingresar un valor válido"
+  });
 };
 
 export const validateCelular = (value: string) => {
-  if (!value.trim()) {
-    return "Campo obligatorio";
-  }
-  if (!/^\d+$/.test(value)) {
-    return "Debe ingresar un número válido";
-  }
-  return "";
+  return validateField(value, {
+    required: true,
+    pattern: /^\d+$/,
+    customMessage: "Debe ingresar un número válido"
+  });
 };
 
-export const validateDistrito = (distrito: string): string => {
+export const validateDistrito = (distrito: string) => {
   if (!distrito || distrito === "Seleccionar distrito") {
     return "Debe seleccionar un distrito"; 
   }
-  return ""; 
+  return "";
 };
 
 export const validateDireccion = (value: string) => {
-  if (!value.trim()) {
-    return "Campo obligatorio";
-  }
-  return "";
+  return validateField(value, { required: true });
 };
 
 export const validateReferencia = (value: string) => {
-  if (!value.trim()) {
-    return "Campo obligatorio";
-  }
-  return "";
+  return validateField(value, { required: true });
+};
+
+// Validación para loginForm
+export const validateUsername = (value: string) => {
+  return validateField(value, { required: true });
+};
+
+export const validatePassword = (value: string) => {
+  return validateField(value, { required: true });
 };
