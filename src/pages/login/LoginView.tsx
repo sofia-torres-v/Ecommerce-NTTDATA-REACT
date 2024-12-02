@@ -1,14 +1,16 @@
+// src/views/LoginView.tsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import FormLogin from '../../component/forms/FormLogin';
-import { loginUser } from '../../services/api/users.services';
-import { validatePassword, validateUsername } from '../../shared/utils/validations';
-import { useAuth } from '../../context/AuthContext'; // Importa el custom hook
+import { useAuth } from '../../context/AuthContext';
 import './login.css';
+import { loginUser } from '../../services/api/authService';
+import { saveUserToLocalStorage } from '../../shared/utils/storage';
+import { useValidation } from '../../shared/hooks/useValidation';
 
 const LoginView = () => {
-  const { login } = useAuth(); // Usa el custom hook para obtener login
+  const { login } = useAuth();
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -17,10 +19,7 @@ const LoginView = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    let validationErrors = { username: '', password: '' };
-    validationErrors.username = validateUsername(username);
-    validationErrors.password = validatePassword(password);
-
+    const validationErrors = useValidation(username, password);
     setErrors(validationErrors);
 
     if (validationErrors.username || validationErrors.password) return;
@@ -28,8 +27,8 @@ const LoginView = () => {
     try {
       const userData = await loginUser(username, password);
       login({ username: userData.username, accessToken: userData.accessToken });
+      saveUserToLocalStorage(userData);
       Swal.fire('¡Inicio de sesión exitoso!', '', 'success');
-      
       navigate('/products');
     } catch (error) {
       Swal.fire('Error', 'Usuario o contraseña incorrectos', 'error');
@@ -38,7 +37,6 @@ const LoginView = () => {
 
   return (
     <div className="login-view">
-
       <FormLogin
         username={username}
         password={password}

@@ -5,7 +5,6 @@ interface ButtonProps {
   label?: string; 
   icon?: React.ReactNode;
   onClick ?: () => void;
-  // onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   className?: string;
   'data-testid'?: string; 
   

@@ -2,9 +2,9 @@ import { FC } from 'react';
 import { useCart } from "../../shared/hooks/useCart";
 import CartShop from '../../component/carShop/CartShop';
 import FormShop from '../../component/forms/FormShop';
-import './cartView.css'
-import Nav from '../../component/navbar/Nav';
 import Footer from '../../component/footer/Footer';
+import Nav from '../../component/navbar/Nav';
+import './cartView.css'
 
 const CartView: FC = () => {
   const { items, incrementItem, decrementItem, removeItem } = useCart();

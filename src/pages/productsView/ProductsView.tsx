@@ -9,10 +9,10 @@ import { CartActions } from "../../domain/cart.domain";
 import { TEXTS } from "../../shared/utils/textContants";
 import InputComponent from "../../component/input/InputComponent";
 import Select from "../../component/select/Select";
-import Card from "../../component/card/Card";
-import "./products.css";
-import Nav from "../../component/navbar/Nav";
 import Footer from "../../component/footer/Footer";
+import Card from "../../component/card/Card";
+import Nav from "../../component/navbar/Nav";
+import "./products.css";
 
 const ProductsView: FC = () => {
   const { products, categories } = useGlobalAppState();

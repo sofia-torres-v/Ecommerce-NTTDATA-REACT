@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from "react";
 
-// src/context/AuthContext.tsx
 interface User {
   username: string;
   accessToken: string;
@@ -8,8 +7,8 @@ interface User {
 
 type AuthContextType = {
   user: User | null;
-  login: (user: User) => void; // Agrega la función login
-  logout: () => void;          // Agrega logout si lo necesitas
+  login: (user: User) => void; 
+  logout: () => void;          
 };
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -19,7 +18,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const login = (user: User) => {
     setUser(user);
-    localStorage.setItem('authToken', user.accessToken); // Guarda el token en localStorage
+    localStorage.setItem('authToken', user.accessToken); 
   };
 
   const logout = () => {

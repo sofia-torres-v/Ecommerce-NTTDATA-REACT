@@ -1,7 +1,7 @@
 import { LuShoppingCart } from "react-icons/lu";
 import { useCartState } from "../../context/CartContext";
 import { Link } from "react-router-dom";
-import "./cartIcon.css";
+// import "./cartIcon.css";
 import { RoutesEnum } from "../../shared/enums/routes.enum";
 import { CartItemType } from "../../domain/cart.domain";
 

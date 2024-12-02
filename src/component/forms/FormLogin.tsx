@@ -48,7 +48,7 @@ const FormLogin: React.FC<FormLoginProps> = ({ username, password, setUsername, 
       </div>
 
       <div className="login-content-button">
-        <a className="link-password" href="#">¿Olvidaste tu Contraseña?</a>
+        <a className="link-password" href="#">¿Olvid Contraseña?</a>
         <Button label="Iniciar sesión" className="button-login" />
       </div>
     </form>
