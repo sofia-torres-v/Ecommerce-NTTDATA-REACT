@@ -1,3 +1,13 @@
+.container-form{
+    width: 100%;
+    margin: 70px auto;
+}
+
+.title-form{
+    text-align: center;
+    font-size: 2.8rem;
+}
+
 .form-input {
     width: 100%;
     background-color: #fff;
@@ -5,6 +15,8 @@
     padding: 15px;
     margin-bottom: 1rem;
     outline: none;
+    border-radius: 10px;
+    border: 1px solid #170925e1;
 }
 
 .form-shop {
@@ -12,7 +24,9 @@
     max-width: 650px;
     margin: 8px auto;
     border-radius: 10px;
-    padding: 50px 0;
+    padding: 30px  50px 35px;
+    box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(36, 35, 35, 0.267);
 }
 
 .button-form {
@@ -24,22 +38,46 @@
     color: #fff;
     background-color: rgb(17, 16, 16);
     font-size: 1.8rem;
+    margin-top: 15px;
+}
+
+.content-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-select-phone {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.label-distric,
+.content-label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-select,
+.form-input {
+    width: 100%;
 }
 
 .label-form {
     font-size: 1.7rem;
-}
-
-.label-distric {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    margin: 5px 0;
 }
 
 .error {
     color: rgba(218, 54, 54, 0.966);
     font-size: 12px;
-    margin-top: 5px;
+    margin-bottom: 5px;
     font-weight: bold;
+}
+
+@media(min-width:750px){
+    .container-form{
+        width: 70%;
+    }
 }

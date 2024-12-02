@@ -8,11 +8,17 @@ const useCartStorage = (initialState: CartItemType[]) => {
   });
 
   useEffect(() => {
-    // Guarda cada vez que cambian
+
     if (cartItems.length > 0) {
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      // Elimina duplicados antes de guardar
+      const uniqueItems = Array.from(
+        new Map(cartItems.map(item => [item.productId, item])).values()
+      );
+
+      localStorage.setItem("cartItems", JSON.stringify(uniqueItems));
+      console.log("Items únicos antes de guardar:", uniqueItems);
     }
-  }, [cartItems]);
+  }, [cartItems]); 
 
   return [cartItems, setCartItems] as const;
 };

@@ -57,6 +57,7 @@ const Products: FC = () => {
           options={categoryOptions}
           value={selectedCategory}
           onChange={setSelectedCategory}
+          className="select-category"
         />
       </div>
 

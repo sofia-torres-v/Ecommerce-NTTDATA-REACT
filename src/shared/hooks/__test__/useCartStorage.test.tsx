@@ -11,7 +11,7 @@ describe('useCartStorage', () => {
     const mockItems: CartItemType[] = [
       {
         id: 1,
-        productId: 101, // Cambiado a número
+        productId: 101, 
         name: 'Item 1',
         quantity: 1,
         price: 10.0,
@@ -29,7 +29,7 @@ describe('useCartStorage', () => {
     const initialState: CartItemType[] = [
       {
         id: 2,
-        productId: 102, // Cambiado a número
+        productId: 102, 
         name: 'Item 2',
         quantity: 1,
         price: 15.0,

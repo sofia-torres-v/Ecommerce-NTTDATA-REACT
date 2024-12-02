@@ -15,19 +15,19 @@ const CartShop: FC<CartItemCardProps> = ({ item, incrementItem, decrementItem, r
   return (
     <div className="cart-item-card">
 
-      <div className="box-title">
+      <div className="box-products">
         <ImageProduct src={item.image} alt={item.name} className="cart-item-card__image" />
       </div>
 
-      <div className="box-title">
+      <div className="box-products">
         <p>{item.name}</p>
       </div>
 
-      <div className="box-title">
+      <div className="box-products">
         <p>S/{item.price.toFixed(2)}</p>
       </div>
 
-      <div className="box-title">
+      <div className="box-products">
         <QuantityControls
           quantity={item.quantity}
           increment={() => incrementItem(item.productId)}
@@ -35,7 +35,7 @@ const CartShop: FC<CartItemCardProps> = ({ item, incrementItem, decrementItem, r
         />
       </div>
 
-      <div className="box-title">
+      <div className="box-products">
         <button
           className="cart-item-card__button-delete"
           onClick={() => removeItem(item.productId)}
