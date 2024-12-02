@@ -51,6 +51,7 @@ const Products: FC = () => {
           icon={<IoIosSearch className="icon-search" />}
           placeholder="Buscar productos..."
           className="input-category__input"
+          iconClassName="input-category__icon"
         />
         <Select
           options={categoryOptions}

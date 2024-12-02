@@ -7,19 +7,21 @@ interface InputProps {
   placeholder: string;
   icon?: React.ReactNode;
   className?: string;
+  type?: string;
+  iconClassName?: string
 }
 
-const InputComponent: FC<InputProps> = ({ value, onChange, placeholder, icon, className }) => {
+const InputComponent: FC<InputProps> = ({ value, onChange, placeholder, icon, className, type = "text", iconClassName }) => {
   return (
     <div className="input-category">
       <input
-        type="text"
+        type={type}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
         className={className}
         />
-        {icon && <div className="input-category__icon" data-testid="icon-search">{icon}</div>}
+        {icon && <div className={iconClassName} data-testid="icon-search">{icon}</div>}
     </div>
   );
 };

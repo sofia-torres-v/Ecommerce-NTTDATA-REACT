@@ -2,20 +2,19 @@ import { useEffect, useState } from "react";
 import { CartItemType } from "../../domain/cart.domain";
 
 const useCartStorage = (initialState: CartItemType[]) => {
-  const [cartItems, setCartItems] = useState<CartItemType[]>(initialState);
-
-  useEffect(() => {
+  const [cartItems, setCartItems] = useState<CartItemType[]>(() => {
     const savedItems = localStorage.getItem("cartItems");
-    if (savedItems) {
-      setCartItems(JSON.parse(savedItems));
-    }
-  }, []);
+    return savedItems ? JSON.parse(savedItems) : initialState;
+  });
 
   useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    // Guarda cada vez que cambian
+    if (cartItems.length > 0) {
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }
   }, [cartItems]);
 
-  return cartItems;
+  return [cartItems, setCartItems] as const;
 };
 
 export default useCartStorage;

@@ -34,7 +34,7 @@ const Card: FC<CardProps> = ({ title, image, price, category, discount, roundPer
                 label="Agregar"
                 icon={<LuShoppingCart />}
                 onClick={onAddToCart}
-                className="button__icon" 
+                className="button" 
                 data-testid={testId} 
             />
         </div>

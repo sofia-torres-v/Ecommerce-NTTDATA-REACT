@@ -11,7 +11,7 @@ const CartIcon = () => {
   const cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
 
   return (
-    <Link to={RoutesEnum.CART_SUMMARY}>
+    <Link to={RoutesEnum.CART_VIEW}>
       <div className="nav__cart-box">
         <LuShoppingCart className="nav__cart-icon"/>
         <span id="cart-counter" className="nav__cart-counter">

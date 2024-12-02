@@ -4,7 +4,7 @@ import { CartAction, CartState } from "../domain/cart.domain";
 import useCartStorage from "../shared/hooks/useCartStorage";
 
 const CartStateContext = createContext<CartState | null>(null);
-const CartDispatchContext = createContext<React.Dispatch<CartAction> | null>(null); 
+const CartDispatchContext = createContext<React.Dispatch<CartAction> | null>(null);
 
 export const useCartState = () => {
   const context = useContext(CartStateContext);
@@ -23,12 +23,14 @@ export const useCartDispatch = () => {
 };
 
 export const CartProvider: FC<PropsWithChildren> = ({ children }) => {
+  // persistente del carrito
+  const [cartItemsFromStorage] = useCartStorage(initialCartState.items);
 
-  const cartItemsFromStorage = useCartStorage(initialCartState.items);
-
+  // Reducer manejar el estado del carrito
   const [state, dispatch] = useReducer(cartReducer, {
     items: cartItemsFromStorage,
   });
+
 
   return (
     <CartStateContext.Provider value={state}>

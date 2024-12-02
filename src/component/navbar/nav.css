@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 80px;
 }
 .nav__content {
     display: flex;
@@ -31,12 +30,12 @@
 }
 
 .nav__logo-image {
-    width: 52px;
+    width: 35px;
 }
 
 .nav__logo-text {
     font-weight: bold;
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-family: "Playwrite NG Modern", cursive;
     color: var(--color-white);
 }
@@ -48,7 +47,7 @@
 
 .nav__cart-icon {
     color: var(--color-white);
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .nav__cart-counter {
@@ -69,5 +68,8 @@
     }
     .nav__logo-text{
         font-size: 2.8rem;
+    }
+    .nav__cart-icon{
+        font-size: 3.5rem;
     }
 }

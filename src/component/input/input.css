@@ -1,8 +1,11 @@
 .input-category {
-  width: 90%;
+  width: 100%;
   position: relative;
 }
 
+.input-login-input{
+  width: 100%;
+}
 .input-category__input{
   width: 100%;
   border-radius: 10px;
@@ -12,17 +15,6 @@
   color: var(--color-input-border);
   border: 1px solid var(--color-input-border);
   font-size: 1.3rem;
-}
-
-.input-category__icon{
-  font-size: 3.6rem;
-  padding: 0 4px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  border-radius: 0 12px 10px 0;
-  color: var(--color-white);
-  background: var(--color-primary-bg);
 }
 
 .input-category__input::placeholder {
