@@ -5,9 +5,11 @@ import {GlobalAppProvider} from "./context/AppContext.tsx";
 import {CartProvider} from "./context/CartContext.tsx";
 import App from "./App.tsx";
 import "./index.css";
+import { AuthProvider } from "./context/AuthContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
+         <AuthProvider>
         <CartProvider>
             <GlobalAppProvider>
                 <BrowserRouter>
@@ -15,5 +17,6 @@ createRoot(document.getElementById("root")!).render(
                 </BrowserRouter>
             </GlobalAppProvider>
         </CartProvider>
+         </AuthProvider>
     </StrictMode>
 );

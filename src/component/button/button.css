@@ -16,6 +16,14 @@
   background-color: var(--color-button-primary);
 }
 
+.button-login{
+  background-color: #06539B;
+  padding: 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
 .button:hover {
   transform: scale(0.98);
 }
@@ -23,3 +31,4 @@
 .button__icon{
   font-size: 2.5rem;
 }
+

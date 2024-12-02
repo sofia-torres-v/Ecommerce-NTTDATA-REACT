@@ -54,6 +54,6 @@ describe("Componente CartIcon", () => {
       </Router>
     );
     const link = screen.getByRole('link');
-    expect(link).toHaveAttribute('href', RoutesEnum.CART_SUMMARY);
+    expect(link).toHaveAttribute('href', RoutesEnum.CART_VIEW);
   });
 });

@@ -6,7 +6,6 @@ export const filterProducts = (products: ProductResponse[], searchTerm: string, 
     const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory =
       selectedCategory === TEXTS.defaultCategory || product.category.toLowerCase() === selectedCategory.toLowerCase();
-      console.log(selectedCategory)
     return matchesSearch && matchesCategory;
   });
 };

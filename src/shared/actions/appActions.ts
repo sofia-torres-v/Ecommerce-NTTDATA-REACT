@@ -8,9 +8,7 @@ export const loadProductsAndCategories = async (dispatch: AppDispatch) => {
         const categories = await fetchCategories();
 
         const mappedProducts = mapperProducts(products);
-        console.log(mappedProducts)
         const mappedCategories = mapperCategories(categories);
-        console.log(mappedCategories)
 
         dispatch({ type: AppActions.SaveProducts, payload: mappedProducts });
         dispatch({ type: AppActions.SaveCategories, payload: mappedCategories });

@@ -1,16 +1,18 @@
 import { FC } from "react";
+import './button.css';
 
 interface ButtonProps {
   label?: string; 
   icon?: React.ReactNode;
-  onClick: () => void;
+  onClick ?: () => void;
   className?: string;
   'data-testid'?: string; 
+  
 }
 
 const Button: FC<ButtonProps> = ({ label, onClick, icon, className, 'data-testid': testId }) => {
   return (
-    <button
+    <button 
       className={className}
       onClick={onClick}
       data-testid={testId} 

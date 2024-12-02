@@ -1,6 +1,10 @@
 .input-category {
-  width: 90%;
+  width: 100%;
   position: relative;
+}
+
+.input-login-input{
+  width: 100%;
 }
 
 .input-category__input{
@@ -14,20 +18,17 @@
   font-size: 1.3rem;
 }
 
-.input-category__icon{
-  font-size: 3.6rem;
-  padding: 0 4px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  border-radius: 0 12px 10px 0;
-  color: var(--color-white);
-  background: var(--color-primary-bg);
-}
-
 .input-category__input::placeholder {
   padding-left: 6px;
   color: var(--color-input-border);
+}
+
+.input-login{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
 }
 
 @media(min-width:750px){

@@ -1,10 +1,10 @@
-import { createContext, useReducer, useContext, FC, PropsWithChildren } from "react";
+import { createContext, useReducer, useContext, FC, PropsWithChildren, useEffect } from "react";
 import { cartReducer, initialCartState } from "../reducer/cartReducer";
 import { CartAction, CartState } from "../domain/cart.domain";
 import useCartStorage from "../shared/hooks/useCartStorage";
 
 const CartStateContext = createContext<CartState | null>(null);
-const CartDispatchContext = createContext<React.Dispatch<CartAction> | null>(null); 
+const CartDispatchContext = createContext<React.Dispatch<CartAction> | null>(null);
 
 export const useCartState = () => {
   const context = useContext(CartStateContext);
@@ -23,16 +23,21 @@ export const useCartDispatch = () => {
 };
 
 export const CartProvider: FC<PropsWithChildren> = ({ children }) => {
+  const [cartItemsFromStorage, setCartItems] = useCartStorage(initialCartState.items);
 
-  const cartItemsFromStorage = useCartStorage(initialCartState.items);
-
+  // Reducer manejar el estado del carrito
   const [state, dispatch] = useReducer(cartReducer, {
+    ...initialCartState,
     items: cartItemsFromStorage,
   });
 
+  useEffect(() => {
+    setCartItems(state.items);
+  }, [state.items, setCartItems]);
+
   return (
     <CartStateContext.Provider value={state}>
-      <CartDispatchContext.Provider value={dispatch}>  
+      <CartDispatchContext.Provider value={dispatch}>
         {children}
       </CartDispatchContext.Provider>
     </CartStateContext.Provider>
