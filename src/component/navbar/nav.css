@@ -21,6 +21,7 @@
     color: var(--color-white);
     font-size: 2.2rem;
     text-decoration: none;
+    display: none;
 }
 
 .nav__logo-box {
@@ -62,14 +63,22 @@
     background-color: var(--color-icon);
 }
 
+.content-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
 .title-hello{
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .box-hello{
     display: flex;
-    gap: 50px;
+    align-items: center;
+    gap: 20px;
 }
 
 @media (min-width: 750px) {
@@ -81,5 +90,17 @@
     }
     .nav__cart-icon{
         font-size: 3.5rem;
+    }
+    .content-logo{
+        flex-direction: row;
+    }
+    .nav__link{
+        display: block;
+    }
+    .box-hello{
+        gap: 50px;
+    }
+    .title-hello{
+        font-size: 2rem;
     }
 }

@@ -19,8 +19,7 @@ const LoginView = () => {
   useEffect(() => {
     const storedUser = getUserFromLocalStorage();
     if (storedUser) {
-      login(storedUser.username, storedUser.accessToken); // Guardamos tanto username como token
-      navigate('/products');
+      login(storedUser.username, storedUser.accessToken);
     }
   }, [login, navigate]);
 
@@ -49,8 +48,8 @@ const LoginView = () => {
       console.log('Respuesta de la API:', userData);
 
       // Guardar el username y el accessToken en el contexto y en localStorage
-      login(userData.username, userData.accessToken);  // pasamos el username y el token
-      saveUserToLocalStorage(userData);  // Guardamos también el username en localStorage
+      login(userData.username, userData.accessToken);
+      saveUserToLocalStorage(userData);  
 
       Swal.fire('¡Inicio de sesión exitoso!', '', 'success');
       navigate('/products');

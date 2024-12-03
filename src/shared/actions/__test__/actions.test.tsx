@@ -49,7 +49,6 @@ describe("loadProductsAndCategories", () => {
     const mockDispatch = jest.fn();
     const error = new Error("API error");
 
-    // Configurar el mock para que falle
     (fetchProducts as jest.Mock).mockRejectedValue(error);
     console.error = jest.fn(); // Mock de console.error
 

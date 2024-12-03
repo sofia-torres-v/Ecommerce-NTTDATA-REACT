@@ -18,5 +18,5 @@ export const loginUser = async (username: string, password: string) => {
     throw new Error('Usuario o contraseña incorrectos');
   }
 
-  return responseData; // Deberías devolver el username y el token
+  return responseData; // username y el token
 };

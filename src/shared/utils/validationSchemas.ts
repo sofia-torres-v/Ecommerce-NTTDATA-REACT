@@ -14,7 +14,6 @@ export const validateField = (value: string, rules: ValidationRules) => {
   return "";
 };
 
-// Funciones de validación específicas
 export const validateNombre = (value: string) => {
   return validateField(value, {
     required: true,
