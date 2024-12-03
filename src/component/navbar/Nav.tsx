@@ -5,8 +5,8 @@ import { useAuth } from "../../context/AuthContext";
 
 
 const Nav = () => {
-  const { username, isAuthenticated } = useAuth(); // Obtén el username y la autenticación desde el contexto
-  
+  const { username, isAuthenticated } = useAuth();
+
   return (
     <nav className="nav">
       <div className="nav__content container">

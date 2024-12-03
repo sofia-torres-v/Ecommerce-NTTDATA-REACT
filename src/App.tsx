@@ -9,7 +9,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 
 function App() {
   const dispatch = useGlobalAppDispatch();
-  const { isAuthenticated } = useAuth();  // Verificamos si el usuario está autenticado
+  const { isAuthenticated } = useAuth();  
 
   useEffect(() => {
     loadProductsAndCategories(dispatch);

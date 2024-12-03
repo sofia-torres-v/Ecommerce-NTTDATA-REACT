@@ -15,11 +15,11 @@ const LoginView = () => {
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState<{ username?: string; password?: string }>({});
 
-  // Recuperar el usuario de localStorage 
+  // Recuperar el usuario de localStorage
   useEffect(() => {
     const storedUser = getUserFromLocalStorage();
     if (storedUser) {
-      login(storedUser.accessToken);  // Solo el token
+      login(storedUser.username, storedUser.accessToken); // Guardamos tanto username como token
       navigate('/products');
     }
   }, [login, navigate]);
@@ -48,9 +48,9 @@ const LoginView = () => {
 
       console.log('Respuesta de la API:', userData);
 
-      // Guardar solo el token en el contexto y en localStorage
-      login(userData.accessToken);
-      saveUserToLocalStorage(userData);
+      // Guardar el username y el accessToken en el contexto y en localStorage
+      login(userData.username, userData.accessToken);  // pasamos el username y el token
+      saveUserToLocalStorage(userData);  // Guardamos también el username en localStorage
 
       Swal.fire('¡Inicio de sesión exitoso!', '', 'success');
       navigate('/products');

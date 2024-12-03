@@ -1,9 +1,7 @@
-// loginUser.ts
-
 import { API_ENDPOINTS } from "./api.config";
 
 export const loginUser = async (username: string, password: string) => {
-  console.log('Enviando datos de login:', { username, password });  // Verifica los datos antes de hacer la llamada
+  console.log('Enviando datos de login:', { username, password });
 
   const response = await fetch(API_ENDPOINTS.users, {
     method: 'POST',
@@ -14,12 +12,11 @@ export const loginUser = async (username: string, password: string) => {
   });
 
   const responseData = await response.json();
-  console.log('Datos recibidos de la API:', responseData);  // Verifica los datos devueltos por la API
+  console.log('Datos recibidos de la API:', responseData);
 
   if (!response.ok) {
     throw new Error('Usuario o contraseña incorrectos');
   }
 
-  // Guardar el token y el username
-  return { token: responseData.accessToken, username };
+  return responseData; // Deberías devolver el username y el token
 };

@@ -2,8 +2,8 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 
 interface AuthContextType {
   isAuthenticated: boolean;
-  username: string | null;
-  login: (token: string, username: string) => void;
+  username: string | null;  // Agregamos el username en el contexto
+  login: (username: string, token: string) => void;
   logout: () => void;
 }
 
@@ -26,27 +26,26 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [username, setUsername] = useState<string | null>(null);
 
   useEffect(() => {
+    const storedUsername = localStorage.getItem('username');
     const token = localStorage.getItem('authToken');
-    const savedUsername = localStorage.getItem('username');
-
-    if (token && savedUsername) {
+    if (token && storedUsername) {
       setIsAuthenticated(true);
-      setUsername(savedUsername);
+      setUsername(storedUsername);
     }
   }, []);
 
-  const login = (token: string, username: string) => {
-    localStorage.setItem('authToken', token);
-    localStorage.setItem('username', username);
-    setIsAuthenticated(true);
-    setUsername(username);
+  const login = (username: string, token: string) => {
+    localStorage.setItem('username', username);  // Guardamos el username en localStorage
+    localStorage.setItem('authToken', token);    // Guardamos el token en localStorage
+    setUsername(username);                       // Actualizamos el username en el estado
+    setIsAuthenticated(true);                    // Marcamos al usuario como autenticado
   };
 
   const logout = () => {
-    localStorage.removeItem('authToken');
-    localStorage.removeItem('username');
-    setIsAuthenticated(false);
-    setUsername(null);
+    localStorage.removeItem('username');  // Eliminamos el username del localStorage
+    localStorage.removeItem('authToken'); // Eliminamos el token del localStorage
+    setUsername(null);                    // Limpiamos el estado del username
+    setIsAuthenticated(false);            // Marcamos al usuario como no autenticado
   };
 
   return (
