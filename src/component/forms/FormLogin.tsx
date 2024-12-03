@@ -6,6 +6,7 @@ import '../input/input.css';
 import { FaRegUser } from 'react-icons/fa';
 import { RiLockPasswordLine } from "react-icons/ri";
 
+// Definimos las props que recibe el FormLogin
 interface FormLoginProps {
   username: string;
   password: string;
@@ -17,7 +18,6 @@ interface FormLoginProps {
 
 const FormLogin: React.FC<FormLoginProps> = ({ username, password, setUsername, setPassword, errors, onSubmit }) => {
   return (
-
     <form className="form-login" onSubmit={onSubmit}>
       <h1 className='title-form-login'>Iniciar Sesión</h1>
       <div className="input-content">
@@ -48,11 +48,10 @@ const FormLogin: React.FC<FormLoginProps> = ({ username, password, setUsername, 
       </div>
 
       <div className="login-content-button">
-        <a className="link-password" href="#">¿Olvid Contraseña?</a>
+        <a className="link-password" href="#">¿Olvidaste tu Contraseña?</a>
         <Button label="Iniciar sesión" className="button-login" />
       </div>
     </form>
-
   );
 };
 

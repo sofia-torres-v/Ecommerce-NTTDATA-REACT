@@ -1,10 +1,12 @@
+// ProtectedRoute.tsx
+
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
-  const { user } = useAuth();
+  const { username } = useAuth();  
 
-  if (!user) {
+  if (!username) {  
     return <Navigate to="/" replace />;
   }
 
