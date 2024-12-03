@@ -6,9 +6,11 @@ import InputComponent from "../input/InputComponent";
 import useForm from "../../shared/hooks/useForm";
 import './formShop.css';
 import { validateApellido, validateCelular, validateDireccion, validateDistrito, validateNombre, validateReferencia } from "../../shared/utils/validationSchemas";
+import { useNavigate } from "react-router-dom";
 
 
 const FormShop: FC = () => {
+  const navigate = useNavigate();
   const { districtNames } = useDistricts();
 
   // objeto de validaciones
@@ -49,7 +51,7 @@ const FormShop: FC = () => {
         direccion: "",
         referencia: "",
       });
-      window.location.href = "/products";
+      navigate('/Products');
     });
   };
 
