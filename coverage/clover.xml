@@ -1,227 +1,269 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1733192036003" clover="3.2.0">
-  <project timestamp="1733192036003" name="All files">
-    <metrics statements="218" coveredstatements="197" conditionals="49" coveredconditionals="39" methods="49" coveredmethods="41" elements="316" coveredelements="277" complexity="0" loc="218" ncloc="218" packages="19" files="27" classes="27"/>
+<coverage generated="1733613553516" clover="3.2.0">
+  <project timestamp="1733613553517" name="All files">
+    <metrics statements="251" coveredstatements="229" conditionals="57" coveredconditionals="44" methods="55" coveredmethods="50" elements="363" coveredelements="323" complexity="0" loc="251" ncloc="251" packages="20" files="29" classes="29"/>
     <package name="component.button">
       <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <file name="Button.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\button\Button.tsx">
+      <file name="Button.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\component\button\Button.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="14" count="24" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="17" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
       </file>
     </package>
     <package name="component.card">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Card.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\card\Card.tsx">
+      <file name="Card.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\component\card\Card.tsx">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="21" type="stmt"/>
-        <line num="44" count="2" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="14" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
       </file>
     </package>
     <package name="component.cartIcon">
       <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <file name="CartIcon.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\cartIcon\CartIcon.tsx">
+      <file name="CartIcon.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\component\cartIcon\CartIcon.tsx">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
-        <line num="11" count="4" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
       </file>
     </package>
     <package name="component.common">
       <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-      <file name="DetailsProduct.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\common\DetailsProduct.tsx">
+      <file name="DetailsProduct.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\component\common\DetailsProduct.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="22" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="15" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
       </file>
-      <file name="ImageProduct.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\common\ImageProduct.tsx">
+      <file name="ImageProduct.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\component\common\ImageProduct.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="22" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="15" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
       </file>
     </package>
     <package name="component.footer">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Footer.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\footer\Footer.tsx">
+      <file name="Footer.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\component\footer\Footer.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
       </file>
     </package>
     <package name="component.input">
       <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
-      <file name="InputComponent.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\input\InputComponent.tsx">
+      <file name="InputComponent.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\component\input\InputComponent.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="15" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="16" count="8" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="9" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="component.navbar">
+    <package name="component.mainLayout">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Nav.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\navbar\Nav.tsx">
+      <file name="MainLayout.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\component\mainLayout\MainLayout.tsx">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="7" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="component.navbar">
+      <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="Nav.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\component\navbar\Nav.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
         <line num="7" count="7" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
       </file>
     </package>
     <package name="component.select">
       <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-      <file name="Select.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\select\Select.tsx">
+      <file name="Select.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\component\select\Select.tsx">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="11" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="18" count="11" type="stmt"/>
-        <line num="25" count="33" type="stmt"/>
-        <line num="33" count="2" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="12" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="18" count="12" type="stmt"/>
+        <line num="25" count="30" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
       </file>
     </package>
     <package name="context">
-      <metrics statements="40" coveredstatements="30" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="5"/>
-      <file name="AppContext.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\context\AppContext.tsx">
-        <metrics statements="19" coveredstatements="14" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="25" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="35" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
+      <metrics statements="67" coveredstatements="52" conditionals="8" coveredconditionals="1" methods="12" coveredmethods="10"/>
+      <file name="AppContext.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\context\AppContext.tsx">
+        <metrics statements="19" coveredstatements="17" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="24" count="3" type="cond" truecount="0" falsecount="1"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="33" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
       </file>
-      <file name="CartContext.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\context\CartContext.tsx">
-        <metrics statements="21" coveredstatements="16" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="3"/>
+      <file name="AuthContext.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\context\AuthContext.tsx">
+        <metrics statements="27" coveredstatements="16" conditionals="4" coveredconditionals="1" methods="5" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="3" type="cond" truecount="1" falsecount="2"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="51" count="3" type="stmt"/>
+      </file>
+      <file name="CartContext.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\context\CartContext.tsx">
+        <metrics statements="21" coveredstatements="19" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="8" type="cond" truecount="0" falsecount="1"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="cond" truecount="0" falsecount="1"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="8" type="stmt"/>
+        <line num="28" count="8" type="stmt"/>
+        <line num="33" count="8" type="stmt"/>
+        <line num="34" count="8" type="stmt"/>
+        <line num="37" count="8" type="stmt"/>
       </file>
     </package>
     <package name="domain">
       <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="appState.domain.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\domain\appState.domain.ts">
+      <file name="appState.domain.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\domain\appState.domain.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="15" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
       </file>
-      <file name="cart.domain.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\domain\cart.domain.ts">
+      <file name="cart.domain.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\domain\cart.domain.ts">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="10" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
+        <line num="10" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
       </file>
     </package>
     <package name="pages.productsView">
-      <metrics statements="32" coveredstatements="27" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="2"/>
-      <file name="ProductsView.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\pages\productsView\ProductsView.tsx">
-        <metrics statements="32" coveredstatements="27" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="2"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
+      <metrics statements="30" coveredstatements="29" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="5"/>
+      <file name="ProductsView.tsx" path="C:\Users\jj29_\Desktop\challenge-ntt\src\pages\productsView\ProductsView.tsx">
+        <metrics statements="30" coveredstatements="29" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="5"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
         <line num="18" count="7" type="stmt"/>
-        <line num="19" count="7" type="stmt"/>
         <line num="20" count="7" type="stmt"/>
-        <line num="22" count="7" type="stmt"/>
-        <line num="23" count="6" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="42" count="6" type="stmt"/>
-        <line num="43" count="6" type="stmt"/>
-        <line num="45" count="6" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="49" count="6" type="stmt"/>
-        <line num="75" count="18" type="stmt"/>
-        <line num="82" count="0" type="stmt"/>
-        <line num="96" count="1" type="stmt"/>
+        <line num="21" count="7" type="stmt"/>
+        <line num="23" count="7" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="40" count="7" type="stmt"/>
+        <line num="41" count="7" type="stmt"/>
+        <line num="43" count="7" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="47" count="7" type="stmt"/>
+        <line num="69" count="11" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="86" count="2" type="stmt"/>
       </file>
     </package>
     <package name="reducer">
       <metrics statements="22" coveredstatements="20" conditionals="13" coveredconditionals="10" methods="6" coveredmethods="4"/>
-      <file name="appReducer.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\reducer\appReducer.ts">
+      <file name="appReducer.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\reducer\appReducer.ts">
         <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
         <line num="6" count="4" type="cond" truecount="3" falsecount="0"/>
         <line num="8" count="2" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
       </file>
-      <file name="cartReducer.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\reducer\cartReducer.ts">
+      <file name="cartReducer.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\reducer\cartReducer.ts">
         <metrics statements="16" coveredstatements="14" conditionals="10" coveredconditionals="7" methods="5" coveredmethods="3"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
         <line num="8" count="4" type="cond" truecount="4" falsecount="0"/>
         <line num="10" count="1" type="stmt"/>
         <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
@@ -239,11 +281,11 @@
     </package>
     <package name="services.api">
       <metrics statements="18" coveredstatements="14" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <file name="api.config.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\services\api\api.config.ts">
+      <file name="api.config.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\services\api\api.config.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="product.service.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\services\api\product.service.ts">
+      <file name="product.service.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\services\api\product.service.ts">
         <metrics statements="17" coveredstatements="13" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -266,7 +308,7 @@
     </package>
     <package name="services.mappers">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-      <file name="product.mapper.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\services\mappers\product.mapper.ts">
+      <file name="product.mapper.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\services\mappers\product.mapper.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
@@ -276,7 +318,7 @@
     </package>
     <package name="shared.actions">
       <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="appActions.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\actions\appActions.ts">
+      <file name="appActions.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\shared\actions\appActions.ts">
         <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -294,31 +336,31 @@
     </package>
     <package name="shared.enums">
       <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="routes.enum.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\enums\routes.enum.ts">
+      <file name="routes.enum.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\shared\enums\routes.enum.ts">
         <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
+        <line num="1" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
       </file>
     </package>
     <package name="shared.hooks">
       <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
-      <file name="useCartStorage.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\hooks\useCartStorage.ts">
+      <file name="useCartStorage.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\shared\hooks\useCartStorage.ts">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="7" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="10" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="14" count="10" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
       </file>
-      <file name="usePlace.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\hooks\usePlace.ts">
+      <file name="usePlace.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\shared\hooks\usePlace.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -328,34 +370,34 @@
       </file>
     </package>
     <package name="shared.utils">
-      <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-      <file name="filterProducts.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\utils\filterProducts.ts">
-        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="7" type="stmt"/>
-        <line num="6" count="20" type="stmt"/>
-        <line num="8" count="20" type="cond" truecount="2" falsecount="0"/>
-        <line num="9" count="20" type="cond" truecount="2" falsecount="0"/>
+      <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+      <file name="filterProducts.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\shared\utils\filterProducts.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="14" type="cond" truecount="2" falsecount="0"/>
       </file>
-      <file name="formatPrice.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\utils\formatPrice.ts">
+      <file name="formatPrice.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\shared\utils\formatPrice.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="22" type="stmt"/>
-        <line num="3" count="22" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="15" type="stmt"/>
+        <line num="3" count="15" type="stmt"/>
       </file>
-      <file name="textContants.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\utils\textContants.ts">
+      <file name="textContants.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\shared\utils\textContants.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="2" count="2" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
       </file>
     </package>
     <package name="types">
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="app-types.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\types\app-types.ts">
+      <file name="app-types.ts" path="C:\Users\jj29_\Desktop\challenge-ntt\src\types\app-types.ts">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="5" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
+        <line num="5" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
       </file>
     </package>
   </project>

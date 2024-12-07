@@ -9,14 +9,13 @@ interface FormData {
   referencia: string;
 }
 
-export const showSuccessAlert = (formData: FormData, setFormData: React.Dispatch<React.SetStateAction<FormData>>) => {
+export const showSuccessAlert = ( setFormData: React.Dispatch<React.SetStateAction<FormData>>) => {
   Swal.fire({
     title: '¡Pedido registrado con éxito!',
     text: 'Gracias por tu compra.',
     icon: 'success',
     confirmButtonText: 'Aceptar'
   }).then(() => {
-    // Limpiar el formulario después de que el usuario haga clic en "Aceptar"
     setFormData({
       nombre: "",
       apellido: "",
@@ -26,6 +25,6 @@ export const showSuccessAlert = (formData: FormData, setFormData: React.Dispatch
       referencia: "",
     });
 
-    window.location.href = "/"; // Redirige a la página principal
+    window.location.href = "/"; 
   });
 };

@@ -25,7 +25,6 @@ export const useCartDispatch = () => {
 export const CartProvider: FC<PropsWithChildren> = ({ children }) => {
   const [cartItemsFromStorage, setCartItems] = useCartStorage(initialCartState.items);
 
-  // Reducer manejar el estado del carrito
   const [state, dispatch] = useReducer(cartReducer, {
     ...initialCartState,
     items: cartItemsFromStorage,

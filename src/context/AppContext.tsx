@@ -18,7 +18,6 @@ const GlobalAppProvider: FC<PropsWithChildren> = ({ children }) => {
     );
 };
 
-// Hook para obtener el estado global
 const useGlobalAppState = (): AppState => {
     const context = useContext(AppStateContext);
 
@@ -28,7 +27,6 @@ const useGlobalAppState = (): AppState => {
     return context;
 };
 
-// Hook para obtener el dispatch global
 const useGlobalAppDispatch = (): AppDispatch => {
     const context = useContext(AppDispatchContext);
 

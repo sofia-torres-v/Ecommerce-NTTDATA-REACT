@@ -2,8 +2,6 @@ import { FC } from 'react';
 import { useCart } from "../../shared/hooks/useCart";
 import CartShop from '../../component/carShop/CartShop';
 import FormShop from '../../component/forms/FormShop';
-import Footer from '../../component/footer/Footer';
-import Nav from '../../component/navbar/Nav';
 import './cartView.css'
 
 const CartView: FC = () => {
@@ -12,10 +10,6 @@ const CartView: FC = () => {
 
   return (
     <>
-      <header className='header'>
-        <Nav />
-      </header>
-      <main>
         {items.length > 0 ? (
           <section>
             <div className="cart-header">
@@ -45,10 +39,6 @@ const CartView: FC = () => {
         <div className='content-form container'>
           <FormShop />
         </div>
-      </main>
-      <footer className='footer'>
-        <Footer />
-      </footer>
     </>
   );
 };

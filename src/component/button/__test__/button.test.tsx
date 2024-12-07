@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import Button from '../Button';
 
-
 describe('Componente Button', () => {
   it('Debería Renderiza el botón con un texto y maneja el evento clic', () => {
     const handleClick = jest.fn(); 

@@ -7,7 +7,6 @@ interface ButtonProps {
   onClick ?: () => void;
   className?: string;
   'data-testid'?: string; 
-  
 }
 
 const Button: FC<ButtonProps> = ({ label, onClick, icon, className, 'data-testid': testId }) => {
