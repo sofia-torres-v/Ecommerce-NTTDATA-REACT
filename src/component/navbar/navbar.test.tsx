@@ -1,7 +1,7 @@
-import { render, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext"; 
+import { render, screen } from "@testing-library/react";
 import { CartProvider } from "../../context/CartContext"; 
+import { useAuth } from "../../context/AuthContext"; 
 import Nav from "./Nav";
 
 jest.mock("../../context/AuthContext", () => ({

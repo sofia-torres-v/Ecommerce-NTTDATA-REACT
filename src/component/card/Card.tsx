@@ -13,16 +13,26 @@ interface CardProps {
     discount: number;
     onAddToCart: () => void;
     roundPercentage: (discount: number) => string;
-    'data-testid'?: string;
+    "data-testid"?: string;
 }
 
-const Card: FC<CardProps> = ({ title, image, price, category, discount, roundPercentage, onAddToCart,  'data-testid': testId }) => {
+const Card: FC<CardProps> = ({
+    title,
+    image,
+    price,
+    category,
+    discount,
+    roundPercentage,
+    onAddToCart,
+    "data-testid": testId,
+}) => {
     return (
         <div className="card">
             <ImageProduct
                 src={image}
                 alt={title}
-                className="card__image" />
+                className="card__image" 
+            />
             <DetailsProduct
                 title={title}
                 price={price}
@@ -34,8 +44,8 @@ const Card: FC<CardProps> = ({ title, image, price, category, discount, roundPer
                 label="Agregar"
                 icon={<LuShoppingCart />}
                 onClick={onAddToCart}
-                className="button" 
-                data-testid={testId} 
+                className="button"
+                data-testid={testId}
             />
         </div>
     );
