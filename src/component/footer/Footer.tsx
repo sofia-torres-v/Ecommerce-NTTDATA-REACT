@@ -1,3 +1,4 @@
+// falta test
 import {FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp} from "react-icons/fa";
 import './footer.css';
 

@@ -1,3 +1,4 @@
+// test?
 import { loadProductsAndCategories } from "./shared/actions/appActions";
 import { useGlobalAppDispatch } from "./context/AppContext";
 import { Route, Routes } from "react-router-dom";

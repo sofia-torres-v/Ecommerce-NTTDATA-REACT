@@ -1,3 +1,4 @@
+// falta test
 import { FC } from "react";
 import DetailsProduct from "../common/DetailsProduct";
 import ImageProduct from "../common/ImageProduct";

@@ -1,3 +1,4 @@
+// falta test
 import { Link } from "react-router-dom";
 import CartIcon from "../cartIcon/CartIcon";
 import "./nav.css";

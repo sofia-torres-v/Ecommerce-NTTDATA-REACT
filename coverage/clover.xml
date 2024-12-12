@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1733022204666" clover="3.2.0">
-  <project timestamp="1733022204666" name="All files">
+<coverage generated="1734024047672" clover="3.2.0">
+  <project timestamp="1734024047672" name="All files">
     <metrics statements="217" coveredstatements="208" conditionals="43" coveredconditionals="36" methods="47" coveredmethods="46" elements="307" coveredelements="290" complexity="0" loc="217" ncloc="217" packages="20" files="28" classes="28"/>
     <package name="component.button">
       <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <file name="Button.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\button\Button.tsx">
+      <file name="Button.tsx" path="/Users/maxcm/Desktop/React/Sofia Torres/src/component/button/Button.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="11" count="4" type="stmt"/>
         <line num="12" count="17" type="stmt"/>
@@ -13,7 +13,7 @@
     </package>
     <package name="component.card">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Card.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\card\Card.tsx">
+      <file name="Card.tsx" path="/Users/maxcm/Desktop/React/Sofia Torres/src/component/card/Card.tsx">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="3" type="stmt"/>
         <line num="3" count="3" type="stmt"/>
@@ -27,7 +27,7 @@
     </package>
     <package name="component.cartIcon">
       <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <file name="CartIcon.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\cartIcon\CartIcon.tsx">
+      <file name="CartIcon.tsx" path="/Users/maxcm/Desktop/React/Sofia Torres/src/component/cartIcon/CartIcon.tsx">
         <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -43,14 +43,14 @@
     </package>
     <package name="component.common">
       <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-      <file name="DetailsProduct.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\common\DetailsProduct.tsx">
+      <file name="DetailsProduct.tsx" path="/Users/maxcm/Desktop/React/Sofia Torres/src/component/common/DetailsProduct.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="2" count="4" type="stmt"/>
         <line num="12" count="4" type="stmt"/>
         <line num="13" count="15" type="stmt"/>
         <line num="23" count="4" type="stmt"/>
       </file>
-      <file name="ImageProduct.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\common\ImageProduct.tsx">
+      <file name="ImageProduct.tsx" path="/Users/maxcm/Desktop/React/Sofia Torres/src/component/common/ImageProduct.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="4" type="stmt"/>
         <line num="10" count="4" type="stmt"/>
@@ -60,7 +60,7 @@
     </package>
     <package name="component.footer">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Footer.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\footer\Footer.tsx">
+      <file name="Footer.tsx" path="/Users/maxcm/Desktop/React/Sofia Torres/src/component/footer/Footer.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -71,7 +71,7 @@
     </package>
     <package name="component.input">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="InputComponent.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\input\InputComponent.tsx">
+      <file name="InputComponent.tsx" path="/Users/maxcm/Desktop/React/Sofia Torres/src/component/input/InputComponent.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="2" count="3" type="stmt"/>
         <line num="12" count="3" type="stmt"/>
@@ -81,7 +81,7 @@
     </package>
     <package name="component.mainLayout">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="MainLayout.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\mainLayout\MainLayout.tsx">
+      <file name="MainLayout.tsx" path="/Users/maxcm/Desktop/React/Sofia Torres/src/component/mainLayout/MainLayout.tsx">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -95,7 +95,7 @@
     </package>
     <package name="component.navbar">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Nav.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\navbar\Nav.tsx">
+      <file name="Nav.tsx" path="/Users/maxcm/Desktop/React/Sofia Torres/src/component/navbar/Nav.tsx">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -107,7 +107,7 @@
     </package>
     <package name="component.select">
       <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-      <file name="Select.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\component\select\Select.tsx">
+      <file name="Select.tsx" path="/Users/maxcm/Desktop/React/Sofia Torres/src/component/select/Select.tsx">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
         <line num="2" count="3" type="stmt"/>
         <line num="13" count="3" type="stmt"/>
@@ -120,7 +120,7 @@
     </package>
     <package name="context">
       <metrics statements="38" coveredstatements="34" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="6"/>
-      <file name="AppContext.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\context\AppContext.tsx">
+      <file name="AppContext.tsx" path="/Users/maxcm/Desktop/React/Sofia Torres/src/context/AppContext.tsx">
         <metrics statements="19" coveredstatements="17" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -142,7 +142,7 @@
         <line num="38" count="1" type="stmt"/>
         <line num="41" count="2" type="stmt"/>
       </file>
-      <file name="CartContext.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\context\CartContext.tsx">
+      <file name="CartContext.tsx" path="/Users/maxcm/Desktop/React/Sofia Torres/src/context/CartContext.tsx">
         <metrics statements="19" coveredstatements="17" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -167,11 +167,11 @@
     </package>
     <package name="domain">
       <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="appState.domain.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\domain\appState.domain.ts">
+      <file name="appState.domain.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/domain/appState.domain.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="15" count="2" type="stmt"/>
       </file>
-      <file name="cart.domain.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\domain\cart.domain.ts">
+      <file name="cart.domain.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/domain/cart.domain.ts">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="10" count="4" type="cond" truecount="2" falsecount="0"/>
         <line num="11" count="4" type="stmt"/>
@@ -181,7 +181,7 @@
     </package>
     <package name="pages.productsView">
       <metrics statements="29" coveredstatements="28" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="5"/>
-      <file name="Products.tsx" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\pages\productsView\Products.tsx">
+      <file name="Products.tsx" path="/Users/maxcm/Desktop/React/Sofia Torres/src/pages/productsView/Products.tsx">
         <metrics statements="29" coveredstatements="28" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="5"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -216,7 +216,7 @@
     </package>
     <package name="reducer">
       <metrics statements="16" coveredstatements="16" conditionals="9" coveredconditionals="9" methods="4" coveredmethods="4"/>
-      <file name="appReducer.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\reducer\appReducer.ts">
+      <file name="appReducer.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/reducer/appReducer.ts">
         <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="1" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
@@ -225,7 +225,7 @@
         <line num="13" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
       </file>
-      <file name="cartReducer.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\reducer\cartReducer.ts">
+      <file name="cartReducer.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/reducer/cartReducer.ts">
         <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
         <line num="1" count="3" type="stmt"/>
         <line num="3" count="3" type="stmt"/>
@@ -241,11 +241,11 @@
     </package>
     <package name="services.api">
       <metrics statements="18" coveredstatements="14" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <file name="api.config.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\services\api\api.config.ts">
+      <file name="api.config.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/services/api/api.config.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="product.service.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\services\api\product.service.ts">
+      <file name="product.service.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/services/api/product.service.ts">
         <metrics statements="17" coveredstatements="13" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -268,7 +268,7 @@
     </package>
     <package name="services.mappers">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-      <file name="product.mapper.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\services\mappers\product.mapper.ts">
+      <file name="product.mapper.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/services/mappers/product.mapper.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
@@ -278,7 +278,7 @@
     </package>
     <package name="shared.actions">
       <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="appActions.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\actions\appActions.ts">
+      <file name="appActions.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/shared/actions/appActions.ts">
         <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -298,7 +298,7 @@
     </package>
     <package name="shared.enums">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="routes.enum.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\enums\routes.enum.ts">
+      <file name="routes.enum.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/shared/enums/routes.enum.ts">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="2" count="2" type="stmt"/>
@@ -308,21 +308,21 @@
     </package>
     <package name="shared.hooks">
       <metrics statements="16" coveredstatements="16" conditionals="1" coveredconditionals="1" methods="5" coveredmethods="5"/>
-      <file name="useCartStorage.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\hooks\useCartStorage.ts">
+      <file name="useCartStorage.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/shared/hooks/useCartStorage.ts">
         <metrics statements="11" coveredstatements="11" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="10" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="11" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
         <line num="15" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="19" count="6" type="stmt"/>
-        <line num="22" count="2" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
       </file>
-      <file name="usePlace.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\hooks\usePlace.ts">
+      <file name="usePlace.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/shared/hooks/usePlace.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -333,7 +333,7 @@
     </package>
     <package name="shared.utils">
       <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-      <file name="filterProducts.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\utils\filterProducts.ts">
+      <file name="filterProducts.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/shared/utils/filterProducts.ts">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="2" count="3" type="stmt"/>
         <line num="4" count="3" type="stmt"/>
@@ -343,20 +343,20 @@
         <line num="9" count="14" type="stmt"/>
         <line num="10" count="14" type="cond" truecount="2" falsecount="0"/>
       </file>
-      <file name="formatPrice.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\utils\formatPrice.ts">
+      <file name="formatPrice.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/shared/utils/formatPrice.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="3" type="stmt"/>
         <line num="2" count="15" type="stmt"/>
         <line num="3" count="15" type="stmt"/>
       </file>
-      <file name="textContants.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\shared\utils\textContants.ts">
+      <file name="textContants.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/shared/utils/textContants.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="3" type="stmt"/>
       </file>
     </package>
     <package name="types">
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="app-types.ts" path="C:\Users\jj29_\Desktop\challenge1-ntt\src\types\app-types.ts">
+      <file name="app-types.ts" path="/Users/maxcm/Desktop/React/Sofia Torres/src/types/app-types.ts">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="5" count="4" type="cond" truecount="2" falsecount="0"/>
         <line num="6" count="4" type="stmt"/>
