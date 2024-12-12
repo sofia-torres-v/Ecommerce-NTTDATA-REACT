@@ -1,3 +1,4 @@
+// deben ser archivos separados para mantener un orden
 import { mapperCategories, mapperProducts } from '../product.mapper';
 
 test('mapperProducts debería mapear correctamente los productos y devolver lo especificado', () => {

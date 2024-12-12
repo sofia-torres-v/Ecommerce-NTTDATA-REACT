@@ -1,3 +1,4 @@
+// el test debe simiular el comportamiento de un provider, modificando los datos que recibe o ejecutando las acciones
 import { render, screen, fireEvent } from "@testing-library/react";
 import { GlobalAppProvider, useGlobalAppDispatch } from "../../context/AppContext";
 import { AppActions } from "../../types/app-types";

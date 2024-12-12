@@ -1,3 +1,4 @@
+// test?
 export const validateNombre = (value: string) => {
   if (!value.trim()) {
     return "Campo obligatorio";
