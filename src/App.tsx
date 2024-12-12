@@ -1,3 +1,4 @@
+// falta test
 import { Route, Routes, Navigate } from 'react-router-dom';
 import ProductsView from './pages/productsView/ProductsView';
 import LoginView from './pages/login/LoginView';
@@ -9,6 +10,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 
 function App() {
   const dispatch = useGlobalAppDispatch();
+  // lo ideal ser'ia crear un high order component
   const { isAuthenticated } = useAuth();  
 
   useEffect(() => {
