@@ -2,7 +2,8 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 
 interface AuthContextType {
   isAuthenticated: boolean;
-  username: string | null;  
+  username: string | null;
+  loading: boolean; // 👈 agregado
   login: (username: string, token: string) => void;
   logout: () => void;
 }
@@ -24,6 +25,7 @@ interface AuthProviderProps {
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [username, setUsername] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true); // 👈 nuevo
 
   useEffect(() => {
     const storedUsername = localStorage.getItem('username');
@@ -32,24 +34,25 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       setIsAuthenticated(true);
       setUsername(storedUsername);
     }
+    setLoading(false); // 👈 ya terminó de leer localStorage
   }, []);
 
   const login = (username: string, token: string) => {
-    localStorage.setItem('username', username);  
-    localStorage.setItem('authToken', token);    
-    setUsername(username);                       
-    setIsAuthenticated(true);                    
+    localStorage.setItem('username', username);
+    localStorage.setItem('authToken', token);
+    setUsername(username);
+    setIsAuthenticated(true);
   };
 
   const logout = () => {
-    localStorage.removeItem('username');  
-    localStorage.removeItem('authToken'); 
-    setUsername(null);                   
-    setIsAuthenticated(false);            
+    localStorage.removeItem('username');
+    localStorage.removeItem('authToken');
+    setUsername(null);
+    setIsAuthenticated(false);
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, username, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, username, loading, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
