@@ -5,7 +5,7 @@ Este proyecto implementa pruebas automáticas en una aplicación desarrollada co
 
 ---
 
-## 🎯 Objetivos del Proyecto
+## 📌 Objetivos del Proyecto
 
 ### Migración y Optimización
 - Migración del proyecto a **React** usando componentes funcionales.
@@ -19,7 +19,7 @@ Este proyecto implementa pruebas automáticas en una aplicación desarrollada co
 
 ---
 
-## 🚀 Funcionalidades Principales
+## 📌 Funcionalidades Principales
 
 ### Renderizado de Productos
 Los productos se muestran dinámicamente gracias a la integración con el API.
@@ -43,7 +43,7 @@ Validación de campos y creación de usuario.
 Para ingresar al dashboard:
 
 - Usuario: emilys
-- Contraseña: emilys pass
+- Contraseña: emilyspass
 
 
 ### 🔹 Pantalla de Inicio de Sesión
@@ -60,7 +60,7 @@ Para ingresar al dashboard:
 
 ---
 
-## 🗂️ Estructura de Carpetas
+## 📌 Estructura de Carpetas
 
 ```plaintext
 📦 src
@@ -133,7 +133,7 @@ Para ingresar al dashboard:
 ├── index.css
 └── index.html
 
-## 🛠️ Tecnologías Utilizadas
+## 📌 Tecnologías Utilizadas
 
 - **React**
 - **TypeScript**
@@ -146,7 +146,7 @@ Para ingresar al dashboard:
 
 ---
 
-## ⚙️ Instalación y Uso
+## 📌 Instalación y Uso
 
 ### Clonar el repositorio
 ```bash
