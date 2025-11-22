@@ -1,5 +1,5 @@
 import { FC } from "react";
-import "./QuantityControls.css";
+import "./quantityControls.css";
 
 interface QuantityControlsProps {
   quantity: number;
