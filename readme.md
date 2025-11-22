@@ -46,20 +46,16 @@ Para ingresar al dashboard:
 - Contraseña: emilys pass
 
 
----
-
-## 🖼️ Vista previa
-
 ### 🔹 Pantalla de Inicio de Sesión
 ![Login](src/assets/login.png)
 
-### 🔹 Home
+### 🔹 Pantalla: Inicio de sesión con éxito
 ![Dashboard](src/assets/dashboard-exito.png)
-### 🔹 Home
+### 🔹 Pantalla: Inicio con filtrado
 ![Dashboard](src/assets/dashboard.png)
-### 🔹 Carrito de compras
+### 🔹 Pantalla: Carrito de compras
 ![Dashboard](src/assets/carrito.png)
-### 🔹 Formulario de envío
+### 🔹 Pantalla: Formulario de envío
 ![Dashboard](src/assets/form.png)
 
 ---
