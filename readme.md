@@ -53,10 +53,14 @@ Para ingresar al dashboard:
 ### 🔹 Pantalla de Inicio de Sesión
 ![Login](src/assets/login.png)
 
-### 🔹 Dashboard
+### 🔹 Home
 ![Dashboard](src/assets/dashboard-exito.png)
+### 🔹 Home
 ![Dashboard](src/assets/dashboard.png)
+### 🔹 Carrito de compras
 ![Dashboard](src/assets/carrito.png)
+### 🔹 Formulario de envío
+![Dashboard](src/assets/form.png)
 
 ---
 
