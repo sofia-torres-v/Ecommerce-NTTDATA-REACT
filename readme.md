@@ -1,11 +1,11 @@
 # Market App – Testing Challenge with Jest
 
-## 📌 Descripción del Proyecto
+## Descripción del Proyecto
 Este proyecto implementa pruebas automáticas en una aplicación desarrollada con **React + TypeScript**, enfocada en buenas prácticas, modularización y cobertura de código usando **Jest** y **React Testing Library**.
 
 ---
 
-## 📌 Objetivos del Proyecto
+## Objetivos del Proyecto
 
 ### Migración y Optimización
 - Migración del proyecto a **React** usando componentes funcionales.
@@ -19,7 +19,7 @@ Este proyecto implementa pruebas automáticas en una aplicación desarrollada co
 
 ---
 
-## 📌 Funcionalidades Principales
+## Funcionalidades Principales
 
 ### Renderizado de Productos
 Los productos se muestran dinámicamente gracias a la integración con el API.
@@ -60,7 +60,7 @@ Para ingresar al dashboard:
 
 ---
 
-## 📌 Estructura de Carpetas
+## Estructura de Carpetas
 
 ```plaintext
 📦 src
@@ -146,10 +146,10 @@ Para ingresar al dashboard:
 
 ---
 
-## 📌 Instalación y Uso
+Instalación y Uso
 
-### Clonar el repositorio
-```bash
+Clonar el repositorio
+
 git clone https://github.com/sofia-torres-v/BOOTCAMP-FRONTEND-REACT-NTT.git
 cd BOOTCAMP-FRONTEND-REACT-NTT
 
