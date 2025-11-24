@@ -28,44 +28,44 @@ Los productos se muestran dinámicamente gracias a la integración con el API.
 Filtro de productos en tiempo real.
 
 ### Filtrado por Categorías
-Selección sincronizada con el resto de la UI.
+Selección sincronizada con la UI.
 
 ### Carrito de Compras
-Agregar, eliminar y modificar cantidades, con actualización inmediata.
+Agregar, eliminar y modificar cantidades.
 
 ### Formulario de Registro
-Validación de campos y creación de usuario.
+Validación y creación de usuario.
 
 ---
 
 ## 🔐 Credenciales para Pruebas
-
 Para ingresar al dashboard:
 
-- Usuario: emilys
-- Contraseña: emilyspass
-
+- **Usuario:** emilys  
+- **Contraseña:** emilyspass
 
 ### 🔹 Pantalla de Inicio de Sesión
 ![Login](src/assets/login.png)
 
-### 🔹 Pantalla: Inicio de sesión con éxito
+### 🔹 Inicio de sesión con éxito
 ![Dashboard](src/assets/dashboard-exito.png)
-### 🔹 Pantalla: Inicio con filtrado
+
+### 🔹 Pantalla con filtrado
 ![Dashboard](src/assets/dashboard.png)
-### 🔹 Pantalla: Carrito de compras
+
+### 🔹 Carrito de compras
 ![Dashboard](src/assets/carrito.png)
-### 🔹 Pantalla: Formulario de envío
+
+### 🔹 Formulario de envío
 ![Dashboard](src/assets/form.png)
 
 ---
 
-## Estructura de Carpetas
+## 📁 Estructura de Carpetas
 
 ```plaintext
 📦 src
 ├── 📁 assets
-│
 ├── 📁 component
 │   ├── button
 │   │   ├── __test__
@@ -88,7 +88,6 @@ Para ingresar al dashboard:
 │   └── product.domain.ts
 │
 ├── 📁 hoc
-│
 ├── 📁 mocks
 │
 ├── 📁 pages
@@ -133,7 +132,10 @@ Para ingresar al dashboard:
 ├── index.css
 └── index.html
 
-## 📌 Tecnologías Utilizadas
+```
+---
+
+## Tecnologías Utilizadas
 
 - **React**
 - **TypeScript**
@@ -146,14 +148,18 @@ Para ingresar al dashboard:
 
 ---
 
-Instalación y Uso
+## Instalación y Uso
 
-Clonar el repositorio
+### 1. Clonar el repositorio
 
+```bash
 git clone https://github.com/sofia-torres-v/BOOTCAMP-FRONTEND-REACT-NTT.git
 cd BOOTCAMP-FRONTEND-REACT-NTT
 
 npm install
 
 npm run dev
+```
+---
 
+## 💛 Gracias por visitar este proyecto
